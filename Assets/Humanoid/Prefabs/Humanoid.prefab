@@ -23,7 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001119312885382}
-  m_LocalRotation: {x: 0.19701776, y: -0.18126072, z: -0.0032338365, w: 0.9634927}
+  m_LocalRotation: {x: 0.19701643, y: -0.18124115, z: -0.0032421136, w: 0.96349657}
   m_LocalPosition: {x: 0.000000017881394, y: 0.02919662, z: -0.000000044703484}
   m_LocalScale: {x: 1.0000001, y: 0.9999999, z: 0.9999999}
   m_Children:
@@ -54,8 +54,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002089608420890}
-  m_LocalRotation: {x: 0.0000014251564, y: 0.000001039356, z: -0.0000010666299, w: 1}
-  m_LocalPosition: {x: -0.027934028, y: -0.00000022289169, z: 0.00000002557249}
+  m_LocalRotation: {x: 0.000014735146, y: -0.00000755116, z: -0.0000079963975, w: 1}
+  m_LocalPosition: {x: -0.02793391, y: -0.00000010151416, z: 0.000000032594812}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4320099069120258}
@@ -88,7 +88,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003187176396958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4743407682561782}
@@ -159,6 +159,18 @@ MonoBehaviour:
     enabled: 0
     trackerTransform: {fileID: 0}
     subTrackers: []
+  openVR:
+    status: 0
+    enabled: 1
+    trackerTransform: {fileID: 0}
+    subTrackers: []
+    hmd: {fileID: 0}
+    controllers: []
+  oculus:
+    status: 0
+    enabled: 1
+    trackerTransform: {fileID: 4532993809319004}
+    subTrackers: []
   forwardSpeed: 1
   backwardSpeed: 0.6
   sidewardSpeed: 1
@@ -202,7 +214,7 @@ MonoBehaviour:
   controllerType: 0
   fingerMovements: 1
   leftVerticalInput:
-    type: 3
+    type: 2
     targetGameObject: {fileID: 1003187176396958}
     targetComponent: {fileID: 114146988969048474}
     eventType: 6
@@ -234,7 +246,9 @@ MonoBehaviour:
     - Rotate
     - TeleportForward
     - MoveTo
+    - Jump
     objMethodComponents:
+    - {fileID: 114146988969048474}
     - {fileID: 114146988969048474}
     - {fileID: 114146988969048474}
     - {fileID: 114146988969048474}
@@ -259,7 +273,7 @@ MonoBehaviour:
     animatorParameterType: 0
     animatorParameterIndex: 0
   leftHorizontalInput:
-    type: 3
+    type: 2
     targetGameObject: {fileID: 1003187176396958}
     targetComponent: {fileID: 114146988969048474}
     eventType: 6
@@ -291,7 +305,9 @@ MonoBehaviour:
     - Rotate
     - TeleportForward
     - MoveTo
+    - Jump
     objMethodComponents:
+    - {fileID: 114146988969048474}
     - {fileID: 114146988969048474}
     - {fileID: 114146988969048474}
     - {fileID: 114146988969048474}
@@ -893,7 +909,6 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1060,7 +1075,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1096,8 +1110,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018894504199456}
-  m_LocalRotation: {x: -0.0013954669, y: 0.0069468874, z: -0.19692291, w: 0.9803934}
-  m_LocalPosition: {x: -0.029196568, y: 0.000000081025064, z: 0.000000007741619}
+  m_LocalRotation: {x: -0.0014153653, y: 0.0069385343, z: -0.19692208, w: 0.9803935}
+  m_LocalPosition: {x: -0.029196693, y: -0.000000029336661, z: 0.0000000039872248}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4601782163714082}
@@ -1218,8 +1232,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028835581532512}
-  m_LocalRotation: {x: -0.008996228, y: 0.024624685, z: -0.34303764, w: 0.9389557}
-  m_LocalPosition: {x: -0.04319332, y: -0.000000014901161, z: 0.00000003480818}
+  m_LocalRotation: {x: -0.00901302, y: 0.02461112, z: -0.34302983, w: 0.93895876}
+  m_LocalPosition: {x: -0.04319323, y: -0.0000000018626451, z: -0.0000000012805685}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4891661842404048}
@@ -1249,7 +1263,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028960526426862}
-  m_LocalRotation: {x: 0.6661513, y: -0.44501328, z: -0.36937064, w: -0.47092572}
+  m_LocalRotation: {x: 0.66615146, y: -0.44501314, z: -0.36937055, w: -0.47092572}
   m_LocalPosition: {x: -0.0195459, y: 0.17546915, z: 0.0644887}
   m_LocalScale: {x: 0.9999999, y: 0.9999998, z: 0.9999998}
   m_Children:
@@ -1310,8 +1324,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033284628720794}
-  m_LocalRotation: {x: -0.017657127, y: 0.115314804, z: -0.1503218, w: 0.98173016}
-  m_LocalPosition: {x: 0.05875599, y: -0.011650529, z: -0.027812956}
+  m_LocalRotation: {x: -0.017655954, y: 0.115310974, z: -0.15031439, w: 0.9817318}
+  m_LocalPosition: {x: 0.058755983, y: -0.011650493, z: -0.027813008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4432671791840990}
@@ -1341,8 +1355,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037128031434206}
-  m_LocalRotation: {x: 0.5492302, y: 0.096352845, z: -0.04808662, w: -0.8287038}
-  m_LocalPosition: {x: -0.000000007450581, y: 0.3890997, z: 5.5879357e-10}
+  m_LocalRotation: {x: 0.550233, y: 0.096461505, z: -0.047966044, w: -0.82803273}
+  m_LocalPosition: {x: -0.0000000614673, y: 0.38910004, z: 0.00000038743028}
   m_LocalScale: {x: 0.9999998, y: 0.9999999, z: 1.0000001}
   m_Children:
   - {fileID: 4279173491690676}
@@ -1372,7 +1386,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049325994679246}
-  m_LocalRotation: {x: -0.08539744, y: 0.09403613, z: 0.10655494, w: 0.9861595}
+  m_LocalRotation: {x: -0.08537289, y: 0.09402104, z: 0.10654955, w: 0.9861637}
   m_LocalPosition: {x: -0.000000029802322, y: 0.013552886, z: -0.000000008940697}
   m_LocalScale: {x: 0.9999998, y: 0.99999976, z: 0.9999999}
   m_Children: []
@@ -1433,7 +1447,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058626579096706}
-  m_LocalRotation: {x: -0.09849154, y: 0.092777066, z: 0.02029934, w: 0.9905957}
+  m_LocalRotation: {x: -0.098491184, y: 0.09278877, z: 0.020303672, w: 0.9905945}
   m_LocalPosition: {x: 0.0000000044703485, y: 0.039195366, z: -0.000000015553088}
   m_LocalScale: {x: 1.0000001, y: 0.9999998, z: 1.0000002}
   m_Children:
@@ -1494,8 +1508,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1065956226680514}
-  m_LocalRotation: {x: 0.047937494, y: 0.014583876, z: 0.03394437, w: 0.9981669}
-  m_LocalPosition: {x: 0.000000014901165, y: 0.26173568, z: -0.0000008000062}
+  m_LocalRotation: {x: 0.047624096, y: 0.016014932, z: 0.032463584, w: 0.99820924}
+  m_LocalPosition: {x: 0.00000002980233, y: 0.26173568, z: -0.00000078137975}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.9999999}
   m_Children:
   - {fileID: 4265580763105126}
@@ -1588,8 +1602,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071104139614858}
-  m_LocalRotation: {x: -0.005705289, y: 0.050320692, z: -0.1124967, w: 0.9923607}
-  m_LocalPosition: {x: 0.06687914, y: -0.012180558, z: -0.0064183194}
+  m_LocalRotation: {x: -0.0057008225, y: 0.05032265, z: -0.11249833, w: 0.99236053}
+  m_LocalPosition: {x: 0.06687899, y: -0.01218073, z: -0.0064182766}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4417891367142784}
@@ -1649,8 +1663,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084505629263428}
-  m_LocalRotation: {x: -0.005704069, y: -0.050320327, z: 0.11250392, w: 0.99235994}
-  m_LocalPosition: {x: -0.066879734, y: -0.012173021, z: -0.0064184833}
+  m_LocalRotation: {x: -0.005714235, y: -0.050323624, z: 0.11251082, w: 0.992359}
+  m_LocalPosition: {x: -0.066879794, y: -0.012172945, z: -0.0064185373}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4313308515753902}
@@ -1924,8 +1938,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1113175111824992}
-  m_LocalRotation: {x: 0.015758246, y: -0.00000013211975, z: -0.000000083764704, w: 0.99987584}
-  m_LocalPosition: {x: -0.00000009231716, y: 0.9669776, z: -0.089312375}
+  m_LocalRotation: {x: 0.0074839583, y: -0.00000013069844, z: -0.00000024978252, w: 0.999972}
+  m_LocalPosition: {x: -0.00000027564315, y: 0.96722704, z: -0.080263376}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4968286101144654}
@@ -2050,8 +2064,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125460456468738}
-  m_LocalRotation: {x: -0.0049576624, y: -0.09646094, z: 0.051086012, w: 0.9940126}
-  m_LocalPosition: {x: -0.059026815, y: -0.010685027, z: -0.021412384}
+  m_LocalRotation: {x: -0.004953707, y: -0.096470855, z: 0.051085204, w: 0.9940117}
+  m_LocalPosition: {x: -0.05902669, y: -0.010684812, z: -0.021412464}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4159580148161470}
@@ -2204,8 +2218,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143347797816766}
-  m_LocalRotation: {x: 0.54947144, y: -0.09632964, z: 0.048089296, w: -0.82854646}
-  m_LocalPosition: {x: -0.000000006705523, y: 0.3890997, z: 0.0000000017229468}
+  m_LocalRotation: {x: 0.5505685, y: -0.09642641, z: 0.047971766, w: -0.8278134}
+  m_LocalPosition: {x: -0.000000035390258, y: 0.38909984, z: -0.000000409782}
   m_LocalScale: {x: 1, y: 1, z: 1.0000002}
   m_Children:
   - {fileID: 4435518858202296}
@@ -2299,8 +2313,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151225926221510}
-  m_LocalRotation: {x: -0.05815931, y: -0.0016512078, z: -0.0013244895, w: 0.9983051}
-  m_LocalPosition: {x: -8.881784e-16, y: 0.23304634, z: 0.000000029802333}
+  m_LocalRotation: {x: -0.054854177, y: -0.001646844, z: -0.0013299616, w: 0.9984922}
+  m_LocalPosition: {x: 6.061818e-14, y: 0.23304634, z: 0.000000037252917}
   m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 1.0000001}
   m_Children:
   - {fileID: 4101724072462928}
@@ -2390,7 +2404,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158159054395246}
-  m_LocalRotation: {x: -0.06410133, y: -0.065219745, z: 0.09362674, w: 0.9913988}
+  m_LocalRotation: {x: -0.06408886, y: -0.06522886, z: 0.09362457, w: 0.99139917}
   m_LocalPosition: {x: -0.00000003576279, y: 0.07214912, z: -0.00000006482005}
   m_LocalScale: {x: 0.9999997, y: 1.0000002, z: 0.99999994}
   m_Children:
@@ -2421,7 +2435,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1161115026029688}
-  m_LocalRotation: {x: 0.6661513, y: 0.44501308, z: 0.3693709, w: -0.47092563}
+  m_LocalRotation: {x: 0.66615134, y: 0.44501284, z: 0.3693709, w: -0.47092584}
   m_LocalPosition: {x: 0.0195458, y: 0.17546915, z: 0.0644887}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Children:
@@ -2495,7 +2509,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2624,7 +2637,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187391476588154}
-  m_LocalRotation: {x: -0.3139063, y: -0.25306296, z: 0.017509783, w: 0.9149401}
+  m_LocalRotation: {x: -0.31390324, y: -0.25306892, z: 0.017514644, w: 0.91493946}
   m_LocalPosition: {x: -0, y: 0.04320998, z: 0.0000000011175871}
   m_LocalScale: {x: 0.99999976, y: 1.0000002, z: 1}
   m_Children:
@@ -2655,7 +2668,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193743691364198}
-  m_LocalRotation: {x: 0.09085616, y: 0.03487786, z: 0.005538331, w: 0.99523777}
+  m_LocalRotation: {x: 0.08396427, y: 0.034899123, z: 0.005118219, w: 0.99584436}
   m_LocalPosition: {x: 0.0000000057742002, y: 0.4977098, z: -5.5879357e-10}
   m_LocalScale: {x: 0.9999999, y: 0.99999964, z: 0.99999976}
   m_Children:
@@ -2746,8 +2759,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210328996221056}
-  m_LocalRotation: {x: 0.03778271, y: 0.0011128637, z: -0.026385915, w: -0.99893695}
-  m_LocalPosition: {x: -0.11306503, y: 0.0038180721, z: -0.007652572}
+  m_LocalRotation: {x: 0.021406315, y: 0.0013840793, z: -0.026356297, w: -0.99942243}
+  m_LocalPosition: {x: -0.113065034, y: 0.0038180093, z: -0.00765256}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4265836628940780}
@@ -2778,8 +2791,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1214387338340654}
-  m_LocalRotation: {x: 0.061555393, y: 0.0010753224, z: 0.026387438, w: -0.9977543}
-  m_LocalPosition: {x: 0.0000000030528862, y: -0.3890996, z: -0.00000012665987}
+  m_LocalRotation: {x: 0.06274721, y: 0.00083755446, z: 0.026378725, w: -0.9976805}
+  m_LocalPosition: {x: -0.0000000049906905, y: -0.3891, z: -0.00000046938658}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_Children:
   - {fileID: 4294946978247862}
@@ -2972,7 +2985,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -3161,9 +3173,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233517525712632}
-  m_LocalRotation: {x: -0.0000000931322, y: -0.0000000026775508, z: -0.000000058316765,
+  m_LocalRotation: {x: -0.000000104308064, y: 0.000000010651996, z: -0.000000005507897,
     w: 1}
-  m_LocalPosition: {x: 0.0050154356, y: -0.06950989, z: 0.118847825}
+  m_LocalPosition: {x: 0.0050154594, y: -0.06950984, z: 0.11884775}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4622518637162442}
@@ -3292,7 +3304,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244044714468310}
-  m_LocalRotation: {x: 0.19702849, y: 0.18125983, z: 0.0032385392, w: 0.96349066}
+  m_LocalRotation: {x: 0.1970094, y: 0.1812743, z: 0.0032231812, w: 0.9634918}
   m_LocalPosition: {x: -0.000000017881394, y: 0.029196614, z: -0.0000000834465}
   m_LocalScale: {x: 1.0000001, y: 0.9999999, z: 0.9999998}
   m_Children:
@@ -3356,7 +3368,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1246919268167264}
-  m_LocalRotation: {x: 0.018556774, y: -0.024262704, z: 0.17621258, w: 0.9838781}
+  m_LocalRotation: {x: 0.018891651, y: -0.025591394, z: 0.17709005, w: 0.9836805}
   m_LocalPosition: {x: 0.0000000029802323, y: 0.2096534, z: 0.0000001244247}
   m_LocalScale: {x: 0.99999976, y: 1.0000001, z: 1}
   m_Children:
@@ -3429,7 +3441,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -3495,7 +3506,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257792366268626}
-  m_LocalRotation: {x: -0.06410076, y: 0.06521659, z: -0.09362893, w: 0.9913988}
+  m_LocalRotation: {x: -0.06410117, y: 0.06521273, z: -0.0936389, w: 0.9913981}
   m_LocalPosition: {x: 0.000000011920929, y: 0.07214911, z: 0.000000006705523}
   m_LocalScale: {x: 0.99999994, y: 1.0000001, z: 1}
   m_Children:
@@ -3617,7 +3628,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268577926608414}
-  m_LocalRotation: {x: -0.14018472, y: 0.12380162, z: 0.025396293, w: 0.9820267}
+  m_LocalRotation: {x: -0.14019164, y: 0.123796925, z: 0.025406161, w: 0.9820261}
   m_LocalPosition: {x: 0.000000008940697, y: 0.07208297, z: -0.0000000052154063}
   m_LocalScale: {x: 0.9999998, y: 0.9999999, z: 1}
   m_Children:
@@ -3679,7 +3690,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1281373668151938}
-  m_LocalRotation: {x: -0.12973015, y: 0.167051, z: -0.18461259, w: 0.9597825}
+  m_LocalRotation: {x: -0.12973566, y: 0.16706178, z: -0.18461525, w: 0.9597793}
   m_LocalPosition: {x: 0.000000011920929, y: 0.0782364, z: -0.00000006109476}
   m_LocalScale: {x: 0.9999999, y: 1, z: 0.9999998}
   m_Children:
@@ -3843,7 +3854,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -3879,8 +3889,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293454837283012}
-  m_LocalRotation: {x: 0.0646017, y: 0.15076837, z: 0.38851708, w: 0.9067249}
-  m_LocalPosition: {x: -0.03873501, y: -0.007538726, z: 0.017603138}
+  m_LocalRotation: {x: 0.06460652, y: 0.15077436, z: 0.388514, w: 0.9067249}
+  m_LocalPosition: {x: -0.038734984, y: -0.0075387023, z: 0.017603137}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4083890675364410}
@@ -3910,7 +3920,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303570217244032}
-  m_LocalRotation: {x: -0.101878405, y: 0.0025353313, z: 0.0025851007, w: 0.9947903}
+  m_LocalRotation: {x: -0.097172596, y: 0.0025378969, z: 0.0025836164, w: 0.995261}
   m_LocalPosition: {x: 0.0000000011932572, y: 0.103641056, z: 0.00000010896473}
   m_LocalScale: {x: 0.9999999, y: 0.99999976, z: 0.9999999}
   m_Children:
@@ -4039,8 +4049,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313738321027854}
-  m_LocalRotation: {x: -0.0095890835, y: -0.1649117, z: 0.04910893, w: 0.98503834}
-  m_LocalPosition: {x: -0.019545872, y: 0.045609243, z: 0.039717857}
+  m_LocalRotation: {x: -0.009589238, y: -0.16491199, z: 0.04910906, w: 0.9850382}
+  m_LocalPosition: {x: -0.019545874, y: 0.045609243, z: 0.039717864}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4534421310821446}
@@ -4112,7 +4122,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -4148,8 +4157,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317748970392160}
-  m_LocalRotation: {x: -0.14319347, y: -0.0000001368258, z: 0.000000054420244, w: 0.9896947}
-  m_LocalPosition: {x: 7.1054274e-15, y: 0.099871404, z: -0.000000020954758}
+  m_LocalRotation: {x: -0.14405186, y: -0.00000006187154, z: 0.00000006385785, w: 0.98957014}
+  m_LocalPosition: {x: 5.3290705e-14, y: 0.09987144, z: 0.000000059022568}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4612029509162868}
@@ -4212,7 +4221,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328212420333452}
-  m_LocalRotation: {x: 0.033014238, y: 0.03492264, z: 0.0006188521, w: 0.99884444}
+  m_LocalRotation: {x: 0.033009756, y: 0.034926564, z: 0.0006067189, w: 0.99884444}
   m_LocalPosition: {x: -0.000000020861625, y: 0.031811982, z: 0.00000013411045}
   m_LocalScale: {x: 0.9999999, y: 0.99999976, z: 1}
   m_Children:
@@ -4273,8 +4282,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332339260448644}
-  m_LocalRotation: {x: 0.0021581862, y: -0.021876521, z: -0.09816131, w: 0.9949277}
-  m_LocalPosition: {x: 0.03919533, y: 0.00000000858563, z: -0.00000016551348}
+  m_LocalRotation: {x: 0.0021487582, y: -0.02187668, z: -0.09816763, w: 0.9949271}
+  m_LocalPosition: {x: 0.03919537, y: -0.000000039406586, z: -0.00000020219886}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4588685527615200}
@@ -4334,8 +4343,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336539075125594}
-  m_LocalRotation: {x: -0.0014983095, y: -0.17642699, z: -0.00026838802, w: 0.98431253}
-  m_LocalPosition: {x: 0.2096533, y: 0.000000026077036, z: 0.000000039406586}
+  m_LocalRotation: {x: -0.00017934664, y: -0.17672709, z: -0.00003229547, w: 0.98425984}
+  m_LocalPosition: {x: 0.20965335, y: -0.000000111991554, z: 0.00000010212534}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4510637005904788}
@@ -4366,8 +4375,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344548303560030}
-  m_LocalRotation: {x: 0.061847106, y: -0.0010801426, z: -0.02639019, w: -0.9977361}
-  m_LocalPosition: {x: -0.0000000025017464, y: -0.38909957, z: 0.000000029802322}
+  m_LocalRotation: {x: 0.06315201, y: -0.0008463122, z: -0.026382156, w: -0.9976548}
+  m_LocalPosition: {x: 0.0000000039646024, y: -0.38909972, z: 0.0000003799796}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_Children:
   - {fileID: 4887052528329802}
@@ -4609,7 +4618,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371052166256540}
-  m_LocalRotation: {x: 0.03301647, y: -0.034921143, z: -0.00061433925, w: 0.9988444}
+  m_LocalRotation: {x: 0.033017572, y: -0.034923203, z: -0.0006118991, w: 0.99884427}
   m_LocalPosition: {x: -0.0000000059604646, y: 0.03181202, z: 0.00000008493662}
   m_LocalScale: {x: 0.9999999, y: 0.99999976, z: 1}
   m_Children:
@@ -4672,8 +4681,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374457552578878}
-  m_LocalRotation: {x: -0.0480788, y: 0.000055269797, z: 0.001422684, w: 0.9988426}
-  m_LocalPosition: {x: 2.6193447e-10, y: 0.10364097, z: 0.000000027939677}
+  m_LocalRotation: {x: -0.043354485, y: 0.00006195539, z: 0.0014223807, w: 0.9990587}
+  m_LocalPosition: {x: 1.1641532e-10, y: 0.10364105, z: 0.000000048428774}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4233586287970926}
@@ -4740,6 +4749,26 @@ MonoBehaviour:
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     headAnimation: 1
     faceAnimation: 1
+  openVR:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    hmd: {fileID: 0}
+  oculus:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    overrideOptitrackPosition: 1
+  microphone:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
   head:
     name: 
     boneId: 7
@@ -4783,6 +4812,857 @@ MonoBehaviour:
       rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
       velocity: {x: 0, y: 0, z: 0}
     headTarget: {fileID: 114165416469678432}
+  face:
+    headTarget: {fileID: 114165416469678432}
+    microphone:
+      enabled: 1
+      target: {fileID: 0}
+      sensorTransform: {fileID: 0}
+      sensor2TargetPosition: {x: 0, y: 0, z: 0}
+      sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    leftEye:
+      name: 
+      boneId: 65
+      target:
+        length: 0
+        transform: {fileID: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+      bone:
+        transform: {fileID: 0}
+        length: 0
+        jointLimitations: 0
+        maxAngle: 0
+        minAngles: {x: 0, y: 0, z: 0}
+        maxAngles: {x: 0, y: 0, z: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+        rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+        velocity: {x: 0, y: 0, z: 0}
+      headTarget: {fileID: 114165416469678432}
+      upperLid:
+        name: 
+        boneId: 64
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      lowerLid:
+        name: 
+        boneId: 66
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      blink: 0
+      closed: 0
+    rightEye:
+      name: 
+      boneId: 68
+      target:
+        length: 0
+        transform: {fileID: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+      bone:
+        transform: {fileID: 0}
+        length: 0
+        jointLimitations: 0
+        maxAngle: 0
+        minAngles: {x: 0, y: 0, z: 0}
+        maxAngles: {x: 0, y: 0, z: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+        rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+        velocity: {x: 0, y: 0, z: 0}
+      headTarget: {fileID: 114165416469678432}
+      upperLid:
+        name: 
+        boneId: 67
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      lowerLid:
+        name: 
+        boneId: 69
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      blink: 0
+      closed: 0
+    lastBlink: 0
+    leftBrow:
+      outer:
+        name: 
+        boneId: 70
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      center:
+        name: 
+        boneId: 71
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      inner:
+        name: 
+        boneId: 72
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+    rightBrow:
+      outer:
+        name: 
+        boneId: 75
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      center:
+        name: 
+        boneId: 74
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      inner:
+        name: 
+        boneId: 73
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+    leftEar:
+      name: 
+      boneId: 76
+      target:
+        length: 0
+        transform: {fileID: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+      bone:
+        transform: {fileID: 0}
+        length: 0
+        jointLimitations: 0
+        maxAngle: 0
+        minAngles: {x: 0, y: 0, z: 0}
+        maxAngles: {x: 0, y: 0, z: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+        rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+        velocity: {x: 0, y: 0, z: 0}
+      startPosition: {x: 0, y: 0, z: 0}
+    rightEar:
+      name: 
+      boneId: 77
+      target:
+        length: 0
+        transform: {fileID: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+      bone:
+        transform: {fileID: 0}
+        length: 0
+        jointLimitations: 0
+        maxAngle: 0
+        minAngles: {x: 0, y: 0, z: 0}
+        maxAngles: {x: 0, y: 0, z: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+        rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+        velocity: {x: 0, y: 0, z: 0}
+      startPosition: {x: 0, y: 0, z: 0}
+    leftCheek:
+      name: 
+      boneId: 78
+      target:
+        length: 0
+        transform: {fileID: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+      bone:
+        transform: {fileID: 0}
+        length: 0
+        jointLimitations: 0
+        maxAngle: 0
+        minAngles: {x: 0, y: 0, z: 0}
+        maxAngles: {x: 0, y: 0, z: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+        rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+        velocity: {x: 0, y: 0, z: 0}
+      startPosition: {x: 0, y: 0, z: 0}
+    rightCheek:
+      name: 
+      boneId: 79
+      target:
+        length: 0
+        transform: {fileID: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+      bone:
+        transform: {fileID: 0}
+        length: 0
+        jointLimitations: 0
+        maxAngle: 0
+        minAngles: {x: 0, y: 0, z: 0}
+        maxAngles: {x: 0, y: 0, z: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+        rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+        velocity: {x: 0, y: 0, z: 0}
+      startPosition: {x: 0, y: 0, z: 0}
+    nose:
+      top:
+        name: 
+        boneId: 80
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      tip:
+        name: 
+        boneId: 81
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      bottomLeft:
+        name: 
+        boneId: 82
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      bottom:
+        name: 
+        boneId: 83
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      bottomRight:
+        name: 
+        boneId: 84
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+    mouth:
+      upperLipLeft:
+        name: 
+        boneId: 85
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      upperLip:
+        name: 
+        boneId: 86
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      upperLipRight:
+        name: 
+        boneId: 87
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      lipLeft:
+        name: 
+        boneId: 88
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      lipRight:
+        name: 
+        boneId: 89
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      lowerLipLeft:
+        name: 
+        boneId: 90
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      lowerLip:
+        name: 
+        boneId: 91
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      lowerLipRight:
+        name: 
+        boneId: 92
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      bones:
+      - name: 
+        boneId: 85
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      - name: 
+        boneId: 86
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      - name: 
+        boneId: 87
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      - name: 
+        boneId: 88
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      - name: 
+        boneId: 89
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      - name: 
+        boneId: 90
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      - name: 
+        boneId: 91
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      - name: 
+        boneId: 92
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+    gazeDirection: {x: 0, y: 0, z: 1}
+    localGazeDirection: {x: 0, y: 0, z: 1}
+    focusPoint: {x: 0, y: 0, z: 0}
+    focusObject: {fileID: 0}
+    jaw:
+      name: 
+      boneId: 93
+      target:
+        length: 0
+        transform: {fileID: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+      bone:
+        transform: {fileID: 0}
+        length: 0
+        jointLimitations: 0
+        maxAngle: 0
+        minAngles: {x: 0, y: 0, z: 0}
+        maxAngles: {x: 0, y: 0, z: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+        rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+        velocity: {x: 0, y: 0, z: 0}
+    pose: 0
+    poseMixer:
+      mixedPoses: []
+      currentPoseIx: 0
+      detectedPose: {fileID: 0}
+    directFaceMovements: 1
   smileValue: 0
   puckerValue: 0
   frownValue: 0
@@ -4862,7 +5742,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -4961,8 +5840,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386661135198430}
-  m_LocalRotation: {x: -0.14319354, y: 0.0000000046929003, z: -0.0000000039286547,
-    w: 0.9896947}
+  m_LocalRotation: {x: -0.14405197, y: 0.00000007962936, z: 0.000000005159208, w: 0.98957014}
   m_LocalPosition: {x: -0, y: 0.099871516, z: -0.0000000026077032}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5070,9 +5948,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1392706375475202}
-  m_LocalRotation: {x: 0.00000007078048, y: 0.000000015366815, z: -0.0000000337677,
+  m_LocalRotation: {x: -0.00000003725289, y: 0.000000016938424, z: -0.000000045303732,
     w: 1}
-  m_LocalPosition: {x: -0.0050165253, y: -0.06950908, z: 0.118848234}
+  m_LocalPosition: {x: -0.005016499, y: -0.069509044, z: 0.11884815}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4823343616730946}
@@ -5102,7 +5980,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395292973961004}
-  m_LocalRotation: {x: -0.009008769, y: -0.010964828, z: 0.01057306, w: 0.9998434}
+  m_LocalRotation: {x: -0.008988501, y: -0.010958642, z: 0.010573661, w: 0.9998437}
   m_LocalPosition: {x: -0, y: 0.027933894, z: -0.0000000014901161}
   m_LocalScale: {x: 1.0000002, y: 0.99999994, z: 0.99999994}
   m_Children: []
@@ -5132,7 +6010,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398077792108928}
-  m_LocalRotation: {x: -0.009015373, y: 0.010962133, z: -0.010571451, w: 0.9998434}
+  m_LocalRotation: {x: -0.009007407, y: 0.010949043, z: -0.01057935, w: 0.9998436}
   m_LocalPosition: {x: 0.000000026822091, y: 0.027933901, z: -0.0000000014901161}
   m_LocalScale: {x: 0.9999998, y: 0.99999994, z: 0.99999994}
   m_Children: []
@@ -5251,7 +6129,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -5335,7 +6212,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402875662777858}
-  m_LocalRotation: {x: -0.12972435, y: -0.16705002, z: 0.18461463, w: 0.959783}
+  m_LocalRotation: {x: -0.1297267, y: -0.16704585, z: 0.18461628, w: 0.9597831}
   m_LocalPosition: {x: -0.0000000059604646, y: 0.0782364, z: -0.000000054761767}
   m_LocalScale: {x: 1.0000002, y: 1.0000004, z: 1.0000001}
   m_Children:
@@ -5429,7 +6306,6 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -5554,7 +6430,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412060138017092}
-  m_LocalRotation: {x: -0.020775663, y: -0.020584473, z: 0.01323065, w: 0.9994847}
+  m_LocalRotation: {x: -0.02077218, y: -0.02057874, z: 0.013225358, w: 0.99948496}
   m_LocalPosition: {x: -0.0000000029802323, y: 0.034748603, z: -0.000000009313226}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1.0000001}
   m_Children:
@@ -5657,7 +6533,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -5693,9 +6568,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424178138028672}
-  m_LocalRotation: {x: 0.0000008883647, y: -0.0000009224743, z: -0.0000000038226036,
-    w: 1}
-  m_LocalPosition: {x: 0.013552938, y: 0.00000014380203, z: -0.00000006346612}
+  m_LocalRotation: {x: -0.000006739396, y: 0.000025637435, z: -0.0000015452026, w: 1}
+  m_LocalPosition: {x: 0.013552914, y: 0.0000001626031, z: 0.00000002651123}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4203219466308372}
@@ -5725,7 +6599,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425295665203600}
-  m_LocalRotation: {x: -0.026883995, y: -0.9988369, z: -0.03756339, w: -0.013827147}
+  m_LocalRotation: {x: -0.026640482, y: -0.99931914, z: -0.021273555, w: -0.014107091}
   m_LocalPosition: {x: -0.1130681, y: 0.09605343, z: -0.007606505}
   m_LocalScale: {x: 1, y: 1.0000001, z: 0.9999999}
   m_Children:
@@ -5756,8 +6630,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428050994456158}
-  m_LocalRotation: {x: 0.1369586, y: 0.000000011021015, z: -0.00000006700916, w: 0.9905768}
-  m_LocalPosition: {x: 2.88658e-14, y: 0.098382935, z: 0.000000052154064}
+  m_LocalRotation: {x: 0.13805169, y: 0.0000000025562772, z: -0.000000074630414, w: 0.99042505}
+  m_LocalPosition: {x: -2.5757174e-14, y: 0.098382875, z: -0.00000006891787}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4897238156439488}
@@ -5787,7 +6661,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433705172162910}
-  m_LocalRotation: {x: 0.02686447, y: -0.9988363, z: -0.037443954, w: 0.014228048}
+  m_LocalRotation: {x: 0.026626522, y: -0.9993181, z: -0.021069223, w: 0.014505611}
   m_LocalPosition: {x: 0.11306188, y: 0.09605343, z: -0.00769861}
   m_LocalScale: {x: 0.99999994, y: 1.0000001, z: 1.0000001}
   m_Children:
@@ -5901,8 +6775,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452292288540028}
-  m_LocalRotation: {x: -0.008988911, y: -0.024602458, z: 0.34303728, w: 0.93895656}
-  m_LocalPosition: {x: 0.043193184, y: 0.000000077299774, z: 0.000000011117663}
+  m_LocalRotation: {x: -0.008982769, y: -0.024598572, z: 0.3430422, w: 0.93895483}
+  m_LocalPosition: {x: 0.04319323, y: 0.00000018719584, z: -0.000000038126018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4625177701213276}
@@ -5962,9 +6836,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455416347329928}
-  m_LocalRotation: {x: 0.00000045471808, y: -0.00000054808316, z: -0.0000010503346,
-    w: 1}
-  m_LocalPosition: {x: -0.020972537, y: -0.0000000222999, z: -0.00000007825937}
+  m_LocalRotation: {x: 0.00001253314, y: -0.0000009997746, z: -0.0000043056275, w: 1}
+  m_LocalPosition: {x: -0.020972615, y: 0.00000010170811, z: -0.000000020212111}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_Children:
   - {fileID: 4149711315393270}
@@ -5994,8 +6867,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456957831285316}
-  m_LocalRotation: {x: 0.00006989574, y: -0.002134166, z: -0.03295141, w: 0.99945474}
-  m_LocalPosition: {x: -0.031812035, y: 0.000000012165401, z: 0.00000007719609}
+  m_LocalRotation: {x: 0.00007198145, y: -0.0021316966, z: -0.032952555, w: 0.9994547}
+  m_LocalPosition: {x: -0.031811975, y: -0.00000003146124, z: 0.00000001555236}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4791508540383098}
@@ -6025,7 +6898,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461812210016768}
-  m_LocalRotation: {x: -0.14018254, y: -0.12379928, z: -0.025392344, w: 0.9820274}
+  m_LocalRotation: {x: -0.14017501, y: -0.12379927, z: -0.0253964, w: 0.98202837}
   m_LocalPosition: {x: 0.0000000029802323, y: 0.072082974, z: 0.000000018253923}
   m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 1.0000001}
   m_Children:
@@ -6124,9 +6997,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465898791141800}
-  m_LocalRotation: {x: 0.000000653788, y: -0.0000012014052, z: -0.00000041181892,
-    w: 1}
-  m_LocalPosition: {x: 0.034228638, y: -0.0000002947636, z: -0.000000044674152}
+  m_LocalRotation: {x: -0.000008280386, y: 0.0000035818653, z: -0.000008439017, w: 1}
+  m_LocalPosition: {x: 0.03422843, y: -0.00000022118911, z: 0.00000021052779}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4803401839867098}
@@ -6248,8 +7120,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476131452168114}
-  m_LocalRotation: {x: -0.0014780478, y: 0.1771868, z: 0.00026596707, w: 0.9841761}
-  m_LocalPosition: {x: -0.20965335, y: 0.000000007683411, z: 0.00000004604226}
+  m_LocalRotation: {x: -0.00014456359, y: 0.17809477, z: 0.00002612825, w: 0.9840133}
+  m_LocalPosition: {x: -0.20965338, y: -0.00000008626375, z: -0.000000015221303}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_Children:
   - {fileID: 4722921552807510}
@@ -6279,8 +7151,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482141645588092}
-  m_LocalRotation: {x: -0.004039791, y: -0.10929944, z: 0.036708638, w: 0.9933226}
-  m_LocalPosition: {x: -0.06310033, y: -0.007020643, z: -0.010279436}
+  m_LocalRotation: {x: -0.0040371735, y: -0.10929987, z: 0.036722653, w: 0.9933221}
+  m_LocalPosition: {x: -0.063100256, y: -0.0070205424, z: -0.010279406}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4530111573815336}
@@ -6310,8 +7182,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483982151323864}
-  m_LocalRotation: {x: 0.09144404, y: 0.00000000395812, z: 0.0000000059953877, w: 0.9958103}
-  m_LocalPosition: {x: 0.0000000018626451, y: -0.4977097, z: 0.000000040978193}
+  m_LocalRotation: {x: 0.08474672, y: 0.0000000050058575, z: 0.0000000025192997, w: 0.9964025}
+  m_LocalPosition: {x: 0.000000013038516, y: -0.49770972, z: 0.00000008568168}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4874897581124614}
@@ -6402,7 +7274,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493930478182798}
-  m_LocalRotation: {x: 0.0032041657, y: -0.0025557457, z: -0.009328884, w: 0.9999481}
+  m_LocalRotation: {x: 0.0032073876, y: -0.0025677446, z: -0.009329363, w: 0.999948}
   m_LocalPosition: {x: -0.0000000059604646, y: 0.020972518, z: -0.00000008717179}
   m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000001}
   m_Children: []
@@ -6432,8 +7304,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494183702735710}
-  m_LocalRotation: {x: -0.00028252316, y: -0.01388308, z: 0.02035195, w: 0.9996965}
-  m_LocalPosition: {x: -0.034748465, y: 0.0000002480374, z: -0.00000022312452}
+  m_LocalRotation: {x: -0.00028443284, y: -0.01387636, z: 0.020370482, w: 0.99969614}
+  m_LocalPosition: {x: -0.034748726, y: 0.000000012849341, z: -0.00000025014742}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4749625204626208}
@@ -6493,9 +7365,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497681734929000}
-  m_LocalRotation: {x: -0.00000037238334, y: -0.00000053178496, z: 0.00000013118319,
-    w: 1}
-  m_LocalPosition: {x: 0.021958867, y: -0.0000001292101, z: 0.00000007716656}
+  m_LocalRotation: {x: 0.000012086552, y: 0.0000053485824, z: -0.000021391932, w: 1}
+  m_LocalPosition: {x: 0.021958811, y: -0.00000009165183, z: 0.0000000761369}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4513430418279412}
@@ -6567,7 +7438,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -6633,7 +7503,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1507155231181688}
-  m_LocalRotation: {x: 0.18898644, y: -0.5028094, z: -0.2873388, w: 0.7930342}
+  m_LocalRotation: {x: 0.18897101, y: -0.5027967, z: -0.28733855, w: 0.79304606}
   m_LocalPosition: {x: -0.00000007152558, y: 0.04319323, z: -0.0000000059604646}
   m_LocalScale: {x: 0.9999999, y: 1.0000001, z: 0.99999976}
   m_Children:
@@ -6737,7 +7607,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -6803,7 +7672,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518392689425944}
-  m_LocalRotation: {x: -0.07168163, y: 0.8902036, z: -0.25457072, w: 0.37093553}
+  m_LocalRotation: {x: -0.071681626, y: 0.8902036, z: -0.2545707, w: 0.3709355}
   m_LocalPosition: {x: -0.0000000014668331, y: 0.13777359, z: 1.8626452e-10}
   m_LocalScale: {x: 1, y: 1.0000001, z: 0.9999999}
   m_Children: []
@@ -6961,7 +7830,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538231959466680}
-  m_LocalRotation: {x: -0.09884093, y: -0.09396764, z: 0.10678747, w: 0.98488426}
+  m_LocalRotation: {x: -0.09884458, y: -0.09395869, z: 0.10678402, w: 0.9848851}
   m_LocalPosition: {x: 0.000000011920929, y: 0.0736487, z: -0.00000001564622}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 0.99999994}
   m_Children:
@@ -6992,8 +7861,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538876403014824}
-  m_LocalRotation: {x: 0.038626216, y: -0.00006858678, z: -0.0014220135, w: 0.99925274}
-  m_LocalPosition: {x: 2.4616463e-14, y: 0.11452059, z: -0.0124851065}
+  m_LocalRotation: {x: 0.041933943, y: -0.0000639077, z: -0.0014222506, w: 0.9991194}
+  m_LocalPosition: {x: 1.2053973e-13, y: 0.11452053, z: -0.012485144}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4152618081546724}
@@ -7023,7 +7892,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539029072340636}
-  m_LocalRotation: {x: -0.22829661, y: 0.059741907, z: 0.0329996, w: 0.9711965}
+  m_LocalRotation: {x: -0.2282989, y: 0.059739232, z: 0.032994527, w: 0.97119623}
   m_LocalPosition: {x: 0.000000110268594, y: 0.03422841, z: -0.000000026077032}
   m_LocalScale: {x: 1, y: 1.0000002, z: 1.0000002}
   m_Children: []
@@ -7229,8 +8098,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1554212365134952}
-  m_LocalRotation: {x: 0.037913155, y: -0.0011192844, z: 0.02638854, w: -0.998932}
-  m_LocalPosition: {x: 0.11306499, y: 0.003817992, z: -0.007652569}
+  m_LocalRotation: {x: 0.021621529, y: -0.0013930709, z: 0.026358921, w: -0.9994178}
+  m_LocalPosition: {x: 0.11306498, y: 0.0038180028, z: -0.0076526175}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4852305108979124}
@@ -7260,7 +8129,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558982179252364}
-  m_LocalRotation: {x: 0.18897405, y: 0.50280935, z: 0.28734547, w: 0.7930348}
+  m_LocalRotation: {x: 0.18897292, y: 0.50281364, z: 0.2873518, w: 0.79303}
   m_LocalPosition: {x: 0.000000008940697, y: 0.043193217, z: -0.00000005066395}
   m_LocalScale: {x: 1, y: 0.9999999, z: 0.9999999}
   m_Children:
@@ -7292,8 +8161,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566097144353924}
-  m_LocalRotation: {x: 0.015758246, y: -0.00000013211975, z: -0.000000083764704, w: 0.99987584}
-  m_LocalPosition: {x: -0.00000009231716, y: 0.9669776, z: -0.089312375}
+  m_LocalRotation: {x: 0.0074839583, y: -0.00000013069844, z: -0.00000024978252, w: 0.999972}
+  m_LocalPosition: {x: -0.00000027564315, y: 0.96722704, z: -0.080263376}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4009915692520274}
@@ -7415,8 +8284,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567975533295086}
-  m_LocalRotation: {x: -0.00028208777, y: 0.013882998, z: -0.020342572, w: 0.9996966}
-  m_LocalPosition: {x: 0.034748517, y: 0.00000020938751, z: 0.000000007727067}
+  m_LocalRotation: {x: -0.00027642757, y: 0.013877685, z: -0.020339357, w: 0.99969685}
+  m_LocalPosition: {x: 0.03474877, y: 0.0000001219305, z: -0.00000015665137}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4413968871351114}
@@ -7476,7 +8345,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583332134335732}
-  m_LocalRotation: {x: -0.098499216, y: -0.092777945, z: -0.020308884, w: 0.9905947}
+  m_LocalRotation: {x: -0.09850546, y: -0.092787266, z: -0.020308955, w: 0.9905932}
   m_LocalPosition: {x: -0.000000011175871, y: 0.039195336, z: -0.000000030640514}
   m_LocalScale: {x: 0.9999998, y: 0.99999976, z: 1}
   m_Children:
@@ -7549,7 +8418,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -7585,7 +8453,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589969889942482}
-  m_LocalRotation: {x: -0.020782435, y: 0.020591522, z: -0.013229954, w: 0.9994844}
+  m_LocalRotation: {x: -0.020800814, y: 0.020593412, z: -0.013222366, w: 0.9994841}
   m_LocalPosition: {x: 0.0000000014901161, y: 0.034748547, z: -0.00000005271286}
   m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.9999999}
   m_Children:
@@ -7617,8 +8485,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594956748595362}
-  m_LocalRotation: {x: -0.03809548, y: 0.07855684, z: -0.038963642, w: 0.9954192}
-  m_LocalPosition: {x: -0.64819723, y: 1.4151645, z: -0.08448195}
+  m_LocalRotation: {x: -0.03810406, y: 0.07854537, z: -0.03900072, w: 0.99541837}
+  m_LocalPosition: {x: -0.64819795, y: 1.4149487, z: -0.08447992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4968286101144654}
@@ -7697,8 +8565,8 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4891661842404048}
-          baseRotation: {x: 0.0000017314002, y: -0.00000070938097, z: -0.000000102926954,
-            w: 1.0000002}
+          baseRotation: {x: 0.0000052298587, y: -0.0000028605355, z: -0.000004457772,
+            w: 1.0000001}
           basePosition: {x: -0.03422833, y: 0.000000015832484, z: 0.000000007881454}
           toBoneRotation: {x: 0.18216474, y: 0.14203079, z: -0.70586073, w: -0.66962993}
         bone:
@@ -7770,8 +8638,8 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4791508540383098}
-          baseRotation: {x: 0.00000045428698, y: -0.0000005505425, z: -0.0000010555752,
-            w: 1.0000004}
+          baseRotation: {x: 0.000012531081, y: -0.0000010236371, z: -0.0000043102523,
+            w: 1.0000002}
           basePosition: {x: -0.020972371, y: 0.000000030248657, z: 0.0000000080039015}
           toBoneRotation: {x: 0.50461847, y: -0.49842048, z: -0.4921772, w: -0.5046773}
         bone:
@@ -7841,8 +8709,8 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4094455697935924}
-          baseRotation: {x: 0.0000014249299, y: 0.0000010248394, z: -0.0000010972975,
-            w: 1.0000002}
+          baseRotation: {x: 0.0000147427545, y: -0.0000075430457, z: -0.000007995697,
+            w: 1.0000001}
           basePosition: {x: -0.027933806, y: -0.00000002321758, z: 0.000000013185854}
           toBoneRotation: {x: 0.5419991, y: -0.5223525, z: -0.4652729, w: -0.46573183}
         bone:
@@ -7915,8 +8783,8 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4749625204626208}
-          baseRotation: {x: -0.00000024302824, y: 0.0000005405752, z: -0.0000002134049,
-            w: 1.0000002}
+          baseRotation: {x: 0.000004243663, y: -0.0000025405818, z: 0.0000015559515,
+            w: 1}
           basePosition: {x: -0.021958817, y: 0.000000024899464, z: 0.000000040981632}
           toBoneRotation: {x: 0.51810676, y: -0.49743676, z: -0.50458765, w: -0.47907615}
         bone:
@@ -7987,8 +8855,8 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4601782163714082}
-          baseRotation: {x: 0.0000006573028, y: -0.0000013533506, z: -0.00000074015253,
-            w: 1.0000005}
+          baseRotation: {x: 0.000013903601, y: -0.0000017596593, z: -0.00002715983,
+            w: 1}
           basePosition: {x: -0.013552842, y: 0.000000037485734, z: -0.000000061220184}
           toBoneRotation: {x: 0.48399678, y: -0.48211548, z: -0.60383415, w: -0.4107271}
         bone:
@@ -8059,8 +8927,8 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4891661842404048}
-          baseRotation: {x: 0.0000017314002, y: -0.00000070938097, z: -0.000000102926954,
-            w: 1.0000002}
+          baseRotation: {x: 0.0000052298587, y: -0.0000028605355, z: -0.000004457772,
+            w: 1.0000001}
           basePosition: {x: -0.03422833, y: 0.000000015832484, z: 0.000000007881454}
           toBoneRotation: {x: 0.18216474, y: 0.14203079, z: -0.70586073, w: -0.66962993}
         bone:
@@ -8131,8 +8999,8 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4791508540383098}
-          baseRotation: {x: 0.00000045428698, y: -0.0000005505425, z: -0.0000010555752,
-            w: 1.0000004}
+          baseRotation: {x: 0.000012531081, y: -0.0000010236371, z: -0.0000043102523,
+            w: 1.0000002}
           basePosition: {x: -0.020972371, y: 0.000000030248657, z: 0.0000000080039015}
           toBoneRotation: {x: 0.50461847, y: -0.49842048, z: -0.4921772, w: -0.5046773}
         bone:
@@ -8201,8 +9069,8 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4094455697935924}
-          baseRotation: {x: 0.0000014249299, y: 0.0000010248394, z: -0.0000010972975,
-            w: 1.0000002}
+          baseRotation: {x: 0.0000147427545, y: -0.0000075430457, z: -0.000007995697,
+            w: 1.0000001}
           basePosition: {x: -0.027933806, y: -0.00000002321758, z: 0.000000013185854}
           toBoneRotation: {x: 0.5419991, y: -0.5223525, z: -0.4652729, w: -0.46573183}
         bone:
@@ -8274,8 +9142,8 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4749625204626208}
-          baseRotation: {x: -0.00000024302824, y: 0.0000005405752, z: -0.0000002134049,
-            w: 1.0000002}
+          baseRotation: {x: 0.000004243663, y: -0.0000025405818, z: 0.0000015559515,
+            w: 1}
           basePosition: {x: -0.021958817, y: 0.000000024899464, z: 0.000000040981632}
           toBoneRotation: {x: 0.51810676, y: -0.49743676, z: -0.50458765, w: -0.47907615}
         bone:
@@ -8345,8 +9213,8 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4601782163714082}
-          baseRotation: {x: 0.0000006573028, y: -0.0000013533506, z: -0.00000074015253,
-            w: 1.0000005}
+          baseRotation: {x: 0.000013903601, y: -0.0000017596593, z: -0.00002715983,
+            w: 1}
           basePosition: {x: -0.013552842, y: 0.000000037485734, z: -0.000000061220184}
           toBoneRotation: {x: 0.48399678, y: -0.48211548, z: -0.60383415, w: -0.4107271}
         bone:
@@ -8372,6 +9240,21 @@ MonoBehaviour:
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     armSwing: 0
+  openVR:
+    enabled: 1
+    target: {fileID: 114928447782628432}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0.14, y: 0.04, z: -0.08}
+    sensor2TargetRotation: {x: -0.1830127, y: 0.1830127, z: 0.68301266, w: 0.68301266}
+    openVRController: {fileID: 0}
+    controllerType: 0
+    useSkeletalInput: 1
+  oculus:
+    enabled: 1
+    target: {fileID: 114928447782628432}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0.1, y: 0.05, z: -0.04}
+    sensor2TargetRotation: {x: -0.49999994, y: 0.5, z: 0.5, w: 0.49999994}
   stretchlessTarget: {fileID: 0}
   shoulder:
     name: 
@@ -8528,8 +9411,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1606240439578078}
-  m_LocalRotation: {x: -0.025840782, y: -0.09673183, z: 0.026617091, w: 0.9946189}
-  m_LocalPosition: {x: 0.17596616, y: -0.00000005075708, z: -0.00000007846393}
+  m_LocalRotation: {x: -0.02087995, y: -0.0946965, z: 0.027752908, w: 0.9949002}
+  m_LocalPosition: {x: 0.17596616, y: 0.00000012037344, z: -0.00000007869676}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_Children:
   - {fileID: 4479776884653078}
@@ -8559,8 +9442,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612937278332420}
-  m_LocalRotation: {x: -0.017656663, y: -0.11531113, z: 0.15032236, w: 0.9817305}
-  m_LocalPosition: {x: -0.058755815, y: -0.011651937, z: -0.027813004}
+  m_LocalRotation: {x: -0.017653177, y: -0.11530121, z: 0.15032974, w: 0.98173064}
+  m_LocalPosition: {x: -0.05875577, y: -0.011651868, z: -0.027813049}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4806724498701320}
@@ -8747,7 +9630,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658093717885456}
-  m_LocalRotation: {x: -0.08540723, y: -0.09403473, z: -0.10655065, w: 0.98615927}
+  m_LocalRotation: {x: -0.0854117, y: -0.09404513, z: -0.106525384, w: 0.9861606}
   m_LocalPosition: {x: 0.0000000059604646, y: 0.013552903, z: 0.000000117719175}
   m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
   m_Children: []
@@ -8777,8 +9660,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668862548784160}
-  m_LocalRotation: {x: -0.025830865, y: 0.096294485, z: -0.026553795, w: 0.9946633}
-  m_LocalPosition: {x: -0.17596602, y: -0.000000063329935, z: -0.0000000081490725}
+  m_LocalRotation: {x: -0.02087411, y: 0.09390653, z: -0.027656341, w: 0.9949779}
+  m_LocalPosition: {x: -0.17596608, y: -0.0000000034924597, z: -0.00000008079223}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4145304030280874}
@@ -8870,7 +9753,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686131445522454}
-  m_LocalRotation: {x: 0.0031952227, y: 0.0025555873, z: 0.009324002, w: 0.9999482}
+  m_LocalRotation: {x: 0.0032052658, y: 0.0025531508, z: 0.009333848, w: 0.999948}
   m_LocalPosition: {x: 0.0000000059604646, y: 0.020972481, z: 0.000000032037498}
   m_LocalScale: {x: 1.0000002, y: 0.99999994, z: 1}
   m_Children: []
@@ -8901,8 +9784,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686377646278178}
-  m_LocalRotation: {x: 0.0074870763, y: -0.00000021282594, z: -0.00000006147634, w: 0.99997205}
-  m_LocalPosition: {x: 0.06642907, y: 0.089688, z: -0.12855887}
+  m_LocalRotation: {x: 0.0074855955, y: 0.00000036910856, z: -0.000000206121, w: 0.999972}
+  m_LocalPosition: {x: 0.06643051, y: 0.08966237, z: -0.12855758}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4968286101144654}
@@ -9006,7 +9889,7 @@ MonoBehaviour:
     target:
       length: 0
       transform: {fileID: 4887052528329802}
-      baseRotation: {x: -0.00000009543852, y: -0.0000000025501585, z: -0.000000057634093,
+      baseRotation: {x: -0.00000010616781, y: 0.000000010477329, z: -0.000000007621648,
         w: 1.0000002}
       basePosition: {x: 0.0050154766, y: -0.07128225, z: 0.11779302}
       toBoneRotation: {x: -0.23123257, y: -0.67593473, z: -0.66588235, w: -0.21504684}
@@ -9025,9 +9908,9 @@ MonoBehaviour:
   jointLimitations: 1
   slidePrevention: 1
   ground: {fileID: 0}
-  groundNormal: {x: 0, y: 1, z: 2.220446e-17}
+  groundNormal: {x: 0, y: 1, z: 0}
   groundTranslation: {x: 0, y: 0, z: 0}
-  groundDistance: -0.089687884
+  groundDistance: -0.3
   soleThicknessFoot: 0
   soleThicknessToes: 0
 --- !u!1 &1691613618242666
@@ -9053,7 +9936,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691613618242666}
-  m_LocalRotation: {x: 0.09127467, y: -0.03487668, z: -0.0055638715, w: 0.99519926}
+  m_LocalRotation: {x: 0.08458977, y: -0.034897424, z: -0.0051563755, w: 0.9957913}
   m_LocalPosition: {x: 0.00000001974404, y: 0.49770975, z: -0.0000000057742002}
   m_LocalScale: {x: 1, y: 0.99999976, z: 0.9999999}
   m_Children:
@@ -9156,7 +10039,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -9234,7 +10116,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -9300,7 +10181,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708166653312896}
-  m_LocalRotation: {x: -0.31390792, y: 0.2530585, z: -0.017510826, w: 0.9149407}
+  m_LocalRotation: {x: -0.31391683, y: 0.25305346, z: -0.017519265, w: 0.9149389}
   m_LocalPosition: {x: -0.0000000059604646, y: 0.043209907, z: -0.00000003874302}
   m_LocalScale: {x: 0.99999976, y: 1, z: 1}
   m_Children:
@@ -9373,7 +10254,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -9481,7 +10361,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -9640,7 +10519,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743299152206972}
-  m_LocalRotation: {x: -0.023084002, y: -0.021601789, z: -0.002547782, w: 0.99949694}
+  m_LocalRotation: {x: -0.023105502, y: -0.0215894, z: -0.0025414117, w: 0.9994967}
   m_LocalPosition: {x: -0.0000000029802323, y: 0.021958834, z: 0.000000011920929}
   m_LocalScale: {x: 0.99999994, y: 1.0000001, z: 0.99999976}
   m_Children: []
@@ -9670,9 +10549,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745173780317050}
-  m_LocalRotation: {x: 0.0000017490231, y: -0.00000071339286, z: -0.00000009214269,
-    w: 1}
-  m_LocalPosition: {x: -0.034228392, y: 0.00000013038516, z: 0.000000042783995}
+  m_LocalRotation: {x: 0.0000052330997, y: -0.0000028051427, z: -0.000004449101, w: 1}
+  m_LocalPosition: {x: -0.03422847, y: 0.00000011920929, z: 0.0000000060116463}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4779596101871306}
@@ -9734,8 +10612,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753726944562190}
-  m_LocalRotation: {x: 0.007488846, y: -0.00000011951047, z: -0.000000050214428, w: 0.999972}
-  m_LocalPosition: {x: -0.06643289, y: 0.08965087, z: -0.128465}
+  m_LocalRotation: {x: 0.0074777054, y: 0.000000021462922, z: 0.00000035677573, w: 0.99997205}
+  m_LocalPosition: {x: -0.06643495, y: 0.089610875, z: -0.12845415}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4968286101144654}
@@ -9839,7 +10717,7 @@ MonoBehaviour:
     target:
       length: 0
       transform: {fileID: 4294946978247862}
-      baseRotation: {x: 0.00000007077853, y: 0.00000001543073, z: -0.000000035816853,
+      baseRotation: {x: -0.00000003725186, y: 0.000000016996966, z: -0.000000046971685,
         w: 1.0000002}
       basePosition: {x: -0.0050164647, y: -0.0712825, z: 0.11779295}
       toBoneRotation: {x: 0.23123269, y: -0.67593795, z: -0.66587967, w: 0.21504387}
@@ -9858,9 +10736,9 @@ MonoBehaviour:
   jointLimitations: 1
   slidePrevention: 1
   ground: {fileID: 0}
-  groundNormal: {x: 0, y: 1, z: 2.2204459e-17}
+  groundNormal: {x: 0, y: 1, z: 0}
   groundTranslation: {x: 0, y: 0, z: 0}
-  groundDistance: -0.08965057
+  groundDistance: -0.3
   soleThicknessFoot: 0
   soleThicknessToes: 0
 --- !u!1 &1756447656105672
@@ -9886,8 +10764,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756447656105672}
-  m_LocalRotation: {x: 0.000000267755, y: 0.00000094622294, z: 0.0000013533524, w: 1}
-  m_LocalPosition: {x: 0.027934058, y: -0.00000015452679, z: 0.00000003504499}
+  m_LocalRotation: {x: 0.0000066058656, y: 0.000003950667, z: 0.00002141546, w: 1}
+  m_LocalPosition: {x: 0.02793385, y: -0.000000028463546, z: 0.0000001022662}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4400081433498932}
@@ -9917,7 +10795,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756651044207738}
-  m_LocalRotation: {x: 0.07168156, y: 0.89020354, z: -0.25457072, w: -0.37093556}
+  m_LocalRotation: {x: 0.07168157, y: 0.89020354, z: -0.25457078, w: -0.3709356}
   m_LocalPosition: {x: 0.000000009965151, y: 0.1377736, z: -0.0000000011175871}
   m_LocalScale: {x: 1, y: 1.0000001, z: 0.99999994}
   m_Children: []
@@ -9982,8 +10860,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1771985782678154}
-  m_LocalRotation: {x: 0.7181617, y: 0.000000057833983, z: -0.000000057680005, w: 0.69587624}
-  m_LocalPosition: {x: -0.00000009231716, y: 0.089312255, z: 0.96697766}
+  m_LocalRotation: {x: 0.7123789, y: 0.00000017701409, z: -0.00000017483204, w: 0.70179504}
+  m_LocalPosition: {x: -0.00000027564315, y: 0.08026326, z: 0.9672271}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4098931775146128}
@@ -10047,7 +10925,6 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -10214,7 +11091,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -10250,9 +11126,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780490093422348}
-  m_LocalRotation: {x: 0.0000006471525, y: -0.0000013420351, z: -0.0000007684754,
-    w: 1}
-  m_LocalPosition: {x: -0.013552906, y: -0.00000010515214, z: -0.00000014791789}
+  m_LocalRotation: {x: 0.000013908132, y: -0.0000017555423, z: -0.00002714067, w: 1}
+  m_LocalPosition: {x: -0.013552797, y: 0.00000012951205, z: 0.000000052050808}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4426884481028828}
@@ -10372,9 +11247,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799098317921304}
-  m_LocalRotation: {x: 0.00000066033624, y: -0.0000002570448, z: 0.0000003344548,
-    w: 1}
-  m_LocalPosition: {x: 0.020972477, y: -0.00000013867225, z: -0.000000112987934}
+  m_LocalRotation: {x: -0.0000018439298, y: 0.000009789356, z: 0.000010321099, w: 1}
+  m_LocalPosition: {x: 0.020972406, y: -0.000000054756356, z: 0.000000049253003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4443524948125274}
@@ -10437,7 +11311,6 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -10587,6 +11460,14 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  isLeft: 0
+  joystick: {x: 0, y: 0, z: 0}
+  indexTrigger: 0
+  handTrigger: 0
+  buttonAX: 0
+  buttonBY: 0
+  thumbrest: 0
+  positionalTracking: 1
 --- !u!1 &1817751863883156
 GameObject:
   m_ObjectHideFlags: 0
@@ -10610,8 +11491,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1817751863883156}
-  m_LocalRotation: {x: -0.009589292, y: 0.16491224, z: -0.049108982, w: 0.9850382}
-  m_LocalPosition: {x: 0.019545827, y: 0.045609243, z: 0.039717834}
+  m_LocalRotation: {x: -0.00958912, y: 0.16491257, z: -0.049109068, w: 0.9850382}
+  m_LocalPosition: {x: 0.019545825, y: 0.045609243, z: 0.03971785}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4366140037610812}
@@ -10641,7 +11522,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822260279874780}
-  m_LocalRotation: {x: 0.018480496, y: 0.02428295, z: -0.17545696, w: 0.98401415}
+  m_LocalRotation: {x: 0.018747197, y: 0.025600005, z: -0.17573018, w: 0.9839269}
   m_LocalPosition: {x: -0.000000007450581, y: 0.20965336, z: 0.00000013932586}
   m_LocalScale: {x: 0.9999998, y: 0.99999994, z: 0.99999994}
   m_Children:
@@ -10672,8 +11553,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834829123970544}
-  m_LocalRotation: {x: 0.00007000794, y: 0.0021404575, z: 0.03294871, w: 0.9994548}
-  m_LocalPosition: {x: 0.031811956, y: -0.0000000043655746, z: 0.00000008497227}
+  m_LocalRotation: {x: 0.000073973526, y: 0.0021279969, z: 0.032944836, w: 0.999455}
+  m_LocalPosition: {x: 0.03181212, y: 0.00000015104888, z: -0.00000015746082}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4427312505510576}
@@ -10704,9 +11585,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837589395170324}
-  m_LocalRotation: {x: 0.0000004190951, y: -0.0000001216002, z: 0.000000007616767,
+  m_LocalRotation: {x: 0.0000013997778, y: -0.00000012133626, z: -0.00000020998047,
     w: 1}
-  m_LocalPosition: {x: 0.00029399685, y: 1.61716, z: -0.094446525}
+  m_LocalPosition: {x: 0.0002940371, y: 1.6171278, z: -0.095422134}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4494725207857286}
@@ -10743,6 +11624,26 @@ MonoBehaviour:
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     headAnimation: 1
     faceAnimation: 1
+  openVR:
+    enabled: 1
+    target: {fileID: 114221893404914274}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0.00029402185, y: -0.03600979, z: -0.105798304}
+    sensor2TargetRotation: {x: -0, y: -0, z: -0, w: 1}
+    hmd: {fileID: 0}
+  oculus:
+    enabled: 1
+    target: {fileID: 114221893404914274}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0.00029402185, y: -0.03600979, z: -0.105798304}
+    sensor2TargetRotation: {x: -0, y: -0, z: -0, w: 1}
+    overrideOptitrackPosition: 1
+  microphone:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
   head:
     name: 
     boneId: 7
@@ -10788,6 +11689,857 @@ MonoBehaviour:
       rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
       velocity: {x: 0, y: 0, z: 0}
     headTarget: {fileID: 114221893404914274}
+  face:
+    headTarget: {fileID: 114221893404914274}
+    microphone:
+      enabled: 1
+      target: {fileID: 0}
+      sensorTransform: {fileID: 0}
+      sensor2TargetPosition: {x: 0, y: 0, z: 0}
+      sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    leftEye:
+      name: 
+      boneId: 65
+      target:
+        length: 0
+        transform: {fileID: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+      bone:
+        transform: {fileID: 0}
+        length: 0
+        jointLimitations: 0
+        maxAngle: 0
+        minAngles: {x: 0, y: 0, z: 0}
+        maxAngles: {x: 0, y: 0, z: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+        rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+        velocity: {x: 0, y: 0, z: 0}
+      headTarget: {fileID: 114221893404914274}
+      upperLid:
+        name: 
+        boneId: 64
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      lowerLid:
+        name: 
+        boneId: 66
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      blink: 0
+      closed: 0
+    rightEye:
+      name: 
+      boneId: 68
+      target:
+        length: 0
+        transform: {fileID: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+      bone:
+        transform: {fileID: 0}
+        length: 0
+        jointLimitations: 0
+        maxAngle: 0
+        minAngles: {x: 0, y: 0, z: 0}
+        maxAngles: {x: 0, y: 0, z: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+        rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+        velocity: {x: 0, y: 0, z: 0}
+      headTarget: {fileID: 114221893404914274}
+      upperLid:
+        name: 
+        boneId: 67
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      lowerLid:
+        name: 
+        boneId: 69
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+      blink: 0
+      closed: 0
+    lastBlink: 0
+    leftBrow:
+      outer:
+        name: 
+        boneId: 70
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      center:
+        name: 
+        boneId: 71
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      inner:
+        name: 
+        boneId: 72
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+    rightBrow:
+      outer:
+        name: 
+        boneId: 75
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      center:
+        name: 
+        boneId: 74
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      inner:
+        name: 
+        boneId: 73
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+    leftEar:
+      name: 
+      boneId: 76
+      target:
+        length: 0
+        transform: {fileID: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+      bone:
+        transform: {fileID: 0}
+        length: 0
+        jointLimitations: 0
+        maxAngle: 0
+        minAngles: {x: 0, y: 0, z: 0}
+        maxAngles: {x: 0, y: 0, z: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+        rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+        velocity: {x: 0, y: 0, z: 0}
+      startPosition: {x: 0, y: 0, z: 0}
+    rightEar:
+      name: 
+      boneId: 77
+      target:
+        length: 0
+        transform: {fileID: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+      bone:
+        transform: {fileID: 0}
+        length: 0
+        jointLimitations: 0
+        maxAngle: 0
+        minAngles: {x: 0, y: 0, z: 0}
+        maxAngles: {x: 0, y: 0, z: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+        rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+        velocity: {x: 0, y: 0, z: 0}
+      startPosition: {x: 0, y: 0, z: 0}
+    leftCheek:
+      name: 
+      boneId: 78
+      target:
+        length: 0
+        transform: {fileID: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+      bone:
+        transform: {fileID: 0}
+        length: 0
+        jointLimitations: 0
+        maxAngle: 0
+        minAngles: {x: 0, y: 0, z: 0}
+        maxAngles: {x: 0, y: 0, z: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+        rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+        velocity: {x: 0, y: 0, z: 0}
+      startPosition: {x: 0, y: 0, z: 0}
+    rightCheek:
+      name: 
+      boneId: 79
+      target:
+        length: 0
+        transform: {fileID: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+      bone:
+        transform: {fileID: 0}
+        length: 0
+        jointLimitations: 0
+        maxAngle: 0
+        minAngles: {x: 0, y: 0, z: 0}
+        maxAngles: {x: 0, y: 0, z: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+        rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+        velocity: {x: 0, y: 0, z: 0}
+      startPosition: {x: 0, y: 0, z: 0}
+    nose:
+      top:
+        name: 
+        boneId: 80
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      tip:
+        name: 
+        boneId: 81
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      bottomLeft:
+        name: 
+        boneId: 82
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      bottom:
+        name: 
+        boneId: 83
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      bottomRight:
+        name: 
+        boneId: 84
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+    mouth:
+      upperLipLeft:
+        name: 
+        boneId: 85
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      upperLip:
+        name: 
+        boneId: 86
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      upperLipRight:
+        name: 
+        boneId: 87
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      lipLeft:
+        name: 
+        boneId: 88
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      lipRight:
+        name: 
+        boneId: 89
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      lowerLipLeft:
+        name: 
+        boneId: 90
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      lowerLip:
+        name: 
+        boneId: 91
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      lowerLipRight:
+        name: 
+        boneId: 92
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      bones:
+      - name: 
+        boneId: 85
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      - name: 
+        boneId: 86
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      - name: 
+        boneId: 87
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      - name: 
+        boneId: 88
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      - name: 
+        boneId: 89
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      - name: 
+        boneId: 90
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      - name: 
+        boneId: 91
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+      - name: 
+        boneId: 92
+        target:
+          length: 0
+          transform: {fileID: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+        bone:
+          transform: {fileID: 0}
+          length: 0
+          jointLimitations: 0
+          maxAngle: 0
+          minAngles: {x: 0, y: 0, z: 0}
+          maxAngles: {x: 0, y: 0, z: 0}
+          baseRotation: {x: 0, y: 0, z: 0, w: 1}
+          basePosition: {x: 0, y: 0, z: 0}
+          toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+          rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+          velocity: {x: 0, y: 0, z: 0}
+        startPosition: {x: 0, y: 0, z: 0}
+    gazeDirection: {x: 0, y: 0, z: 1}
+    localGazeDirection: {x: 0, y: 0, z: 1}
+    focusPoint: {x: 0, y: 0, z: 0}
+    focusObject: {fileID: 0}
+    jaw:
+      name: 
+      boneId: 93
+      target:
+        length: 0
+        transform: {fileID: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+      bone:
+        transform: {fileID: 0}
+        length: 0
+        jointLimitations: 0
+        maxAngle: 0
+        minAngles: {x: 0, y: 0, z: 0}
+        maxAngles: {x: 0, y: 0, z: 0}
+        baseRotation: {x: 0, y: 0, z: 0, w: 1}
+        basePosition: {x: 0, y: 0, z: 0}
+        toTargetRotation: {x: 0, y: 0, z: 0, w: 0}
+        rotationVelocity: {x: 0, y: 0, z: 0, w: 0}
+        velocity: {x: 0, y: 0, z: 0}
+    pose: 0
+    poseMixer:
+      mixedPoses: []
+      currentPoseIx: 0
+      detectedPose: {fileID: 0}
+    directFaceMovements: 1
   smileValue: 0
   puckerValue: 0
   frownValue: 0
@@ -10825,8 +12577,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839459483121668}
-  m_LocalRotation: {x: 0.04793752, y: -0.014626735, z: -0.034266308, w: 0.99815524}
-  m_LocalPosition: {x: -0.00000027567154, y: 0.2617351, z: -0.0000010179356}
+  m_LocalRotation: {x: 0.04764976, y: -0.016056936, z: -0.033064257, w: 0.99818754}
+  m_LocalPosition: {x: -0.000000007450582, y: 0.2617353, z: -0.0000010309741}
   m_LocalScale: {x: 1.0000001, y: 1, z: 0.99999994}
   m_Children:
   - {fileID: 4731655170273478}
@@ -10859,8 +12611,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842558750378386}
-  m_LocalRotation: {x: -0.0040391874, y: 0.109301984, z: -0.03670435, w: 0.9933225}
-  m_LocalPosition: {x: 0.06310004, y: -0.007020105, z: -0.010279084}
+  m_LocalRotation: {x: -0.0040299497, y: 0.10929963, z: -0.036708456, w: 0.9933227}
+  m_LocalPosition: {x: 0.0631001, y: -0.007020105, z: -0.01027923}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4473108806480550}
@@ -10921,8 +12673,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854373169720616}
-  m_LocalRotation: {x: 0.0021578497, y: 0.021869287, z: 0.09815097, w: 0.9949289}
-  m_LocalPosition: {x: -0.039195314, y: 0.00000023125904, z: 0.000000064232154}
+  m_LocalRotation: {x: 0.0021462413, y: 0.021873634, z: 0.09815055, w: 0.9949289}
+  m_LocalPosition: {x: -0.0391955, y: 0.00000011669181, z: -0.00000004141475}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4094455697935924}
@@ -10952,7 +12704,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856174669478828}
-  m_LocalRotation: {x: -0.09884223, y: 0.09397478, z: -0.10678341, w: 0.9848839}
+  m_LocalRotation: {x: -0.09885608, y: 0.09397233, z: -0.10678121, w: 0.98488295}
   m_LocalPosition: {x: 0.000000017881394, y: 0.073648624, z: -0.000000018626451}
   m_LocalScale: {x: 0.9999999, y: 0.99999976, z: 0.9999998}
   m_Children:
@@ -11013,9 +12765,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875569272415370}
-  m_LocalRotation: {x: -0.00000024912865, y: 0.0000005746257, z: -0.0000002359578,
-    w: 1}
-  m_LocalPosition: {x: -0.021958904, y: -0.0000001515391, z: 0.00000010199814}
+  m_LocalRotation: {x: 0.0000042500305, y: -0.00000254996, z: 0.000001560246, w: 1}
+  m_LocalPosition: {x: -0.02195884, y: 0.0000000072559487, z: 0.00000010730284}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4835254127592792}
@@ -11070,6 +12821,14 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  isLeft: 0
+  joystick: {x: 0, y: 0, z: 0}
+  indexTrigger: 0
+  handTrigger: 0
+  buttonAX: 0
+  buttonBY: 0
+  thumbrest: 0
+  positionalTracking: 1
 --- !u!1 &1878524149782770
 GameObject:
   m_ObjectHideFlags: 0
@@ -11145,8 +12904,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880204358524582}
-  m_LocalRotation: {x: 0.0910246, y: -0.000000002328306, z: 6.54836e-10, w: 0.9958487}
-  m_LocalPosition: {x: 0.0000000037252903, y: -0.49770978, z: 0.00000012665987}
+  m_LocalRotation: {x: 0.08412, y: -0.000000004656612, z: 0.0000000012387315, w: 0.9964556}
+  m_LocalPosition: {x: 0.0000000037252903, y: -0.49770978, z: 0.0000000949949}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4568769572018584}
@@ -11236,8 +12995,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884516867326250}
-  m_LocalRotation: {x: -0.0049577774, y: 0.09645955, z: -0.051087175, w: 0.9940127}
-  m_LocalPosition: {x: 0.059026852, y: -0.010682797, z: -0.021412376}
+  m_LocalRotation: {x: -0.004966745, y: 0.09645594, z: -0.051075056, w: 0.99401355}
+  m_LocalPosition: {x: 0.059026673, y: -0.010682749, z: -0.021412294}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4240111297789060}
@@ -11267,7 +13026,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884863550393156}
-  m_LocalRotation: {x: 0.027463472, y: 0.04527069, z: -0.09649502, w: 0.9939241}
+  m_LocalRotation: {x: 0.028581293, y: 0.050239075, z: -0.094449766, w: 0.9938503}
   m_LocalPosition: {x: 0.000000017881394, y: 0.17596617, z: -0.000000008195639}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_Children:
@@ -11361,8 +13120,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1902199179204432}
-  m_LocalRotation: {x: -0.0029117567, y: 0.026390344, z: 0.052476645, w: 0.99826914}
-  m_LocalPosition: {x: 0.26173562, y: -0.00000027249916, z: 0.00000003259629}
+  m_LocalRotation: {x: -0.0014817291, y: 0.024973128, z: 0.051945254, w: 0.99833655}
+  m_LocalPosition: {x: 0.26173568, y: -0.00000026373527, z: -0.000000016763806}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4079645548116950}
@@ -12119,6 +13878,21 @@ MonoBehaviour:
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     armSwing: 0
+  openVR:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    openVRController: {fileID: 0}
+    controllerType: 0
+    useSkeletalInput: 1
+  oculus:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
   stretchlessTarget: {fileID: 0}
   shoulder:
     name: 
@@ -12246,7 +14020,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1909967930634854}
-  m_LocalRotation: {x: 0.027395852, y: -0.04528154, z: 0.09605839, w: 0.9939678}
+  m_LocalRotation: {x: 0.028477427, y: -0.05024814, z: 0.093660735, w: 0.99392754}
   m_LocalPosition: {x: -0.000000023841858, y: 0.17596607, z: -0.00000010058284}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Children:
@@ -12309,8 +14083,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914384020573034}
-  m_LocalRotation: {x: -0.038099896, y: -0.078545764, z: 0.038972307, w: 0.9954196}
-  m_LocalPosition: {x: 0.648262, y: 1.4152148, z: -0.084471375}
+  m_LocalRotation: {x: -0.038098786, y: -0.0785438, z: 0.038969684, w: 0.99541986}
+  m_LocalPosition: {x: 0.64831406, y: 1.4150245, z: -0.084459074}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4968286101144654}
@@ -12389,8 +14163,8 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4625177701213276}
-          baseRotation: {x: 0.000000668273, y: -0.0000013433378, z: -0.00000041390115,
-            w: 1}
+          baseRotation: {x: -0.000008278935, y: 0.0000035312044, z: -0.000008425563,
+            w: 1.0000006}
           basePosition: {x: 0.034228507, y: 0.00000002188608, z: -0.00000004217509}
           toBoneRotation: {x: 0.18216999, y: -0.14201547, z: 0.7058624, w: -0.66962993}
         bone:
@@ -12462,7 +14236,7 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4427312505510576}
-          baseRotation: {x: 0.00000066342244, y: -0.0000002900436, z: 0.00000031919691,
+          baseRotation: {x: -0.0000018451464, y: 0.000009781137, z: 0.00001034262,
             w: 1.0000004}
           basePosition: {x: 0.02097223, y: -0.000000028144541, z: -0.000000028343559}
           toBoneRotation: {x: 0.5046198, y: 0.4984179, z: 0.49218503, w: -0.50467116}
@@ -12534,8 +14308,8 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4588685527615200}
-          baseRotation: {x: 0.000000259806, y: 0.0000009452339, z: 0.0000013338315,
-            w: 0.9999998}
+          baseRotation: {x: 0.0000065913596, y: 0.0000039244196, z: 0.000021456255,
+            w: 1.0000004}
           basePosition: {x: 0.027933965, y: 0.000000009924406, z: -0.000000010515919}
           toBoneRotation: {x: 0.54199445, y: 0.52235514, z: 0.4652707, w: -0.46573704}
         bone:
@@ -12608,8 +14382,8 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4413968871351114}
-          baseRotation: {x: -0.00000037617525, y: -0.000000497414, z: 0.00000012966596,
-            w: 1}
+          baseRotation: {x: 0.000012074089, y: 0.0000053607178, z: -0.000021401822,
+            w: 1.0000004}
           basePosition: {x: 0.021958856, y: -0.000000031528316, z: 0.000000027005171}
           toBoneRotation: {x: 0.5181105, y: 0.49742848, z: 0.50459266, w: -0.4790753}
         bone:
@@ -12679,8 +14453,8 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4572116573331730}
-          baseRotation: {x: 0.0000008911478, y: -0.00000089464044, z: -0.00000002498466,
-            w: 1.0000001}
+          baseRotation: {x: -0.000006708452, y: 0.000025630656, z: -0.0000015786264,
+            w: 1.0000004}
           basePosition: {x: 0.013552964, y: -0.000000017695129, z: -0.000000017335815}
           toBoneRotation: {x: 0.48400423, y: 0.48210543, z: 0.6038353, w: -0.4107285}
         bone:
@@ -12751,8 +14525,8 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4625177701213276}
-          baseRotation: {x: 0.000000668273, y: -0.0000013433378, z: -0.00000041390115,
-            w: 1}
+          baseRotation: {x: -0.000008278935, y: 0.0000035312044, z: -0.000008425563,
+            w: 1.0000006}
           basePosition: {x: 0.034228507, y: 0.00000002188608, z: -0.00000004217509}
           toBoneRotation: {x: 0.18216999, y: -0.14201547, z: 0.7058624, w: -0.66962993}
         bone:
@@ -12823,7 +14597,7 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4427312505510576}
-          baseRotation: {x: 0.00000066342244, y: -0.0000002900436, z: 0.00000031919691,
+          baseRotation: {x: -0.0000018451464, y: 0.000009781137, z: 0.00001034262,
             w: 1.0000004}
           basePosition: {x: 0.02097223, y: -0.000000028144541, z: -0.000000028343559}
           toBoneRotation: {x: 0.5046198, y: 0.4984179, z: 0.49218503, w: -0.50467116}
@@ -12894,8 +14668,8 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4588685527615200}
-          baseRotation: {x: 0.000000259806, y: 0.0000009452339, z: 0.0000013338315,
-            w: 0.9999998}
+          baseRotation: {x: 0.0000065913596, y: 0.0000039244196, z: 0.000021456255,
+            w: 1.0000004}
           basePosition: {x: 0.027933965, y: 0.000000009924406, z: -0.000000010515919}
           toBoneRotation: {x: 0.54199445, y: 0.52235514, z: 0.4652707, w: -0.46573704}
         bone:
@@ -12967,8 +14741,8 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4413968871351114}
-          baseRotation: {x: -0.00000037617525, y: -0.000000497414, z: 0.00000012966596,
-            w: 1}
+          baseRotation: {x: 0.000012074089, y: 0.0000053607178, z: -0.000021401822,
+            w: 1.0000004}
           basePosition: {x: 0.021958856, y: -0.000000031528316, z: 0.000000027005171}
           toBoneRotation: {x: 0.5181105, y: 0.49742848, z: 0.50459266, w: -0.4790753}
         bone:
@@ -13037,8 +14811,8 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 4572116573331730}
-          baseRotation: {x: 0.0000008911478, y: -0.00000089464044, z: -0.00000002498466,
-            w: 1.0000001}
+          baseRotation: {x: -0.000006708452, y: 0.000025630656, z: -0.0000015786264,
+            w: 1.0000004}
           basePosition: {x: 0.013552964, y: -0.000000017695129, z: -0.000000017335815}
           toBoneRotation: {x: 0.48400423, y: 0.48210543, z: 0.6038353, w: -0.4107285}
         bone:
@@ -13064,6 +14838,21 @@ MonoBehaviour:
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     armSwing: 0
+  openVR:
+    enabled: 1
+    target: {fileID: 114352831535022258}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: -0.14, y: 0.04, z: -0.08}
+    sensor2TargetRotation: {x: -0.1830127, y: -0.1830127, z: -0.68301266, w: 0.68301266}
+    openVRController: {fileID: 0}
+    controllerType: 0
+    useSkeletalInput: 1
+  oculus:
+    enabled: 1
+    target: {fileID: 114352831535022258}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: -0.1, y: 0.05, z: -0.04}
+    sensor2TargetRotation: {x: -0.49999994, y: -0.5, z: -0.5, w: 0.49999994}
   stretchlessTarget: {fileID: 0}
   shoulder:
     name: 
@@ -13192,8 +14981,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917365809690136}
-  m_LocalRotation: {x: -0.0029096373, y: -0.026710939, z: -0.052524738, w: 0.9982581}
-  m_LocalPosition: {x: -0.26173514, y: -0.00000015812113, z: 0.00000007869676}
+  m_LocalRotation: {x: -0.0014803781, y: -0.025565356, z: -0.052060366, w: 0.9983156}
+  m_LocalPosition: {x: -0.26173538, y: -0.00000029084552, z: -0.000000055413693}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4685978848575020}
@@ -13950,6 +15739,21 @@ MonoBehaviour:
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     armSwing: 0
+  openVR:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    openVRController: {fileID: 0}
+    controllerType: 0
+    useSkeletalInput: 1
+  oculus:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
   stretchlessTarget: {fileID: 0}
   shoulder:
     name: 
@@ -14077,7 +15881,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920330727854992}
-  m_LocalRotation: {x: -0.22828843, y: -0.059742223, z: -0.033000186, w: 0.97119844}
+  m_LocalRotation: {x: -0.22829266, y: -0.059749227, z: -0.033010047, w: 0.9711966}
   m_LocalPosition: {x: 0.00000012117671, y: 0.03422847, z: -0.00000004172325}
   m_LocalScale: {x: 1, y: 1.0000001, z: 1.0000001}
   m_Children: []
@@ -14333,7 +16137,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -14369,8 +16172,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1957123927445212}
-  m_LocalRotation: {x: -0.036909126, y: -0.000000001487974, z: 0.0000000066592505,
-    w: 0.99931866}
+  m_LocalRotation: {x: -0.03580633, y: -0.0000000086031955, z: -0.0000000017339544,
+    w: 0.9993588}
   m_LocalPosition: {x: -0, y: 0.09838287, z: -0.0000000059604646}
   m_LocalScale: {x: 1, y: 1.0000001, z: 1}
   m_Children:
@@ -14575,7 +16378,6 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -14641,8 +16443,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975233977049092}
-  m_LocalRotation: {x: 0.0646032, y: -0.15077184, z: -0.3885198, w: 0.9067231}
-  m_LocalPosition: {x: 0.03873484, y: -0.007538793, z: 0.017603237}
+  m_LocalRotation: {x: 0.064600706, y: -0.15077691, z: -0.38853067, w: 0.9067178}
+  m_LocalPosition: {x: 0.03873484, y: -0.007538869, z: 0.01760314}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4662711648771450}
@@ -14735,7 +16537,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986701756572166}
-  m_LocalRotation: {x: -0.023077328, y: 0.021603249, z: 0.002551457, w: 0.999497}
+  m_LocalRotation: {x: -0.023078922, y: 0.02159887, z: 0.0025479717, w: 0.9994971}
   m_LocalPosition: {x: 0.0000000029802323, y: 0.021958875, z: -0.00000012591481}
   m_LocalScale: {x: 1, y: 1.0000001, z: 0.9999999}
   m_Children: []
@@ -14826,8 +16628,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1993377973834358}
-  m_LocalRotation: {x: -0.0013952192, y: -0.006944108, z: 0.19693533, w: 0.9803909}
-  m_LocalPosition: {x: 0.029196579, y: -0.000000013038516, z: 0.0000000953587}
+  m_LocalRotation: {x: -0.0013810523, y: -0.006958319, z: 0.1969156, w: 0.98039484}
+  m_LocalPosition: {x: 0.029196622, y: -0.000000099418685, z: -0.0000000054133125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4572116573331730}
