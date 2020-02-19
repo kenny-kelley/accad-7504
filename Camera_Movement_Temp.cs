@@ -23,7 +23,7 @@ public class Camera_Movement : MonoBehaviour
         float mouse_y = Input.GetAxis("Mouse Y") * mouse_sensitivity * Time.deltaTime;
 
         x_rotation -= mouse_y;
-        x_rotation = Mathf.Clamp(x_rotation, -90f, 75f); //prevent player from looking up or down past 90*
+        x_rotation = Mathf.Clamp(x_rotation, -90f, 90f); //prevent player from looking up or down past 90*
 
         transform.localRotation = Quaternion.Euler(x_rotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouse_x);
