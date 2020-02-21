@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
-public class Trigger1 : MonoBehaviour
+public class Trigger2 : MonoBehaviour
 {
 	AudioSource audio;
 	bool hasEntered = false;
