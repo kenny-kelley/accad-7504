@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Humanoid/Demo/GroceryStore/Grocery Store.unity
-    guid: ffce42d1efa78e748ab332a43bb081b4
+    path: Assets/Scenes/S01_SCHOOL/S01_SCHOOL.unity
+    guid: 61437e185e32f6e469ed1c95f73e653c
   m_configObjects: {}

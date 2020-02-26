@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: VR Configuration
   m_EditorClassIdentifier: 
   steamVRSupport: 0
-  openVRSupport: 1
+  openVRSupport: 0
   viveTrackerSupport: 0
   oculusSupport: 1
   windowsMRSupport: 0
