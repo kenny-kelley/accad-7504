@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: Full Configuration
   m_EditorClassIdentifier: 
   steamVRSupport: 0
-  openVRSupport: 1
-  viveTrackerSupport: 1
+  openVRSupport: 0
+  viveTrackerSupport: 0
   oculusSupport: 1
   windowsMRSupport: 0
   vrtkSupport: 0
-  neuronSupport: 1
-  realsenseSupport: 1
+  neuronSupport: 0
+  realsenseSupport: 0
   leapSupport: 0
-  kinect1Support: 1
-  kinectSupport: 1
+  kinect1Support: 0
+  kinectSupport: 0
   astraSupport: 0
-  hydraSupport: 1
+  hydraSupport: 0
   tobiiSupport: 0
   optitrackSupport: 0
   pupilSupport: 0
