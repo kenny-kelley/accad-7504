@@ -7,6 +7,7 @@ public class Trigger2 : MonoBehaviour
 {
 	AudioSource audio;
 	bool hasEntered = false;
+	public AminaScript amina;
 	
 	void Start()
 	{
@@ -17,6 +18,7 @@ public class Trigger2 : MonoBehaviour
 	{
 		if (!hasEntered)
 		{
+			amina.MoveToDoor();
 			audio.Play(0);
 			hasEntered = true;	
 		}
