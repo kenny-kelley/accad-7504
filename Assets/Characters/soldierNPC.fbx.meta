@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: beb15150cc8689140b69a2e29aa2c5c3
+guid: a59347670af7ab447abcf3b0689cc9be
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
@@ -7,68 +7,103 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: afro01
-    second: {fileID: 2100000, guid: c79d2f74aab984d4789f0c76b1ecfea8, type: 2}
+      name: Co_Dusty_Mat_02
+    second: {fileID: 2100000, guid: eb8a0a498b7ec34418d0b596b40e5664, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: burkinabegirltpose
-    second: {fileID: 2100000, guid: 5218f1c90a7afec4597f3d220c461eca, type: 2}
+      name: No Name
+    second: {fileID: 2100000, guid: 661d078ceb764f148ae6e8c23bb71375, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: eyelashes03
-    second: {fileID: 2100000, guid: b1055c685e0694e479df01ec4e6ea65f, type: 2}
+      name: US_Dusty_Beard_02
+    second: {fileID: 2100000, guid: d8fee4e3a00456147b1a2a0683edd1fe, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: female_casualsuit02
-    second: {fileID: 2100000, guid: e38f15c5acc0825459b910b1d4f676c1, type: 2}
+      name: glasses_Mat_02
+    second: {fileID: 2100000, guid: ab221a0b18a1f7744a79cf4934daea7b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: high-poly
-    second: {fileID: 2100000, guid: bad0436e661e0684a99dea526384fc69, type: 2}
+      name: lens_mat_02
+    second: {fileID: 2100000, guid: 6006181d9fe88a74f97dcbab336ad780, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: shoes05
-    second: {fileID: 2100000, guid: 9ad06f3849caf6a4b900341f27760728, type: 2}
+      name: material_0_01
+    second: {fileID: 2100000, guid: 027cff4014326764c8ce9b26ba6a09be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_2_02
+    second: {fileID: 2100000, guid: 9429cd0bea8b94d4b8622586c76f0f5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: x
+    second: {fileID: 2100000, guid: 78eb47e14eb406048a710b3aa9a4d413, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: x.1
+    second: {fileID: 2100000, guid: 63b76b9c3888dde4a96c160f23dfe881, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: x.2
+    second: {fileID: 2100000, guid: 180577e3d20cefc4982d3ff7b89c379a, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: afro_diffuse
-    second: {fileID: 2800000, guid: 3fd706ae0949db842b388d91e552f4a4, type: 3}
+      name: ArmGlove_CM
+    second: {fileID: 2800000, guid: d011cff3ff7a75248be002f83610ad1f, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: brown_eye
-    second: {fileID: 2800000, guid: 01e4fc2f6c6daf840be6a4e5134532d5, type: 3}
+      name: ArmGlove_NM
+    second: {fileID: 2800000, guid: 0e624d92cb1f4e1448d5a6d18ff397a0, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: eyelashes03
-    second: {fileID: 2800000, guid: 1dc4e85ed331858458522a937d75f6e5, type: 3}
+      name: US_DustyBeard
+    second: {fileID: 2800000, guid: 891f3b96df90a0d4595de4387c9c7104, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: female_casualsuit02_diffuse
-    second: {fileID: 2800000, guid: ed5075a660a3cb747b2cf34ef2aa45a1, type: 3}
+      name: US_DustyBeard_a
+    second: {fileID: 2800000, guid: af90765c4f82b064e93e89e7dfaee730, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: female_casualsuit02_normal
-    second: {fileID: 2800000, guid: 02ef0393690904449b51fed1404b0916, type: 3}
+      name: US_Dusty_CM
+    second: {fileID: 2800000, guid: 32aad33764e18514eaaa9c4e4f2e4aaa, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: shoes05_diffuse
-    second: {fileID: 2800000, guid: 6d28c483710369d4b8e6a0cc19b4ba05, type: 3}
+      name: US_Dusty_CM1
+    second: {fileID: 2800000, guid: ddbc9d47a940a83488a6d92e8ecf9ce6, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: young_darkskinned_female_diffuse
-    second: {fileID: 2800000, guid: 7a3f8e6552c762848bcdaafaa4812351, type: 3}
+      name: US_Dusty_CM2
+    second: {fileID: 2800000, guid: a525afe16fb75984684790524ae23f88, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: US_Dusty_NM
+    second: {fileID: 2800000, guid: e9728427241c0f24f89dd922a66aa96f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: US_Dusty_NM1
+    second: {fileID: 2800000, guid: 3f9db306bcbc7cd478ea9dc4be13ef2e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: US_Dusty_NM2
+    second: {fileID: 2800000, guid: 8fb8c63d2e970d0469380df941708898, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
