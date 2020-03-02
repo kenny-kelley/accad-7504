@@ -7,14 +7,20 @@ public class AminaScript : MonoBehaviour
 {
 	CharacterController controller;
 	CapsuleCollider collider;
-	bool moveToDoor = false;
-	bool rotateInCloset = false;
-	
+    Animator animator;
+    AudioSource[] audios;
+    bool moveToDoor;
+    bool rotateInCloset;
+
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
 		collider = GetComponent<CapsuleCollider>();
+        animator = GetComponent<Animator>();
+        audios = GetComponents<AudioSource>();
+        moveToDoor = false;
+        rotateInCloset = false;
     }
 
     // Update is called once per frame
@@ -41,11 +47,15 @@ public class AminaScript : MonoBehaviour
 	public void MoveToDoor()
 	{
 		moveToDoor = true;
+        animator.Play("Walking");
 	}
 	
 	public void StopMoveToDoor()
 	{
 		moveToDoor = false;
 		rotateInCloset = true;
+        animator.Play("Idle");
+        audios[0].Play();
+        //animator.Play("Turning");
 	}
 }
