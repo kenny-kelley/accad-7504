@@ -45,7 +45,7 @@ public class FadeControl : MonoBehaviour
             fadingIn = false;
         }
 
-        //myPanel.color = new Color(0, 0, 0, x);
+        myPanel.color = new Color(0, 0, 0, x);
     }
 
     void FadeOut()
