@@ -16,7 +16,7 @@ public class Trigger3 : MonoBehaviour
 	{
 		if (other.gameObject.name == "AdultWoman" && !hasEntered)
 		{
-			amina.StopMoveToDoor();
+			amina.StopWalktoCloset();
 			hasEntered = true;
 		}
 	}
