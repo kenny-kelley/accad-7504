@@ -20,6 +20,12 @@ public class AminaScript : MonoBehaviour
     private bool walkToFrontCenter;
     private bool turnBackTowardsClass;
 
+    public bool HasMmphedAbdoul { get; private set; }
+    public bool HasMmphedAbdoulAndIssouf { get; private set; }
+    public bool HasOrderedIssoufToGetChalk { get; private set; }
+    public bool HasToldChildrenToHide { get; private set; }
+    public bool HasToldChildrenTheSoldiersAreBack { get; private set; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +43,11 @@ public class AminaScript : MonoBehaviour
         walkToFront = false;
         walkToFrontCenter = false;
         turnBackTowardsClass = false;
+
+        HasMmphedAbdoul = false;
+        HasMmphedAbdoulAndIssouf = false;
+        HasOrderedIssoufToGetChalk = false;
+        HasToldChildrenToHide = false;
     }
 
     // Update is called once per frame
@@ -143,7 +154,7 @@ public class AminaScript : MonoBehaviour
         audios[0].Play();
 	}
 
-    public void IssoufWhereAreYou()
+    public void AskIssoufWhereAreYou()
     {
         audios[1].Play();
     }
@@ -152,12 +163,14 @@ public class AminaScript : MonoBehaviour
     {
         audios[2].Play();
         animator.Play("Angry Gesture");
+        HasMmphedAbdoul = true;
     }
 
     public void MmphAbdoulAndIssouf()
     {
-        audios[4].Play();
+        audios[5].Play();
         animator.Play("Angry Gesture");
+        HasMmphedAbdoulAndIssouf = true;
     }
 
     public void WalkToFrontCenter()
@@ -177,5 +190,18 @@ public class AminaScript : MonoBehaviour
     {
         audios[3].Play();
         animator.Play("Angry Gesture");
+        HasOrderedIssoufToGetChalk = true;
+    }
+
+    public void TellChildrenToHide()
+    {
+        audios[6].Play();
+        HasToldChildrenToHide = true;
+    }
+
+    public void TellChildrenTheSoldiersAreBack()
+    {
+        audios[4].Play();
+        HasToldChildrenTheSoldiersAreBack = true;
     }
 }

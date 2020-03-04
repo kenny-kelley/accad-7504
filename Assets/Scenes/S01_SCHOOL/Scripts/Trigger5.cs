@@ -8,12 +8,6 @@ public class Trigger5 : MonoBehaviour
     private bool hasEntered;
     private bool hasFadedIn;
     private bool hasFadedOut;
-    private bool hasToldStory;
-    private bool hasMmphedAbdoul;
-    private bool hasFinishedStory;
-    private bool hasMmphedAbdoulAndIssouf;
-    private bool hasApologized;
-    private bool hasOrderedIssoufToGetChalk;
 
     private AudioSource chairsScrapingFloor;
     public GameObject canvas;
@@ -37,12 +31,6 @@ public class Trigger5 : MonoBehaviour
         hasEntered = false;
         hasFadedIn = false;
         hasFadedOut = false;
-        hasToldStory = false;
-        hasMmphedAbdoul = false;
-        hasFinishedStory = false;
-        hasMmphedAbdoulAndIssouf = false;
-        hasApologized = false;
-        hasOrderedIssoufToGetChalk = false;
         chairsScrapingFloor = GetComponent<AudioSource>();
     }
 
@@ -70,36 +58,30 @@ public class Trigger5 : MonoBehaviour
             Destroy(npc6);
             hasFadedOut = true;
         }
-        else if (timePassed > 15.0f && !hasToldStory)
+        else if (timePassed > 15.0f && !abdoul.HasToldStory)
         {
             abdoul.TellStory();
-            hasToldStory = true;
         }
-        else if (timePassed > 35.0f && !hasMmphedAbdoul)
+        else if (timePassed > 35.0f && !amina.HasMmphedAbdoul)
         {
             abdoul.Idle();
             amina.MmphAbdoul();
-            hasMmphedAbdoul = true;
         }
-        else if (timePassed > 38.0f && !hasFinishedStory)
+        else if (timePassed > 38.0f && !abdoul.HasFinishedStory)
         {
             abdoul.FinishStory();
-            hasFinishedStory = true;
         }
-        else if (timePassed > 42.0f && !hasMmphedAbdoulAndIssouf)
+        else if (timePassed > 42.0f && !amina.HasMmphedAbdoulAndIssouf)
         {
             amina.MmphAbdoulAndIssouf();
-            hasMmphedAbdoulAndIssouf = true;
         }
-        else if (timePassed > 45.0f && !hasApologized)
+        else if (timePassed > 45.0f && !abdoul.HasApologized)
         {
             abdoul.Apologize();
-            hasApologized = true;
         }
-        else if (timePassed > 47.0f && !hasOrderedIssoufToGetChalk)
+        else if (timePassed > 47.0f && !amina.HasOrderedIssoufToGetChalk)
         {
             amina.OrderIssoufToGetChalk();
-            hasOrderedIssoufToGetChalk = true;
             trigger6.SetActive(true);
         }
     }
