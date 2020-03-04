@@ -28,6 +28,8 @@ public class Trigger5 : MonoBehaviour
     public GameObject npc5;
     public GameObject npc6;
 
+    public GameObject trigger6;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -98,6 +100,7 @@ public class Trigger5 : MonoBehaviour
         {
             amina.OrderIssoufToGetChalk();
             hasOrderedIssoufToGetChalk = true;
+            trigger6.SetActive(true);
         }
     }
 
