@@ -28,4 +28,15 @@ public class AbdoulScript : MonoBehaviour
         audios[0].Play();
         animator.Play("Telling A Secret");
     }
+
+    public void Idle()
+    {
+        animator.Play("Idle");
+    }
+
+    public void FinishStory()
+    {
+        audios[1].Play();
+        animator.Play("Telling A Secret");
+    }
 }

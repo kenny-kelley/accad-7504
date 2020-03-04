@@ -2,22 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(AudioSource))]
 public class Trigger1 : MonoBehaviour
 {
-	AudioSource audio;
+    public AminaScript amina;
 	bool hasEntered = false;
 	
 	void Start()
 	{
-		audio = GetComponent<AudioSource>();
 	}
 	
 	void OnTriggerEnter(Collider other)
 	{
 		if (!hasEntered)
 		{
-			audio.Play(0);
+            amina.ComeAlongNowIssouf();
 			hasEntered = true;	
 		}
 	}

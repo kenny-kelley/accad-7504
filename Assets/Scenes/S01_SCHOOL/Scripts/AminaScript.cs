@@ -141,8 +141,18 @@ public class AminaScript : MonoBehaviour
 		rotateInCloset = true;
         animator.Play("Idle");
         audios[0].Play();
-        //animator.Play("Turning");
 	}
+
+    public void ComeAlongNowIssouf()
+    {
+        audios[1].Play();
+    }
+
+    public void MmphAbdoul()
+    {
+        audios[2].Play();
+        animator.Play("Angry Gesture");
+    }
 
     public void WalkToFrontCenter()
     {
