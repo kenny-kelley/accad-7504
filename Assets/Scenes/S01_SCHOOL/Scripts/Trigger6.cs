@@ -28,8 +28,16 @@ public class Trigger6 : MonoBehaviour
 
         if (timePassed > 10.5f && !amina.HasToldChildrenToHide)
         {
-
+			amina.TellChildrenToHide();
         }
+		else if (timePassed > 13.5f && !abdoul.HasAskedWhatsGoingOn)
+		{
+			abdoul.AskWhatsGoingOn();
+		}
+		else if (timePassed > 16.0f && !amina.HasToldChildrenTheSoldiersAreBack)
+		{
+			amina.TellChildrenTheSoldiersAreBack();
+		}
     }
 
     void OnTriggerEnter(Collider other)

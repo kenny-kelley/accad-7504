@@ -12,6 +12,7 @@ public class AbdoulScript : MonoBehaviour
     public bool HasToldStory { get; private set; }
     public bool HasFinishedStory { get; private set; }
     public bool HasApologized { get; private set; }
+	public bool HasAskedWhatsGoingOn { get; private set; }
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class AbdoulScript : MonoBehaviour
         HasToldStory = false;
         HasFinishedStory = false;
         HasApologized = false;
+		HasAskedWhatsGoingOn = false;
     }
 
     // Update is called once per frame
@@ -60,5 +62,6 @@ public class AbdoulScript : MonoBehaviour
     public void AskWhatsGoingOn()
     {
         audios[1].Play();
+		HasAskedWhatsGoingOn = true;
     }
 }
