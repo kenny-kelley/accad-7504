@@ -12,6 +12,7 @@ public class Trigger5 : MonoBehaviour
     private bool hasMmphedAbdoul;
     private bool hasFinishedStory;
 
+    private AudioSource chairsScrapingFloor;
     public GameObject canvas;
     public GameObject humanoid;
     public AminaScript amina;
@@ -34,6 +35,7 @@ public class Trigger5 : MonoBehaviour
         hasToldStory = false;
         hasMmphedAbdoul = false;
         hasFinishedStory = false;
+        chairsScrapingFloor = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -50,6 +52,7 @@ public class Trigger5 : MonoBehaviour
         {
             humanoid.transform.position = new Vector3(9.902f, 0.07f, 15.529f);
             humanoid.transform.rotation = new Quaternion(0.0f, 180.0f, 0.0f, 0.0f);
+            chairsScrapingFloor.Play();
             canvas.GetComponent<FadeControl>().FadeOut();
             Destroy(npc1);
             Destroy(npc2);
