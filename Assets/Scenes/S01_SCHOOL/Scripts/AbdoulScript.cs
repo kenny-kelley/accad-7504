@@ -25,7 +25,7 @@ public class AbdoulScript : MonoBehaviour
 
     public void TellStory()
     {
-        audios[0].Play();
+        audios[1].Play();
         animator.Play("Telling A Secret");
     }
 
@@ -36,7 +36,13 @@ public class AbdoulScript : MonoBehaviour
 
     public void FinishStory()
     {
-        audios[1].Play();
+        audios[2].Play();
         animator.Play("Telling A Secret");
+    }
+
+    public void Apologize()
+    {
+        audios[0].Play();
+        animator.Play("Talking");
     }
 }

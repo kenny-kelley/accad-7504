@@ -11,6 +11,9 @@ public class Trigger5 : MonoBehaviour
     private bool hasToldStory;
     private bool hasMmphedAbdoul;
     private bool hasFinishedStory;
+    private bool hasMmphedAbdoulAndIssouf;
+    private bool hasApologized;
+    private bool hasOrderedIssoufToGetChalk;
 
     private AudioSource chairsScrapingFloor;
     public GameObject canvas;
@@ -35,6 +38,9 @@ public class Trigger5 : MonoBehaviour
         hasToldStory = false;
         hasMmphedAbdoul = false;
         hasFinishedStory = false;
+        hasMmphedAbdoulAndIssouf = false;
+        hasApologized = false;
+        hasOrderedIssoufToGetChalk = false;
         chairsScrapingFloor = GetComponent<AudioSource>();
     }
 
@@ -77,6 +83,21 @@ public class Trigger5 : MonoBehaviour
         {
             abdoul.FinishStory();
             hasFinishedStory = true;
+        }
+        else if (timePassed > 42.0f && !hasMmphedAbdoulAndIssouf)
+        {
+            amina.MmphAbdoulAndIssouf();
+            hasMmphedAbdoulAndIssouf = true;
+        }
+        else if (timePassed > 45.0f && !hasApologized)
+        {
+            abdoul.Apologize();
+            hasApologized = true;
+        }
+        else if (timePassed > 47.0f && !hasOrderedIssoufToGetChalk)
+        {
+            amina.OrderIssoufToGetChalk();
+            hasOrderedIssoufToGetChalk = true;
         }
     }
 

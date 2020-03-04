@@ -143,7 +143,7 @@ public class AminaScript : MonoBehaviour
         audios[0].Play();
 	}
 
-    public void ComeAlongNowIssouf()
+    public void IssoufWhereAreYou()
     {
         audios[1].Play();
     }
@@ -151,6 +151,12 @@ public class AminaScript : MonoBehaviour
     public void MmphAbdoul()
     {
         audios[2].Play();
+        animator.Play("Angry Gesture");
+    }
+
+    public void MmphAbdoulAndIssouf()
+    {
+        audios[4].Play();
         animator.Play("Angry Gesture");
     }
 
@@ -165,5 +171,11 @@ public class AminaScript : MonoBehaviour
         walkToFrontCenter = false;
         turnBackTowardsClass = true;
         animator.Play("Idle");
+    }
+
+    public void OrderIssoufToGetChalk()
+    {
+        audios[3].Play();
+        animator.Play("Angry Gesture");
     }
 }

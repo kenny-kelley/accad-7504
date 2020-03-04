@@ -15,7 +15,7 @@ public class Trigger1 : MonoBehaviour
 	{
 		if (!hasEntered)
 		{
-            amina.ComeAlongNowIssouf();
+            amina.IssoufWhereAreYou();
 			hasEntered = true;	
 		}
 	}
