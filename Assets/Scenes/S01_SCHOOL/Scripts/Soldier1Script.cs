@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoldierScript : MonoBehaviour
+public class Soldier1Script : MonoBehaviour
 {
     private CharacterController controller;
     private Animator animator;
@@ -11,8 +11,6 @@ public class SoldierScript : MonoBehaviour
     float timer;
 
     private bool enterSchool;
-    private bool faceStudents;
-    private bool faceAmina;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +22,6 @@ public class SoldierScript : MonoBehaviour
         timer = 0.0f;
 
         enterSchool = false;
-        faceStudents = false;
-        faceAmina = false;
     }
 
     // Update is called once per frame
@@ -43,18 +39,6 @@ public class SoldierScript : MonoBehaviour
             speed = 1.0f;
         }
 
-        if (faceStudents)
-        {
-            if (transform.eulerAngles.y > 20.0f)
-            {
-                rotateSpeed = -3.0f;
-            }
-            else
-            {
-                faceStudents = false;
-            }
-        }
-
         // Apply translations/rotations
         transform.Rotate(0, rotateSpeed, 0, Space.Self);
         controller.SimpleMove(forward * speed);
@@ -69,10 +53,6 @@ public class SoldierScript : MonoBehaviour
     {
         enterSchool = false;
         animator.Play("Aiming Idle");
-    }
-
-    public void FaceStudents()
-    {
-        faceStudents = true;
+        audios[1].Play();
     }
 }

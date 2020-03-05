@@ -10,8 +10,8 @@ public class Trigger6 : MonoBehaviour
     
     public AminaScript amina;
     public AbdoulScript abdoul;
-    public SoldierScript soldier1;
-    public SoldierScript soldier2;
+    public Soldier1Script soldier1;
+    public Soldier2Script soldier2;
 	public DoorScript closetDoor;
     public DoorScript mainDoor;
 

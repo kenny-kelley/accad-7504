@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class Trigger9 : MonoBehaviour
 {
+    float timePassed;
+
     bool hasEntered;
-    public SoldierScript soldier2;
+    public Soldier2Script soldier2;
 
     // Start is called before the first frame update
     void Start()
     {
+        timePassed = 0.0f;
         hasEntered = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (hasEntered)
+            timePassed += Time.deltaTime;
+
 
     }
 
@@ -24,7 +30,7 @@ public class Trigger9 : MonoBehaviour
         if (other.gameObject == soldier2.gameObject && !hasEntered)
         {
             soldier2.StopEnterSchool();
-            soldier2.FaceStudents();
+            soldier2.TurnAndWalkTowardCloset();
             hasEntered = true;
         }
     }
