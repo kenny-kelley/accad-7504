@@ -107,6 +107,7 @@ public class Soldier2Script : MonoBehaviour
     public void TellIssoufToMoveIt()
     {
         audios[0].Play();
+        animator.Play("Aiming Idle");
         faceIssouf = true;
     }
 }
