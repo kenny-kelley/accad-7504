@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17922075, g: 0.224412, b: 0.30614972, a: 1}
+  m_IndirectSpecularColor: {r: 0.17922032, g: 0.22441131, b: 0.3061484, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -52,7 +52,7 @@ LightmapSettings:
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
     m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
@@ -96,7 +96,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: c96bcc88cd0465d4e83733e972deed03,
+    type: 2}
   m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
@@ -1471,6 +1472,15 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  trackerId: -1
+  isLeft: 0
+  controllerType: 0
+  joystick: {x: 0, y: 0, z: 0}
+  touchpad: {x: 0, y: 0, z: 0}
+  trigger: 0
+  grip: 0
+  aButton: 0
+  bButton: 0
 --- !u!1001 &125147567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1529,7 +1539,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &144503189
 BoxCollider:
@@ -1700,7 +1710,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &157439334
 BoxCollider:
@@ -2066,6 +2076,7 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  trackerId: 0
 --- !u!1001 &208041406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3902,7 +3913,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &260672307
 BoxCollider:
@@ -4508,7 +4519,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -4984,7 +4995,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &364458845
 BoxCollider:
@@ -5496,7 +5507,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -5787,31 +5798,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.103420295
+      value: 0.14451046
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7068085
+      value: 0.620595
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.10580479
+      value: -0.117740475
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.69175965
+      value: 0.7616534
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.270262
+      value: -15.886734
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6641149
+      value: 8.482632
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.462989
+      value: -15.530392
       objectReference: {fileID: 0}
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
@@ -5831,17 +5842,17 @@ PrefabInstance:
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
       propertyPath: near clip plane
-      value: 0.07394474
+      value: 0.36082733
       objectReference: {fileID: 0}
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
       propertyPath: far clip plane
-      value: 14788.948
+      value: 72165.47
       objectReference: {fileID: 0}
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
       propertyPath: field of view
-      value: 52.08964
+      value: 51.33906
       objectReference: {fileID: 0}
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
@@ -6588,7 +6599,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &569492311
 BoxCollider:
@@ -6840,7 +6851,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &592254960
 BoxCollider:
@@ -7317,7 +7328,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &627213433
 BoxCollider:
@@ -7904,7 +7915,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &698407428
 BoxCollider:
@@ -8064,7 +8075,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &700226930
 BoxCollider:
@@ -8284,7 +8295,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -8405,7 +8416,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &729714279
 BoxCollider:
@@ -8886,7 +8897,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &753763741
 BoxCollider:
@@ -9964,6 +9975,15 @@ MonoBehaviour:
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     armSwing: 0
+  openVR:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    openVRController: {fileID: 0}
+    controllerType: 0
+    useSkeletalInput: 1
   oculus:
     enabled: 1
     target: {fileID: 0}
@@ -10425,7 +10445,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &864237043
 BoxCollider:
@@ -10549,7 +10569,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &870007973
 BoxCollider:
@@ -10769,7 +10789,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -11044,7 +11064,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &931907138
 BoxCollider:
@@ -11166,7 +11186,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &955993072
 BoxCollider:
@@ -11307,7 +11327,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -11580,7 +11600,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1021139177
 BoxCollider:
@@ -12045,7 +12065,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1096971364
 BoxCollider:
@@ -12343,7 +12363,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1121388904
 BoxCollider:
@@ -12545,7 +12565,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1165751701
 BoxCollider:
@@ -12715,7 +12735,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1175135377
 BoxCollider:
@@ -13414,7 +13434,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1262159589
 BoxCollider:
@@ -13687,6 +13707,7 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  trackerId: 0
 --- !u!1001 &1272580537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14332,7 +14353,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1329116414
 BoxCollider:
@@ -15018,6 +15039,15 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  trackerId: -1
+  isLeft: 0
+  controllerType: 0
+  joystick: {x: 0, y: 0, z: 0}
+  touchpad: {x: 0, y: 0, z: 0}
+  trigger: 0
+  grip: 0
+  aButton: 0
+  bButton: 0
 --- !u!1 &1395870352
 GameObject:
   m_ObjectHideFlags: 0
@@ -15035,7 +15065,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1395870353
 BoxCollider:
@@ -15416,7 +15446,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1441370656
 BoxCollider:
@@ -16335,7 +16365,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1515511843
 BoxCollider:
@@ -16721,7 +16751,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1544478522
 BoxCollider:
@@ -16956,7 +16986,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1572042505
 BoxCollider:
@@ -17077,7 +17107,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1584547049
 BoxCollider:
@@ -18885,6 +18915,15 @@ MonoBehaviour:
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     armSwing: 0
+  openVR:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    openVRController: {fileID: 0}
+    controllerType: 0
+    useSkeletalInput: 1
   oculus:
     enabled: 1
     target: {fileID: 0}
@@ -19051,7 +19090,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1680389283
 BoxCollider:
@@ -19281,7 +19320,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1691799370
 BoxCollider:
@@ -20151,7 +20190,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1755106276
 BoxCollider:
@@ -21379,7 +21418,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1901091208
 BoxCollider:
@@ -21470,7 +21509,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1902950517
 BoxCollider:
@@ -21561,7 +21600,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1904200010
 BoxCollider:
@@ -21833,6 +21872,13 @@ MonoBehaviour:
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     headAnimation: 1
     faceAnimation: 1
+  openVR:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    hmd: {fileID: 0}
   oculus:
     enabled: 1
     target: {fileID: 0}
@@ -23180,7 +23226,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1960682134
 BoxCollider:
@@ -23342,7 +23388,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1981566791
 BoxCollider:
@@ -23433,7 +23479,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &1986828012
 BoxCollider:
@@ -23524,7 +23570,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &2005448217
 BoxCollider:
@@ -23796,7 +23842,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -24951,7 +24997,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &2142560054
 BoxCollider:
@@ -25042,7 +25088,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &2144694630
 BoxCollider:
@@ -33362,6 +33408,15 @@ MonoBehaviour:
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     armSwing: 0
+  openVR:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    openVRController: {fileID: 0}
+    controllerType: 0
+    useSkeletalInput: 1
   oculus:
     enabled: 1
     target: {fileID: 1675604918898829087}
@@ -34462,6 +34517,15 @@ MonoBehaviour:
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     armSwing: 0
+  openVR:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    openVRController: {fileID: 0}
+    controllerType: 0
+    useSkeletalInput: 1
   oculus:
     enabled: 1
     target: {fileID: 0}
@@ -34844,6 +34908,13 @@ MonoBehaviour:
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     headAnimation: 1
     faceAnimation: 1
+  openVR:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    hmd: {fileID: 0}
   oculus:
     enabled: 1
     target: {fileID: 0}
@@ -35821,12 +35892,18 @@ MonoBehaviour:
     enabled: 0
     trackerTransform: {fileID: 0}
     subTrackers: []
+  openVR:
+    status: 0
+    enabled: 0
+    trackerTransform: {fileID: 0}
+    subTrackers: []
+    hmd: {fileID: 0}
+    controllers: []
   oculus:
     status: 0
     enabled: 1
     trackerTransform: {fileID: 504093357}
     subTrackers: []
-    androidDeviceType: 2
   forwardSpeed: 1
   backwardSpeed: 0.6
   sidewardSpeed: 1
@@ -36598,6 +36675,13 @@ MonoBehaviour:
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     headAnimation: 1
     faceAnimation: 1
+  openVR:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    hmd: {fileID: 0}
   oculus:
     enabled: 1
     target: {fileID: 1676322799709377999}
@@ -38358,6 +38442,15 @@ MonoBehaviour:
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     armSwing: 0
+  openVR:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    openVRController: {fileID: 0}
+    controllerType: 0
+    useSkeletalInput: 1
   oculus:
     enabled: 1
     target: {fileID: 0}
@@ -39210,6 +39303,15 @@ MonoBehaviour:
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     armSwing: 0
+  openVR:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    openVRController: {fileID: 0}
+    controllerType: 0
+    useSkeletalInput: 1
   oculus:
     enabled: 1
     target: {fileID: 1679557135354268669}
