@@ -19,7 +19,7 @@ public class DoorScript : MonoBehaviour
     void Update()
     {
         if ((close && currentRotation < 90.0f) ||
-            (open && currentRotation < 170.0f))
+            (open && currentRotation < 180.0f))
 		{
             float rotateSpeed = 0.0f;
             rotateSpeed = 5.0f;

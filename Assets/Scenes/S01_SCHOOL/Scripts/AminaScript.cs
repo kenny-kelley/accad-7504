@@ -19,6 +19,8 @@ public class AminaScript : MonoBehaviour
     private bool walkToFront;
     private bool walkToFrontCenter;
     private bool turnBackTowardsClass;
+    private bool faceSoldiers;
+    private bool slideBack;
 
     public bool HasMmphedAbdoul { get; private set; }
     public bool HasMmphedAbdoulAndIssouf { get; private set; }
@@ -43,6 +45,8 @@ public class AminaScript : MonoBehaviour
         walkToFront = false;
         walkToFrontCenter = false;
         turnBackTowardsClass = false;
+        faceSoldiers = false;
+        slideBack = false;
 
         HasMmphedAbdoul = false;
         HasMmphedAbdoulAndIssouf = false;
@@ -133,6 +137,35 @@ public class AminaScript : MonoBehaviour
             {
                 rotateSpeed = -3.0f;
             }
+            else
+            {
+                turnBackTowardsClass = false;
+            }
+        }
+
+        /*
+         * Face soldiers and slide back
+         */
+        if (faceSoldiers)
+        {
+            float angle = transform.localEulerAngles.y;
+            angle = (angle > 180) ? angle - 360 : angle;
+
+            if (angle > -90.0f)
+            {
+                rotateSpeed = -3.0f;
+            }
+            else
+            {
+                faceSoldiers = false;
+                animator.Play("Walk Backward");
+                slideBack = true;
+            }
+        }
+        if (slideBack)
+        {
+            forward = new Vector3(1, 0, 0);
+            speed = 1.0f;
         }
 
         // Apply translations/rotations
@@ -203,5 +236,16 @@ public class AminaScript : MonoBehaviour
     {
         audios[4].Play();
         HasToldChildrenTheSoldiersAreBack = true;
+    }
+
+    public void FaceSoldiersAndSlideBack()
+    {
+        faceSoldiers = true;
+    }
+
+    public void StopSlideBack()
+    {
+        slideBack = false;
+        animator.Play("Terrified");
     }
 }

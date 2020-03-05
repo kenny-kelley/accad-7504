@@ -10,6 +10,8 @@ public class Trigger6 : MonoBehaviour
     
     public AminaScript amina;
     public AbdoulScript abdoul;
+    public SoldierScript soldier1;
+    public SoldierScript soldier2;
 	public DoorScript closetDoor;
     public DoorScript mainDoor;
 
@@ -41,6 +43,9 @@ public class Trigger6 : MonoBehaviour
 			amina.TellChildrenTheSoldiersAreBack();
 			closetDoor.Close();
             mainDoor.Open();
+            amina.FaceSoldiersAndSlideBack();
+            soldier1.EnterSchool();
+            soldier2.EnterSchool();
 		}
     }
 
