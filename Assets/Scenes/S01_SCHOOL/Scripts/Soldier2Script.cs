@@ -55,6 +55,7 @@ public class Soldier2Script : MonoBehaviour
             {
                 faceStudents = false;
                 walkTowardCloset = true;
+                animator.Play("Walking");
             }
         }
 
@@ -95,19 +96,17 @@ public class Soldier2Script : MonoBehaviour
     public void TurnAndWalkTowardCloset()
     {
         faceStudents = true;
-        animator.Play("Walking");
     }
 
     public void StopTurnAndWalkTowardCloset()
     {
         walkTowardCloset = false;
-        animator.Play("Walking");
+        animator.Play("Aiming Idle");
     }
 
     public void TellIssoufToMoveIt()
     {
         audios[0].Play();
-        animator.Play("Aiming Idle");
         faceIssouf = true;
     }
 }
