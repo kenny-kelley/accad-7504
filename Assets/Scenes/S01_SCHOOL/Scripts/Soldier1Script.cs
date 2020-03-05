@@ -12,6 +12,8 @@ public class Soldier1Script : MonoBehaviour
 
     private bool enterSchool;
 
+    public bool HasSaidBurnThePlace { get; private set; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class Soldier1Script : MonoBehaviour
         timer = 0.0f;
 
         enterSchool = false;
+        HasSaidBurnThePlace = false;
     }
 
     // Update is called once per frame
@@ -54,5 +57,11 @@ public class Soldier1Script : MonoBehaviour
         enterSchool = false;
         animator.Play("Aiming Idle");
         audios[1].Play();
+    }
+
+    public void SayBurnThePlace()
+    {
+        audios[0].Play();
+        HasSaidBurnThePlace = true;
     }
 }
