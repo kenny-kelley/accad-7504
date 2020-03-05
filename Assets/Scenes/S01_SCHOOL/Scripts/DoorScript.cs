@@ -5,28 +5,36 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour
 {
 	private bool close;
-	private float currentRotation;
+    private bool open;
+	public float currentRotation;
 	
     // Start is called before the first frame update
     void Start()
     {
         close = false;
-		currentRotation = 10.0f;
+        open = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (close && currentRotation < 90.0f)
+        if ((close && currentRotation < 90.0f) ||
+            (open && currentRotation < 170.0f))
 		{
-			float rotateSpeed = 5.0f;
-			transform.Rotate(0, rotateSpeed, 0, Space.Self);
+            float rotateSpeed = 0.0f;
+            rotateSpeed = 5.0f;
 			currentRotation += rotateSpeed;
-		}
+            transform.Rotate(0, rotateSpeed, 0, Space.Self);
+        }
     }
 	
 	public void Close()
 	{
 		close = true;
 	}
+
+    public void Open()
+    {
+        open = true;
+    }
 }

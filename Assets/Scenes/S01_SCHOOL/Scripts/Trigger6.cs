@@ -10,7 +10,8 @@ public class Trigger6 : MonoBehaviour
     
     public AminaScript amina;
     public AbdoulScript abdoul;
-	public DoorScript door;
+	public DoorScript closetDoor;
+    public DoorScript mainDoor;
 
     private AudioSource motorcycles;
 
@@ -38,7 +39,8 @@ public class Trigger6 : MonoBehaviour
 		else if (timePassed > 16.0f && !amina.HasToldChildrenTheSoldiersAreBack)
 		{
 			amina.TellChildrenTheSoldiersAreBack();
-			door.Close();
+			closetDoor.Close();
+            mainDoor.Open();
 		}
     }
 

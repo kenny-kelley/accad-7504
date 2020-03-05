@@ -2917,13 +2917,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236286225}
-  m_LocalRotation: {x: 0, y: 0.9961947, z: 0, w: 0.08715588}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.072433844, y: -0.05291196, z: 0.5803382}
   m_LocalScale: {x: 0.52522737, y: 0.52522737, z: 0.52522737}
   m_Children: []
   m_Father: {fileID: 236092841}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 170, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &236092841
 Transform:
   m_ObjectHideFlags: 0
@@ -2984,13 +2984,27 @@ GameObject:
   - component: {fileID: 237392727}
   - component: {fileID: 238495871}
   - component: {fileID: 242721609}
+  - component: {fileID: 236286226}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &236286226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236286225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a97bf70da4b14dd4293532dbeb3afe3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentRotation: 90
 --- !u!1 &236447237
 GameObject:
   m_ObjectHideFlags: 0
@@ -5562,31 +5576,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.19663069
+      value: -0.1711692
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.028256655
+      value: -0.0741316
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.005524516
+      value: 0.012774555
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.98005486
+      value: -0.9823657
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.982634
+      value: 6.982627
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3594127
+      value: 1.3594089
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.919104
+      value: -15.919106
       objectReference: {fileID: 0}
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
@@ -11896,7 +11910,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amina: {fileID: 231831946}
   abdoul: {fileID: 243912923}
-  door: {fileID: 1880015810}
+  closetDoor: {fileID: 1880015810}
+  mainDoor: {fileID: 236286226}
 --- !u!82 &1113755048
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20600,6 +20615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97bf70da4b14dd4293532dbeb3afe3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentRotation: 10
 --- !u!1001 &1880574443
 PrefabInstance:
   m_ObjectHideFlags: 0
