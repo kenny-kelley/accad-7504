@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0849e10d7ba0e8d4b82a8215d57eb190
+timeCreated: 1455108331
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - trackerPrefab: {fileID: 147312, guid: 5a7179fb0d8fd7b4c972f0e06be97c7a, type: 2}
+  - trackerObj: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
