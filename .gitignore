@@ -50,3 +50,5 @@ crashlytics-build.properties
 # Begin stuff we've added...
 Assets/Plugins/GitHub/
 Assets/Plugins/GitHub.meta
+*.sln
+*.csproj
