@@ -78,21 +78,24 @@ public class AminaScript : MonoBehaviour
          */
         if (rotateInCloset)
 		{
-            if (transform.eulerAngles.y < 90.0f)
+            if (transform.eulerAngles.y < 60.0f)
             {
-                rotateSpeed = 3.0f;
+                rotateSpeed = 1f;     //originally, 3.0f
+                animator.Play("Turning");
             }
             else if (transform.eulerAngles.y < 180.0f)
             {
                 if (pauseInCloset)
                 {
+                    speed = 0;
                     timePassedInCloset += Time.deltaTime;
                     if (timePassedInCloset > 4.0f)
                         pauseInCloset = false;
                 }
                 else
                 {
-                    rotateSpeed = 3.0f;
+                    rotateSpeed = 0.75f;     //originally, 3.0f
+                    //animator.Play("Turning");     //doing this will cause a jump in the middle of the first call for Turning; just let the first play out
                 }
             }
             else
@@ -140,6 +143,7 @@ public class AminaScript : MonoBehaviour
             else
             {
                 turnBackTowardsClass = false;
+                rotateSpeed = 0;
             }
         }
 
@@ -168,11 +172,41 @@ public class AminaScript : MonoBehaviour
             speed = 1.0f;
         }
 
+        //Turning(rotateSpeed, speed);
+
         // Apply translations/rotations
+
         transform.Rotate(0, rotateSpeed, 0, Space.Self);
         controller.SimpleMove(forward * speed);
     }
 	
+    //function for playing turn animations based on whether turning left or right, while idle or moving
+    public void Turning(float rotateSpeed, float speed)
+    {
+        if(rotateSpeed < 0)   //turning left
+        {
+            if(speed > 0)   //while walking
+            {
+
+            }
+            else//while idle
+            {
+
+            }
+        }
+        else if(rotateSpeed > 0)    //turning right
+        {
+            if(speed > 0)   //while walking
+            {
+                animator.Play("Turning");
+            }
+            else//while idle
+            {
+                animator.Play("Turning");
+            }
+        }
+    }
+
 	public void WalktoCloset()
 	{
 		walktoCloset = true;
