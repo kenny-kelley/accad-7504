@@ -22,6 +22,7 @@ public class AminaScript : MonoBehaviour
     private bool faceSoldiers;
     private bool slideBack;
 
+    public bool HasTakenAttendance { get; private set; }
     public bool HasMmphedAbdoul { get; private set; }
     public bool HasMmphedAbdoulAndIssouf { get; private set; }
     public bool HasOrderedIssoufToGetChalk { get; private set; }
@@ -48,6 +49,7 @@ public class AminaScript : MonoBehaviour
         faceSoldiers = false;
         slideBack = false;
 
+        HasTakenAttendance = false;
         HasMmphedAbdoul = false;
         HasMmphedAbdoulAndIssouf = false;
         HasOrderedIssoufToGetChalk = false;
@@ -226,9 +228,15 @@ public class AminaScript : MonoBehaviour
         audios[1].Play();
     }
 
-    public void MmphAbdoul()
+    public void TakeAttendance()
     {
         audios[2].Play();
+        HasTakenAttendance = true;
+    }
+
+    public void MmphAbdoul()
+    {
+        //audios[2].Play(); --- Removed from script
         animator.Play("Angry Gesture");
         HasMmphedAbdoul = true;
     }

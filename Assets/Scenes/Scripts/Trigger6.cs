@@ -34,11 +34,11 @@ public class Trigger6 : MonoBehaviour
         {
 			amina.TellChildrenToHide();
         }
-		else if (timePassed > 13.5f && !abdoul.HasAskedWhatsGoingOn)
+		else if (timePassed > 14.0f && !abdoul.HasAskedWhatsGoingOn)
 		{
 			abdoul.AskWhatsGoingOn();
 		}
-		else if (timePassed > 16.0f && !amina.HasToldChildrenTheSoldiersAreBack)
+		else if (timePassed > 15.5f && !amina.HasToldChildrenTheSoldiersAreBack)
 		{
 			amina.TellChildrenTheSoldiersAreBack();
 			closetDoor.Close();

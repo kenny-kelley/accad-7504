@@ -58,28 +58,32 @@ public class Trigger5 : MonoBehaviour
             Destroy(npc6);
             hasFadedOut = true;
         }
-        else if (timePassed > 15.0f && !abdoul.HasToldStory)
+        else if (timePassed > 15.0f && !amina.HasTakenAttendance)
+        {
+            amina.TakeAttendance();
+        }
+        else if (timePassed > 31.0f && !abdoul.HasToldStory)
         {
             abdoul.TellStory();
         }
-        else if (timePassed > 35.0f && !amina.HasMmphedAbdoul)
+        else if (timePassed > 44.0f && !amina.HasMmphedAbdoul)
         {
             abdoul.Idle();
             amina.MmphAbdoul();
         }
-        else if (timePassed > 38.0f && !abdoul.HasFinishedStory)
+        else if (timePassed > 45.0f && !abdoul.HasFinishedStory) 
         {
             abdoul.FinishStory();
         }
-        else if (timePassed > 42.0f && !amina.HasMmphedAbdoulAndIssouf)
+        else if (timePassed > 55.0f && !amina.HasMmphedAbdoulAndIssouf) 
         {
             amina.MmphAbdoulAndIssouf();
         }
-        else if (timePassed > 45.0f && !abdoul.HasApologized)
+        else if (timePassed > 57.0f && !abdoul.HasApologized)
         {
             abdoul.Apologize();
         }
-        else if (timePassed > 47.0f && !amina.HasOrderedIssoufToGetChalk)
+        else if (timePassed > 59.0f && !amina.HasOrderedIssoufToGetChalk)
         {
             amina.OrderIssoufToGetChalk();
             trigger6.SetActive(true);
