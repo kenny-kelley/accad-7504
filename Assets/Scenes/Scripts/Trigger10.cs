@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class Trigger10 : MonoBehaviour
 {
-    float timePassed;
+    private float timePassed;
 
     private bool hasEntered;
-    private bool burnThePlace;
-
-    public Soldier1Script soldier1;
+    
     public Soldier2Script soldier2;
+    public NPCScript abdoul;
 
     // Start is called before the first frame update
     void Start()
     {
         timePassed = 0.0f;
         hasEntered = false;
-        burnThePlace = false;
     }
 
     // Update is called once per frame
@@ -26,10 +24,8 @@ public class Trigger10 : MonoBehaviour
         if (hasEntered)
             timePassed += Time.deltaTime;
 
-        if (timePassed > 4.0f && !soldier1.HasSaidBurnThePlace)
-        {
-            soldier1.SayBurnThePlace();
-        }
+        if (timePassed > 2.0f && hasEntered)
+            abdoul.WalkToAisle();
     }
 
     void OnTriggerEnter(Collider other)
@@ -38,7 +34,6 @@ public class Trigger10 : MonoBehaviour
         {
             soldier2.StopTurnAndWalkTowardCloset();
             soldier2.TellIssoufToMoveIt();
-            burnThePlace = true;
             hasEntered = true;
         }
     }
