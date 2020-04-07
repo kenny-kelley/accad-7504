@@ -36,7 +36,7 @@ public class AminaScript : MonoBehaviour
         timePassedInCloset = 0.0f;
 
         controller = GetComponent<CharacterController>();
-		collider = GetComponent<CapsuleCollider>();
+        collider = GetComponent<CapsuleCollider>();
         animator = GetComponent<Animator>();
         audios = GetComponents<AudioSource>();
 
@@ -61,43 +61,40 @@ public class AminaScript : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-		Vector3 forward = new Vector3(0,0,0);
-		float speed = 0;
-		float rotateSpeed = 0;
-		
+        Vector3 forward = new Vector3(0, 0, 0);
+        float speed = 0;
+        float rotateSpeed = 0;
+
         /*
          * Amina walks to the closet
-         */ 
-		if (walktoCloset)
-		{
-			forward = new Vector3(0,0,1);
-			speed = 1.0f;
-		}
+         */
+        if (walktoCloset)
+        {
+            forward = new Vector3(0, 0, 1);
+            speed = 1.0f;
+        }
 
         /*
          * Amina rotates and faces Issouf, tells him it's time to get started,
          * then turns around and begins approaching front of classroom
          */
         if (rotateInCloset)
-		{
-            if (transform.eulerAngles.y < 60.0f)
+        {
+            if (transform.eulerAngles.y < 90.0f)
             {
-                rotateSpeed = 1f;     //originally, 3.0f
-                animator.Play("Turning");
+                rotateSpeed = 3.0f;
             }
             else if (transform.eulerAngles.y < 180.0f)
             {
                 if (pauseInCloset)
                 {
-                    speed = 0;
                     timePassedInCloset += Time.deltaTime;
                     if (timePassedInCloset > 4.0f)
                         pauseInCloset = false;
                 }
                 else
                 {
-                    rotateSpeed = 0.75f;     //originally, 3.0f
-                    //animator.Play("Turning");     //doing this will cause a jump in the middle of the first call for Turning; just let the first play out
+                    rotateSpeed = 3.0f;
                 }
             }
             else
@@ -106,7 +103,7 @@ public class AminaScript : MonoBehaviour
                 walkToFront = true;
                 animator.Play("Walking");
             }
-		}
+        }
 
         /*
          * Amina walks to the front of the classroom
@@ -145,7 +142,6 @@ public class AminaScript : MonoBehaviour
             else
             {
                 turnBackTowardsClass = false;
-                rotateSpeed = 0;
             }
         }
 
@@ -174,54 +170,24 @@ public class AminaScript : MonoBehaviour
             speed = 1.0f;
         }
 
-        //Turning(rotateSpeed, speed);
-
         // Apply translations/rotations
-
         transform.Rotate(0, rotateSpeed, 0, Space.Self);
         controller.SimpleMove(forward * speed);
     }
-	
-    //function for playing turn animations based on whether turning left or right, while idle or moving
-    public void Turning(float rotateSpeed, float speed)
+
+    public void WalktoCloset()
     {
-        if(rotateSpeed < 0)   //turning left
-        {
-            if(speed > 0)   //while walking
-            {
-
-            }
-            else//while idle
-            {
-
-            }
-        }
-        else if(rotateSpeed > 0)    //turning right
-        {
-            if(speed > 0)   //while walking
-            {
-                animator.Play("Turning");
-            }
-            else//while idle
-            {
-                animator.Play("Turning");
-            }
-        }
+        walktoCloset = true;
+        animator.Play("Walking");
     }
 
-	public void WalktoCloset()
-	{
-		walktoCloset = true;
-        animator.Play("Walking");
-	}
-	
-	public void StopWalktoCloset()
-	{
-		walktoCloset = false;
-		rotateInCloset = true;
+    public void StopWalktoCloset()
+    {
+        walktoCloset = false;
+        rotateInCloset = true;
         animator.Play("Idle");
         audios[0].Play();
-	}
+    }
 
     public void AskIssoufWhereAreYou()
     {
