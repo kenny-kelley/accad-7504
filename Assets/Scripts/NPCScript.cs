@@ -76,6 +76,7 @@ public class NPCScript : MonoBehaviour
 
     public void WalkToAisle()
     {
+        animator.Play("Walking");
         walkToAisle = true;
     }
 

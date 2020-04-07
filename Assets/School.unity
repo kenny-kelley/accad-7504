@@ -676,6 +676,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCFemaleStudent (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 0851b1b20e22dbd49aaa39f481d686b1,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 22d2472402f118e448a3bb670b6662e5, type: 2}
     - target: {fileID: -4216859302048453862, guid: 0851b1b20e22dbd49aaa39f481d686b1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1062,7 +1067,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: bd9c8d216b785504b88845b0dcf73728,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.047
+      value: 9.929
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bd9c8d216b785504b88845b0dcf73728,
         type: 3}
@@ -1117,7 +1122,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: bd9c8d216b785504b88845b0dcf73728,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bd9c8d216b785504b88845b0dcf73728,
         type: 3}
@@ -1143,6 +1148,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCFemaleStudent (2)
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 0851b1b20e22dbd49aaa39f481d686b1,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 64aa25e4c9aaa2b469b73f6cd30c9ab3, type: 2}
     - target: {fileID: -4216859302048453862, guid: 0851b1b20e22dbd49aaa39f481d686b1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4592,6 +4602,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCFemaleStudent (5)
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 0851b1b20e22dbd49aaa39f481d686b1,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 27f399a2609d82f4480f3da9519a318f, type: 2}
     - target: {fileID: -4216859302048453862, guid: 0851b1b20e22dbd49aaa39f481d686b1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6183,31 +6198,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.12944598
+      value: -0.0000051816446
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7051423
+      value: 0.00000068545336
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.13330089
+      value: -0.00000011319206
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.68428725
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.4423304
+      value: 0.18812554
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.41521215
+      value: 0.13999604
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.3454714
+      value: -2.5136263
       objectReference: {fileID: 0}
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
@@ -6227,17 +6242,17 @@ PrefabInstance:
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
       propertyPath: near clip plane
-      value: 0.029764174
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
       propertyPath: far clip plane
-      value: 5952.835
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
       propertyPath: field of view
-      value: 50.33561
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
@@ -7387,7 +7402,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587672388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.78, y: 0.859, z: 15.412}
+  m_LocalPosition: {x: 7.303, y: 0.859, z: 15.412}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15584,6 +15599,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCFemaleStudent (4)
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 0851b1b20e22dbd49aaa39f481d686b1,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9aaf3eb081c260745b4736940634cb99, type: 2}
     - target: {fileID: -4216859302048453862, guid: 0851b1b20e22dbd49aaa39f481d686b1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17272,6 +17292,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPCFemaleStudent (3)
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 0851b1b20e22dbd49aaa39f481d686b1,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5204e0943d22bd14ca1afc546c993c31, type: 2}
     - target: {fileID: -4216859302048453862, guid: 0851b1b20e22dbd49aaa39f481d686b1,
         type: 3}
       propertyPath: m_LocalPosition.x

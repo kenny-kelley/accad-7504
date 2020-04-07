@@ -46,7 +46,7 @@ public class Trigger5 : MonoBehaviour
         }
         else if (timePassed > 13.0f && !hasFadedOut)
         {
-            humanoid.transform.position = new Vector3(9.902f, 0.07f, 15.529f);
+            humanoid.transform.position = new Vector3(9.047f, 0.000792563f, 15.58642f);
             humanoid.transform.rotation = new Quaternion(0.0f, 180.0f, 0.0f, 0.0f);
             chairsScrapingFloor.Play();
             canvas.GetComponent<FadeControl>().FadeOut();

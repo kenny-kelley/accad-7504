@@ -17,7 +17,7 @@ public class Trigger2 : MonoBehaviour
 		if (!hasEntered)
 		{
 			amina.WalktoCloset();
-			hasEntered = true;	
+			hasEntered = true;
 		}
 	}
 }
