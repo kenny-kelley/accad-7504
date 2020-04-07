@@ -22,6 +22,15 @@ public class AminaScript : MonoBehaviour
     private bool faceSoldiers;
     private bool slideBack;
 
+    private float rotateSum;
+
+    private bool isAngry;
+    private bool isTerrified;
+
+    private bool transition;
+    private bool rotationPause1;
+    private bool rotationPause2;
+
     public bool HasTakenAttendance { get; private set; }
     public bool HasMmphedAbdoul { get; private set; }
     public bool HasMmphedAbdoulAndIssouf { get; private set; }
@@ -54,6 +63,15 @@ public class AminaScript : MonoBehaviour
         HasMmphedAbdoulAndIssouf = false;
         HasOrderedIssoufToGetChalk = false;
         HasToldChildrenToHide = false;
+
+        rotateSum = 0;
+
+        isAngry = false;
+        isTerrified = false;
+
+        transition = false;
+        rotationPause1 = true;
+        rotationPause2 = true;
     }
 
     // Update is called once per frame
@@ -80,28 +98,61 @@ public class AminaScript : MonoBehaviour
          */
         if (rotateInCloset)
         {
-            if (transform.eulerAngles.y < 90.0f)
+            if (transform.eulerAngles.y + rotateSum < 60.0f)
             {
-                rotateSpeed = 3.0f;
+                rotateSpeed = 1.0f; //originally, 3.0f;
+                rotateSum += rotateSpeed;
+                //animator.Play("Turning");
             }
-            else if (transform.eulerAngles.y < 180.0f)
+            else if (transform.eulerAngles.y + rotateSum < 180.0f && rotationPause1) //add pause to let turn animation complete
+            {
+                rotateSpeed = 1.0f;
+                timePassedInCloset += Time.deltaTime;
+                if (timePassedInCloset > 1.7f)
+                {
+                    rotationPause1 = false;
+                    timePassedInCloset = 0;
+                    rotateSpeed = 0;
+                }
+            }
+            else if (transform.eulerAngles.y + rotateSum < 180.0f && !rotationPause1)
             {
                 if (pauseInCloset)
                 {
+                    speed = 0;
                     timePassedInCloset += Time.deltaTime;
                     if (timePassedInCloset > 4.0f)
+                    {
                         pauseInCloset = false;
+                        timePassedInCloset = 0;
+                    }
                 }
                 else
                 {
-                    rotateSpeed = 3.0f;
+                    rotateSpeed = 1.0f; //originally, 3.0f;
+                    rotateSum += rotateSpeed;
+                    //animator.Play("Turning");     //doing this will cause a jump in the middle of the first call for Turning; just let the first play out
+                }
+            }
+            else if (transform.eulerAngles.y + rotateSum >= 180.0f && rotationPause2) //add pause to let turn animation complete
+            {
+                rotateSpeed = 1.0f;
+                timePassedInCloset += Time.deltaTime;
+
+                if (timePassedInCloset > 1.75f)
+                {
+                    rotationPause2 = false;
+                    timePassedInCloset = 0;
+                    rotateSpeed = 0;
                 }
             }
             else
             {
                 rotateInCloset = false;
                 walkToFront = true;
-                animator.Play("Walking");
+                //animator.Play("Walking");
+
+                transition = true;
             }
         }
 
@@ -110,8 +161,15 @@ public class AminaScript : MonoBehaviour
          */
         if (walkToFront)
         {
-            forward = new Vector3(0, 0, -1);
-            speed = 1.0f;
+            if (transition)
+            {
+                transition = false;
+            }
+            else
+            {
+                forward = new Vector3(0, 0, -1);
+                speed = 1.0f;
+            }
         }
 
         /*
@@ -119,14 +177,19 @@ public class AminaScript : MonoBehaviour
          */
         if (walkToFrontCenter)
         {
-            if (transform.eulerAngles.y > 150.0f)
+            speed = 1.75f;
+
+            if (transform.eulerAngles.y + rotateSum > 150.0f)
             {
-                rotateSpeed = -3.0f;
+                rotateSpeed = -0.5f;    //originally, -3.0f;
+                rotateSum += rotateSpeed;
             }
             else
             {
                 forward = new Vector3(0.5f, 0, -1);
                 speed = 1.0f;
+
+                rotateSpeed = -0.5f;
             }
         }
 
@@ -135,13 +198,15 @@ public class AminaScript : MonoBehaviour
          */
         if (turnBackTowardsClass)
         {
-            if (transform.eulerAngles.y > 0.0f)
+            if (transform.eulerAngles.y + rotateSum > 0.0f)
             {
-                rotateSpeed = -3.0f;
+                rotateSpeed = -0.5f;    //originally, -3.0f;
+                rotateSum += rotateSpeed;
             }
             else
             {
                 turnBackTowardsClass = false;
+                rotateSpeed = 0;
             }
         }
 
@@ -156,36 +221,50 @@ public class AminaScript : MonoBehaviour
             if (angle > -90.0f)
             {
                 rotateSpeed = -3.0f;
+                rotateSum += rotateSpeed;
             }
             else
             {
                 faceSoldiers = false;
-                animator.Play("Walk Backward");
+                //animator.Play("Walk Backward");
                 slideBack = true;
             }
         }
         if (slideBack)
         {
-            forward = new Vector3(1, 0, 0);
-            speed = 1.0f;
+            forward = new Vector3(-1, 0, 0);    //originally, (1, 0, 0)
+            speed = -0.5f;  //originally, 1.0f;
         }
 
+        //Update animator
+        UpdateAnimator(speed, rotateSpeed, isAngry, isTerrified);
+
         // Apply translations/rotations
-        transform.Rotate(0, rotateSpeed, 0, Space.Self);
+        transform.Rotate(0, rotateSum, 0, Space.Self);
+        rotateSum = 0;
+
         controller.SimpleMove(forward * speed);
+    }
+
+    public void UpdateAnimator(float speed, float rotateSpeed, bool isAngry, bool isTerrified)
+    {
+        animator.SetFloat("Speed", speed);
+        animator.SetFloat("Rotate Speed", rotateSpeed);
+        animator.SetBool("Is Angry", isAngry);
+        animator.SetBool("Is Terrified", isTerrified);
     }
 
     public void WalktoCloset()
     {
         walktoCloset = true;
-        animator.Play("Walking");
+        //animator.Play("Walking");
     }
 
     public void StopWalktoCloset()
     {
         walktoCloset = false;
         rotateInCloset = true;
-        animator.Play("Idle");
+        //animator.Play("Idle");
         audios[0].Play();
     }
 
@@ -224,7 +303,7 @@ public class AminaScript : MonoBehaviour
     {
         walkToFrontCenter = false;
         turnBackTowardsClass = true;
-        animator.Play("Idle");
+        //animator.Play("Idle");
     }
 
     public void OrderIssoufToGetChalk()
@@ -254,6 +333,7 @@ public class AminaScript : MonoBehaviour
     public void StopSlideBack()
     {
         slideBack = false;
-        animator.Play("Terrified");
+        //animator.Play("Terrified");
+        isTerrified = true;
     }
 }
