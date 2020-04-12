@@ -330,6 +330,12 @@ public class AminaScript : MonoBehaviour
         faceSoldiers = true;
     }
 
+    public void NoChalk()
+    {
+        audios[3].Play();
+        //REplace this
+    }
+
     public void StopSlideBack()
     {
         slideBack = false;

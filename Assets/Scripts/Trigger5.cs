@@ -23,6 +23,7 @@ public class Trigger5 : MonoBehaviour
     public GameObject npc6;
 
     public GameObject trigger6;
+    public bool hasChalk;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,7 @@ public class Trigger5 : MonoBehaviour
         hasEntered = false;
         hasFadedIn = false;
         hasFadedOut = false;
+        hasChalk = false;
         chairsScrapingFloor = GetComponent<AudioSource>();
     }
 
@@ -88,6 +90,10 @@ public class Trigger5 : MonoBehaviour
             amina.OrderIssoufToGetChalk();
             trigger6.SetActive(true);
         }
+        else if (!hasChalk && timePassed%20 < 1 && timePassed > 70.0f)
+        {
+            amina.NoChalk();
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -97,5 +103,10 @@ public class Trigger5 : MonoBehaviour
             amina.StopWalkToFrontCenter();
             hasEntered = true;
         }
+    }
+
+    public void gotChalk()
+    {
+        hasChalk = true;
     }
 }

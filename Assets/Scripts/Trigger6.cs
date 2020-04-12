@@ -16,6 +16,7 @@ public class Trigger6 : MonoBehaviour
     public DoorScript mainDoor;
 
     private AudioSource motorcycles;
+    public GameObject trigger5;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,10 @@ public class Trigger6 : MonoBehaviour
     void Update()
     {
         if (hasEntered)
+        {
             timePassed += Time.deltaTime;
+            trigger5.SendMessage("gotChalk");
+        }
 
         if (timePassed > 10.5f && !amina.HasToldChildrenToHide)
         {
