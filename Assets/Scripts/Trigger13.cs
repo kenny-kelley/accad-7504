@@ -8,6 +8,8 @@ public class Trigger13 : MonoBehaviour
 
     private bool burn;
 
+    private AudioSource[] audios;
+
     public NPCScript npc1;
     public NPCScript npc2;
     public NPCScript npc3;
@@ -16,9 +18,9 @@ public class Trigger13 : MonoBehaviour
     public NPCScript npc6;
     public NPCScript abdoul;
 
-    public GameObject fire1;
-    public GameObject fire2;
-    public GameObject fire3;
+    public ParticleSystem fire1;
+    public ParticleSystem fire2;
+    public ParticleSystem fire3;
 
     public Soldier1Script soldier1;
 
@@ -26,6 +28,7 @@ public class Trigger13 : MonoBehaviour
     void Start()
     {
         timePassed = 0.0f;
+        audios = GetComponents<AudioSource>();
         burn = false;
     }
 
@@ -35,17 +38,25 @@ public class Trigger13 : MonoBehaviour
         if (!burn && npc1.HasLeftSchool && npc2.HasLeftSchool && npc3.HasLeftSchool && npc4.HasLeftSchool && npc5.HasLeftSchool && npc6.HasLeftSchool)
         {
             soldier1.SayBurnThePlace();
+            audios[0].Play();
             burn = true;
         }
 
         if (burn)
             timePassed += Time.deltaTime;
 
-        if (timePassed > 1.0f)
+        if (timePassed > 3.0f)
         {
-            fire1.GetComponent<ParticleSystem>().Play();
-            fire2.GetComponent<ParticleSystem>().Play();
-            fire3.GetComponent<ParticleSystem>().Play();
+            audios[1].Play();
+            fire1.Play();
+        }
+        else if (timePassed > 4.0f)
+        {
+            fire2.Play();
+        }
+        else if (timePassed > 5.0f)
+        {
+            fire3.Play();
         }
     }
 

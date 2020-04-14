@@ -12,10 +12,12 @@ public class Trigger12 : MonoBehaviour
     public NPCScript npc6;
     public NPCScript abdoul;
 
+    private AudioSource[] audios;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        audios = GetComponents<AudioSource>();
     }
 
     // Update is called once per frame
@@ -48,6 +50,7 @@ public class Trigger12 : MonoBehaviour
         }
         if (other.gameObject == npc6.gameObject && !npc6.HasReachedDoor)
         {
+            audios[0].Play();
             npc6.ExitSchool();
         }
         if (other.gameObject == abdoul.gameObject && !abdoul.HasReachedDoor)
