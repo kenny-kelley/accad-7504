@@ -7,8 +7,8 @@ public class Trigger5 : MonoBehaviour
     private float timePassed;
     private bool hasFadedIn;
     private bool hasFadedOut;
-
-    private AudioSource chairsScrapingFloor;
+    
+    private AudioSource[] audios;
     public GameObject canvas;
     public GameObject humanoid;
     public AminaScript amina;
@@ -34,7 +34,7 @@ public class Trigger5 : MonoBehaviour
         hasFadedIn = false;
         hasFadedOut = false;
         hasChalk = false;
-        chairsScrapingFloor = GetComponent<AudioSource>();
+        audios = GetComponents<AudioSource>();
     }
 
     void Update()
@@ -44,6 +44,7 @@ public class Trigger5 : MonoBehaviour
 
         if (timePassed > 10.0f && timePassed <= 13.0f && !hasFadedIn)
         {
+            audios[1].Stop();
             canvas.GetComponent<FadeControl>().FadeIn();
             hasFadedIn = true;
         }
@@ -51,7 +52,7 @@ public class Trigger5 : MonoBehaviour
         {
             humanoid.transform.position = new Vector3(9.047f, 0.000792563f, 15.58642f);
             humanoid.transform.rotation = new Quaternion(0.0f, 180.0f, 0.0f, 0.0f);
-            chairsScrapingFloor.Play();
+            audios[0].Play();
             canvas.GetComponent<FadeControl>().FadeOut();
             Destroy(npc1);
             Destroy(npc2);
