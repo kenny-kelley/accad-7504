@@ -36,6 +36,7 @@ public class Trigger6 : MonoBehaviour
         if (timePassed > 10.5f && !amina.HasToldChildrenToHide)
         {
             audios[1].Stop();
+            audios[3].Play();
 			amina.TellChildrenToHide();
         }
 		else if (timePassed > 14.0f && !abdoul.HasAskedWhatsGoingOn)
