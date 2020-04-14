@@ -45,16 +45,16 @@ public class Trigger13 : MonoBehaviour
         if (burn)
             timePassed += Time.deltaTime;
 
-        if (timePassed > 3.0f)
+        if (timePassed > 3.0f && !fire1.isPlaying)
         {
             audios[1].Play();
             fire1.Play();
         }
-        else if (timePassed > 4.0f)
+        else if (timePassed > 4.0f && !fire2.isPlaying)
         {
             fire2.Play();
         }
-        else if (timePassed > 5.0f)
+        else if (timePassed > 5.0f && !fire3.isPlaying)
         {
             fire3.Play();
         }
