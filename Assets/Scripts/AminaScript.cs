@@ -30,6 +30,7 @@ public class AminaScript : MonoBehaviour
     private bool transition;
     private bool rotationPause1;
     private bool rotationPause2;
+    private bool secondOrder;
 
     public bool HasTakenAttendance { get; private set; }
     public bool HasMmphedAbdoul { get; private set; }
@@ -72,6 +73,7 @@ public class AminaScript : MonoBehaviour
         transition = false;
         rotationPause1 = true;
         rotationPause2 = true;
+        secondOrder = false;
     }
 
     // Update is called once per frame
@@ -332,7 +334,15 @@ public class AminaScript : MonoBehaviour
 
     public void NoChalk()
     {
-        audios[3].Play();
+        if (!secondOrder)
+        {
+            audios[7].Play();
+            secondOrder = true;
+        }
+        else if(!audios[7].isPlaying)
+        {
+            audios[8].Play();
+        }
         //REplace this
     }
 
