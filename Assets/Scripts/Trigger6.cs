@@ -14,8 +14,8 @@ public class Trigger6 : MonoBehaviour
     public Soldier2Script soldier2;
 	public DoorScript closetDoor;
     public DoorScript mainDoor;
-
-    private AudioSource motorcycles;
+    
+    private AudioSource[] audios;
     public Trigger5 trigger5;
 
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class Trigger6 : MonoBehaviour
     {
         timePassed = 0.0f;
         hasEntered = false;
-        motorcycles = GetComponent<AudioSource>();
+        audios = GetComponents<AudioSource>();
     }
 
     void Update()
@@ -35,6 +35,7 @@ public class Trigger6 : MonoBehaviour
 
         if (timePassed > 10.5f && !amina.HasToldChildrenToHide)
         {
+            audios[1].Stop();
 			amina.TellChildrenToHide();
         }
 		else if (timePassed > 14.0f && !abdoul.HasAskedWhatsGoingOn)
@@ -47,6 +48,7 @@ public class Trigger6 : MonoBehaviour
 			closetDoor.Close();
             mainDoor.Open();
             amina.FaceSoldiersAndSlideBack();
+            audios[2].Play();
             soldier1.EnterSchool();
             soldier2.EnterSchool();
 		}
@@ -56,7 +58,7 @@ public class Trigger6 : MonoBehaviour
     {
         if (!hasEntered && trigger5.HasEntered)
         {
-            motorcycles.Play();
+            audios[0].Play();
             hasEntered = true;
         }
     }
