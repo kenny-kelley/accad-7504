@@ -61,7 +61,6 @@ public class Trigger6 : MonoBehaviour
         {
             audios[0].Play();
             hasEntered = true;
-            trigger5.SendMessage("gotChalk");
         }
     }
 }
