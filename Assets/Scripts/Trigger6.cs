@@ -54,7 +54,7 @@ public class Trigger6 : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (!hasEntered)
+        if (!hasEntered && trigger5.HasEntered)
         {
             motorcycles.Play();
             hasEntered = true;

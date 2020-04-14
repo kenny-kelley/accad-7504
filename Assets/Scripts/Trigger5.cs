@@ -5,7 +5,6 @@ using UnityEngine;
 public class Trigger5 : MonoBehaviour
 {
     private float timePassed;
-    private bool hasEntered;
     private bool hasFadedIn;
     private bool hasFadedOut;
 
@@ -25,11 +24,13 @@ public class Trigger5 : MonoBehaviour
     public Trigger6 trigger6;
     public bool hasChalk;
 
+    public bool HasEntered { get; private set; }
+
     // Start is called before the first frame update
     void Start()
     {
         timePassed = 0.0f;
-        hasEntered = false;
+        HasEntered = false;
         hasFadedIn = false;
         hasFadedOut = false;
         hasChalk = false;
@@ -38,7 +39,7 @@ public class Trigger5 : MonoBehaviour
 
     void Update()
     {
-        if (hasEntered)
+        if (HasEntered)
             timePassed += Time.deltaTime;
 
         if (timePassed > 10.0f && timePassed <= 13.0f && !hasFadedIn)
@@ -97,10 +98,10 @@ public class Trigger5 : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "AdultWoman" && !hasEntered)
+        if (other.gameObject.name == "AdultWoman" && !HasEntered)
         {
             amina.StopWalkToFrontCenter();
-            hasEntered = true;
+            HasEntered = true;
         }
     }
 
