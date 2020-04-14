@@ -22,7 +22,7 @@ public class Trigger5 : MonoBehaviour
     public GameObject npc5;
     public GameObject npc6;
 
-    public GameObject trigger6;
+    public Trigger6 trigger6;
     public bool hasChalk;
 
     // Start is called before the first frame update
@@ -88,7 +88,6 @@ public class Trigger5 : MonoBehaviour
         else if (timePassed > 59.0f && !amina.HasOrderedIssoufToGetChalk)
         {
             amina.OrderIssoufToGetChalk();
-            trigger6.SetActive(true);
         }
         else if (!hasChalk && timePassed%20 < 1 && timePassed > 70.0f)
         {

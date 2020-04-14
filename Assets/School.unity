@@ -944,7 +944,7 @@ MonoBehaviour:
   npc4: {fileID: 1842822337}
   npc5: {fileID: 1907406815}
   npc6: {fileID: 187115281}
-  trigger6: {fileID: 1113755042}
+  trigger6: {fileID: 1113755047}
   hasChalk: 0
 --- !u!82 &31311961
 AudioSource:
@@ -6404,31 +6404,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.06153758
+      value: 0.10043597
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.31149969
+      value: -0.5645831
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.020186186
+      value: 0.069417626
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.9480368
+      value: 0.8162964
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.66052467
+      value: 6.866376
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.16100131
+      value: 0.62471306
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.075627
+      value: -7.110795
       objectReference: {fileID: 0}
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
@@ -6448,17 +6448,17 @@ PrefabInstance:
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
       propertyPath: near clip plane
-      value: 0.028578836
+      value: 0.05073494
       objectReference: {fileID: 0}
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
       propertyPath: far clip plane
-      value: 5715.7676
+      value: 10146.988
       objectReference: {fileID: 0}
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
       propertyPath: field of view
-      value: 52.420456
+      value: 56.103645
       objectReference: {fileID: 0}
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
@@ -12586,7 +12586,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1113755043
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12677,7 +12677,7 @@ MonoBehaviour:
   soldier2: {fileID: 1643231746}
   closetDoor: {fileID: 1880015810}
   mainDoor: {fileID: 236286226}
-  trigger5: {fileID: 31311955}
+  trigger5: {fileID: 31311960}
 --- !u!82 &1113755048
 AudioSource:
   m_ObjectHideFlags: 0
