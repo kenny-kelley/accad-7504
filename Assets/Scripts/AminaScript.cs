@@ -32,6 +32,9 @@ public class AminaScript : MonoBehaviour
     private bool rotationPause2;
     private bool secondOrder;
 
+    private bool midturnCalc;
+    private float midturn;
+
     public bool HasTakenAttendance { get; private set; }
     public bool HasMmphedAbdoul { get; private set; }
     public bool HasMmphedAbdoulAndIssouf { get; private set; }
@@ -74,6 +77,9 @@ public class AminaScript : MonoBehaviour
         rotationPause1 = true;
         rotationPause2 = true;
         secondOrder = false;
+
+        midturnCalc = false;
+        midturn = 0;
     }
 
     // Update is called once per frame
@@ -177,21 +183,32 @@ public class AminaScript : MonoBehaviour
         /*
          * Turn towards center and walk towards it
          */
+        if(!midturnCalc)
+        {
+            midturn = (transform.eulerAngles.y - 150.0f) / 0.5f;
+            midturnCalc = true;
+        }
+
         if (walkToFrontCenter)
         {
-            speed = 1.75f;
+            speed = 0.5f;
 
             if (transform.eulerAngles.y + rotateSum > 150.0f)
             {
                 rotateSpeed = -0.5f;    //originally, -3.0f;
                 rotateSum += rotateSpeed;
+
+                //forward = new Vector3(forward.x + 0.5f/midturn, 0, -1);
+                forward = new Vector3(forward.x + Mathf.Cos(rotateSpeed/180*Mathf.PI), 0, -1);
+                forward = forward.normalized;
+                forward = new Vector3(forward.x, 0, -1);
             }
             else
             {
                 forward = new Vector3(0.5f, 0, -1);
                 speed = 1.0f;
 
-                rotateSpeed = -0.5f;
+                //rotateSpeed = -0.5f;
             }
         }
 
