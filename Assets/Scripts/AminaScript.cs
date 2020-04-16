@@ -34,6 +34,7 @@ public class AminaScript : MonoBehaviour
 
     private bool midturnCalc;
     private float midturn;
+    private int i;
 
     public bool HasTakenAttendance { get; private set; }
     public bool HasMmphedAbdoul { get; private set; }
@@ -80,6 +81,7 @@ public class AminaScript : MonoBehaviour
 
         midturnCalc = false;
         midturn = 0;
+        i = 0;
     }
 
     // Update is called once per frame
@@ -116,7 +118,7 @@ public class AminaScript : MonoBehaviour
             {
                 rotateSpeed = 1.0f;
                 timePassedInCloset += Time.deltaTime;
-                if (timePassedInCloset > 1.7f)
+                if (timePassedInCloset > 0.7f)
                 {
                     rotationPause1 = false;
                     timePassedInCloset = 0;
@@ -147,7 +149,7 @@ public class AminaScript : MonoBehaviour
                 rotateSpeed = 1.0f;
                 timePassedInCloset += Time.deltaTime;
 
-                if (timePassedInCloset > 1.75f)
+                if (timePassedInCloset > 0.5f)
                 {
                     rotationPause2 = false;
                     timePassedInCloset = 0;
@@ -191,14 +193,15 @@ public class AminaScript : MonoBehaviour
 
         if (walkToFrontCenter)
         {
-            speed = 0.5f;
+            speed = 0.9f;
 
             if (transform.eulerAngles.y + rotateSum > 150.0f)
             {
                 rotateSpeed = -0.5f;    //originally, -3.0f;
                 rotateSum += rotateSpeed;
 
-                //forward = new Vector3(forward.x + 0.5f/midturn, 0, -1);
+                i++;
+                //forward = new Vector3(forward.x + 0.5f/midturn/(1 + i/10), 0, -1);
                 forward = new Vector3(forward.x + Mathf.Cos(rotateSpeed/180*Mathf.PI), 0, -1);
                 forward = forward.normalized;
                 forward = new Vector3(forward.x, 0, -1);
@@ -219,7 +222,7 @@ public class AminaScript : MonoBehaviour
         {
             if (transform.eulerAngles.y + rotateSum > 0.0f)
             {
-                rotateSpeed = -0.5f;    //originally, -3.0f;
+                rotateSpeed = -1.5f;    //originally, -3.0f;
                 rotateSum += rotateSpeed;
             }
             else
