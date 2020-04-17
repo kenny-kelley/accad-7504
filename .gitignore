@@ -48,7 +48,11 @@ sysinfo.txt
 crashlytics-build.properties
 
 # Begin stuff we've added...
-Assets/Plugins/GitHub/
-Assets/Plugins/GitHub.meta
 *.sln
 *.csproj
+Assets/Plugins
+Assets/Plugins.meta
+Assets/GardenTools
+Assets/GardenTools.meta
+Assets/Scenes
+Assets/Scenes.meta
