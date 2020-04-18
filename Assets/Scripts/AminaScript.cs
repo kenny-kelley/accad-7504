@@ -110,13 +110,13 @@ public class AminaScript : MonoBehaviour
         {
             if (transform.eulerAngles.y + rotateSum < 60.0f)
             {
-                rotateSpeed = 1.0f; //originally, 3.0f;
+                rotateSpeed = 3.0f; //1.0f; //originally, 3.0f;
                 rotateSum += rotateSpeed;
                 //animator.Play("Turning");
             }
             else if (transform.eulerAngles.y + rotateSum < 180.0f && rotationPause1) //add pause to let turn animation complete
             {
-                rotateSpeed = 1.0f;
+                rotateSpeed = 3.0f; //1.0f;
                 timePassedInCloset += Time.deltaTime;
                 if (timePassedInCloset > 0.7f)
                 {
@@ -139,14 +139,14 @@ public class AminaScript : MonoBehaviour
                 }
                 else
                 {
-                    rotateSpeed = 1.0f; //originally, 3.0f;
+                    rotateSpeed = 2.0f; //1.0f; //originally, 3.0f;
                     rotateSum += rotateSpeed;
                     //animator.Play("Turning");     //doing this will cause a jump in the middle of the first call for Turning; just let the first play out
                 }
             }
             else if (transform.eulerAngles.y + rotateSum >= 180.0f && rotationPause2) //add pause to let turn animation complete
             {
-                rotateSpeed = 1.0f;
+                rotateSpeed = 3.0f; //1.0f;
                 timePassedInCloset += Time.deltaTime;
 
                 if (timePassedInCloset > 0.5f)
@@ -185,7 +185,7 @@ public class AminaScript : MonoBehaviour
         /*
          * Turn towards center and walk towards it
          */
-        if(!midturnCalc)
+        if (!midturnCalc)
         {
             midturn = (transform.eulerAngles.y - 150.0f) / 0.5f;
             midturnCalc = true;
@@ -202,7 +202,7 @@ public class AminaScript : MonoBehaviour
 
                 i++;
                 //forward = new Vector3(forward.x + 0.5f/midturn/(1 + i/10), 0, -1);
-                forward = new Vector3(forward.x + Mathf.Cos(rotateSpeed/180*Mathf.PI), 0, -1);
+                forward = new Vector3(forward.x + Mathf.Cos(rotateSpeed / 180 * Mathf.PI), 0, -1);
                 forward = forward.normalized;
                 forward = new Vector3(forward.x, 0, -1);
             }
@@ -220,7 +220,7 @@ public class AminaScript : MonoBehaviour
          */
         if (turnBackTowardsClass)
         {
-            if (transform.eulerAngles.y + rotateSum > 0.0f)
+            if (transform.eulerAngles.y + rotateSum > 0.0f && transform.eulerAngles.y + rotateSum < 270.0f)
             {
                 rotateSpeed = -1.5f;    //originally, -3.0f;
                 rotateSum += rotateSpeed;
@@ -359,7 +359,7 @@ public class AminaScript : MonoBehaviour
             audios[7].Play();
             secondOrder = true;
         }
-        else if(!audios[7].isPlaying)
+        else if (!audios[7].isPlaying)
         {
             audios[8].Play();
         }

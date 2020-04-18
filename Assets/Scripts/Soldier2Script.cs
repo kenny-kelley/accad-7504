@@ -9,11 +9,19 @@ public class Soldier2Script : MonoBehaviour
     private AudioSource[] audios;
 
     float timer;
+    private float timePassed;
 
     private bool enterSchool;
     private bool faceStudents;
     private bool walkTowardCloset;
     private bool faceIssouf;
+    private bool transition1;
+    private bool transition2;
+    private bool threateningStudents;
+
+    private bool isAiming;
+    private bool bash;
+    private bool push;
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +31,19 @@ public class Soldier2Script : MonoBehaviour
         audios = GetComponents<AudioSource>();
 
         timer = 0.0f;
+        timePassed = 0.0f;
 
         enterSchool = false;
         faceStudents = false;
         walkTowardCloset = false;
         faceIssouf = false;
+        transition1 = true;
+        transition2 = true;
+        threateningStudents = false;
+
+        isAiming = true;
+        bash = false;
+        push = false;
     }
 
     // Update is called once per frame
@@ -45,6 +61,8 @@ public class Soldier2Script : MonoBehaviour
             speed = 1.0f;
         }
 
+
+
         if (faceStudents)
         {
             if (transform.eulerAngles.y > 4.0f)
@@ -55,7 +73,9 @@ public class Soldier2Script : MonoBehaviour
             {
                 faceStudents = false;
                 walkTowardCloset = true;
-                animator.Play("Walking");
+                //animator.Play("Walking");
+
+                isAiming = false;
             }
         }
 
@@ -67,19 +87,53 @@ public class Soldier2Script : MonoBehaviour
 
         if (faceIssouf)
         {
-            if (transform.eulerAngles.y > 25.0f)
+            //isAiming = true;
+
+            if (transition2)
+            {
+                timePassed += Time.deltaTime;
+                if (timePassed < 10000000000000000000000000000000.0f)
+                {
+                    timePassed = 0;
+                    transition2 = false;
+                }
+            }
+            else if (transform.eulerAngles.y < 120.0f)
             {
                 rotateSpeed = 3.0f;
             }
             else
             {
                 faceIssouf = false;
+                threateningStudents = true;
             }
         }
 
+        if (threateningStudents)
+        {
+            timePassed += Time.deltaTime;
+            if (timePassed < 10000000000000.0f)
+            {
+                timePassed = 0;
+                bash = true;
+            }
+        }
+
+        UpdateAnimator(speed, rotateSpeed, isAiming, bash, push);
+
         // Apply translations/rotations
         transform.Rotate(0, rotateSpeed, 0, Space.Self);
+
         controller.SimpleMove(forward * speed);
+    }
+
+    public void UpdateAnimator(float speed, float rotateSpeed, bool isAiming, bool bash, bool push)
+    {
+        animator.SetFloat("Speed", speed);
+        animator.SetFloat("Rotate Speed", rotateSpeed);
+        animator.SetBool("Is Aiming", isAiming);
+        animator.SetBool("Bash", bash);
+        animator.SetBool("Push", push);
     }
 
     public void EnterSchool()
@@ -90,7 +144,7 @@ public class Soldier2Script : MonoBehaviour
     public void StopEnterSchool()
     {
         enterSchool = false;
-        animator.Play("Aiming Idle");
+        //animator.Play("Aiming Idle");
     }
 
     public void TurnAndWalkTowardCloset()
@@ -101,7 +155,7 @@ public class Soldier2Script : MonoBehaviour
     public void StopTurnAndWalkTowardCloset()
     {
         walkTowardCloset = false;
-        animator.Play("Aiming Idle");
+        //animator.Play("Aiming Idle");
     }
 
     public void TellIssoufToMoveIt()

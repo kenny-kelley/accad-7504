@@ -9,10 +9,21 @@ public class Soldier1Script : MonoBehaviour
     private AudioSource[] audios;
 
     float timer;
+    private float timePassed;
 
     private bool enterSchool;
+    private bool threaten;
 
     public bool HasSaidBurnThePlace { get; private set; }
+
+    private float speed;
+    private float rotateSpeed;
+    private bool isAiming;
+    private bool bash;
+    private bool push;
+
+    private float rotateSum;
+    private bool pause;
 
     // Start is called before the first frame update
     void Start()
@@ -22,9 +33,18 @@ public class Soldier1Script : MonoBehaviour
         audios = GetComponents<AudioSource>();
 
         timer = 0.0f;
+        timePassed = 0.0f;
 
         enterSchool = false;
+        threaten = false;
         HasSaidBurnThePlace = false;
+
+        isAiming = true;
+        bash = false;
+        push = false;
+
+        rotateSum = 0;
+        pause = false;
     }
 
     // Update is called once per frame
@@ -33,18 +53,38 @@ public class Soldier1Script : MonoBehaviour
         timer += Time.deltaTime;
 
         Vector3 forward = new Vector3(0, 0, 0);
-        float speed = 0;
-        float rotateSpeed = 0;
+        speed = 0;
+        rotateSpeed = 0;
 
         if (enterSchool)
         {
             forward = new Vector3(1, 0, 0);
             speed = 1.0f;
         }
+        else if (threaten)
+        {
+            timePassed += Time.deltaTime;
+            if (timePassed < 13.0f)
+            {
+                timePassed = 0;
+                push = true;
+            }
+        }
+
+        UpdateAnimator(speed, rotateSpeed, isAiming, bash, push);
 
         // Apply translations/rotations
         transform.Rotate(0, rotateSpeed, 0, Space.Self);
         controller.SimpleMove(forward * speed);
+    }
+
+    public void UpdateAnimator(float speed, float rotateSpeed, bool isAiming, bool bash, bool push)
+    {
+        animator.SetFloat("Speed", speed);
+        animator.SetFloat("Rotate Speed", rotateSpeed);
+        animator.SetBool("Is Aiming", isAiming);
+        animator.SetBool("Bash", bash);
+        animator.SetBool("Push", push);
     }
 
     public void EnterSchool()
@@ -55,7 +95,8 @@ public class Soldier1Script : MonoBehaviour
     public void StopEnterSchool()
     {
         enterSchool = false;
-        animator.Play("Aiming Idle");
+        threaten = true;
+        //animator.Play("Aiming Idle");
         audios[1].Play();
     }
 
