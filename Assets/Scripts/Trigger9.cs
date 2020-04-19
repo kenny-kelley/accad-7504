@@ -10,8 +10,6 @@ public class Trigger9 : MonoBehaviour
     public NPCScript npc2;
     public NPCScript npc3;
     public NPCScript npc4;
-    public NPCScript npc5;
-    public NPCScript npc6;
 
     bool hasEntered;
     public Soldier2Script soldier2;
@@ -42,8 +40,6 @@ public class Trigger9 : MonoBehaviour
             npc2.WalkToAisle();
             npc3.WalkToAisle();
             npc4.WalkToAisle();
-            npc5.WalkToAisle();
-            npc6.WalkToAisle();
 
             soldier2.TurnAndWalkTowardCloset();
             hasEntered = true;

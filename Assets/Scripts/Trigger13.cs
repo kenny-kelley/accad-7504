@@ -14,8 +14,6 @@ public class Trigger13 : MonoBehaviour
     public NPCScript npc2;
     public NPCScript npc3;
     public NPCScript npc4;
-    public NPCScript npc5;
-    public NPCScript npc6;
     public NPCScript abdoul;
 
     public ParticleSystem fire1;
@@ -35,7 +33,7 @@ public class Trigger13 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!burn && npc1.HasLeftSchool && npc2.HasLeftSchool && npc3.HasLeftSchool && npc4.HasLeftSchool && npc5.HasLeftSchool && npc6.HasLeftSchool)
+        if (!burn && npc1.HasLeftSchool && npc2.HasLeftSchool && npc3.HasLeftSchool && npc4.HasLeftSchool)
         {
             soldier1.SayBurnThePlace();
             audios[0].Play();
@@ -77,14 +75,6 @@ public class Trigger13 : MonoBehaviour
         if (other.gameObject == npc4.gameObject)
         {
             npc4.HasLeftSchool = true;
-        }
-        if (other.gameObject == npc5.gameObject)
-        {
-            npc5.HasLeftSchool = true;
-        }
-        if (other.gameObject == npc6.gameObject)
-        {
-            npc6.HasLeftSchool = true;
         }
         if (other.gameObject == abdoul.gameObject)
         {

@@ -8,8 +8,6 @@ public class Trigger12 : MonoBehaviour
     public NPCScript npc2;
     public NPCScript npc3;
     public NPCScript npc4;
-    public NPCScript npc5;
-    public NPCScript npc6;
     public NPCScript abdoul;
 
     private AudioSource[] audios;
@@ -42,16 +40,8 @@ public class Trigger12 : MonoBehaviour
         }
         if (other.gameObject == npc4.gameObject && !npc4.HasReachedDoor)
         {
-            npc4.ExitSchool();
-        }
-        if (other.gameObject == npc5.gameObject && !npc5.HasReachedDoor)
-        {
-            npc5.ExitSchool();
-        }
-        if (other.gameObject == npc6.gameObject && !npc6.HasReachedDoor)
-        {
             audios[0].Play();
-            npc6.ExitSchool();
+            npc4.ExitSchool();
         }
         if (other.gameObject == abdoul.gameObject && !abdoul.HasReachedDoor)
         {

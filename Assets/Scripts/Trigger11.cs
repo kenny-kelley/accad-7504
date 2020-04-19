@@ -8,8 +8,6 @@ public class Trigger11 : MonoBehaviour
     public NPCScript npc2;
     public NPCScript npc3;
     public NPCScript npc4;
-    public NPCScript npc5;
-    public NPCScript npc6;
     public NPCScript abdoul;
 
     // Start is called before the first frame update
@@ -41,14 +39,6 @@ public class Trigger11 : MonoBehaviour
         if (other.gameObject == npc4.gameObject && !npc4.HasReachedAisle)
         {
             npc4.WalkToDoor();
-        }
-        if (other.gameObject == npc5.gameObject && !npc5.HasReachedAisle)
-        {
-            npc5.WalkToDoor();
-        }
-        if (other.gameObject == npc6.gameObject && !npc6.HasReachedAisle)
-        {
-            npc6.WalkToDoor();
         }
         if (other.gameObject == abdoul.gameObject && !abdoul.HasReachedAisle)
         {
