@@ -15,7 +15,7 @@ public class Trigger4 : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "AdultWoman" && !hasEntered)
+        if (other.gameObject == amina.gameObject && !hasEntered)
         {
             amina.WalkToFrontCenter();
             hasEntered = true;

@@ -14,7 +14,7 @@ public class Trigger3 : MonoBehaviour
 	
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.name == "AdultWoman" && !hasEntered)
+		if (other.gameObject == amina.gameObject && !hasEntered)
 		{
 			amina.StopWalktoCloset();
 			hasEntered = true;

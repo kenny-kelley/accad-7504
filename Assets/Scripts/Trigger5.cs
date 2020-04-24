@@ -99,7 +99,7 @@ public class Trigger5 : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "AdultWoman" && !HasEntered)
+        if (other.gameObject == amina.gameObject && !HasEntered)
         {
             amina.StopWalkToFrontCenter();
             HasEntered = true;
