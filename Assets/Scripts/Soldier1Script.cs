@@ -24,6 +24,7 @@ public class Soldier1Script : MonoBehaviour
 
     private float rotateSum;
     private bool pause;
+    //private int strikeCounter;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,7 @@ public class Soldier1Script : MonoBehaviour
 
         rotateSum = 0;
         pause = false;
+        //strikeCounter = 0;
     }
 
     // Update is called once per frame
@@ -56,20 +58,35 @@ public class Soldier1Script : MonoBehaviour
         speed = 0;
         rotateSpeed = 0;
 
+        /*
+        if (strikeCounter >= 2) //stop push animation after two times
+        {
+            push = false;
+            threaten = false;
+        }
+        */
+
         if (enterSchool)
         {
             forward = new Vector3(1, 0, 0);
             speed = 1.0f;
         }
-        else if (threaten)
+        else if (threaten /* && strikeCounter < 2 */)
         {
             timePassed += Time.deltaTime;
-            if (timePassed < 13.0f)
+            if (timePassed < 5.0f)
             {
-                timePassed = 0;
+                //timePassed = 0;
                 push = true;
+                //strikeCounter++;
+            }
+            else //if(timePassed > 5.0f)
+            {
+                push = false;
+                threaten = false;
             }
         }
+        
 
         UpdateAnimator(speed, rotateSpeed, isAiming, bash, push);
 

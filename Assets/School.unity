@@ -2039,6 +2039,15 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  trackerId: -1
+  isLeft: 0
+  controllerType: 0
+  joystick: {x: 0, y: 0, z: 0}
+  touchpad: {x: 0, y: 0, z: 0}
+  trigger: 0
+  grip: 0
+  aButton: 0
+  bButton: 0
 --- !u!1001 &125147567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2603,6 +2612,7 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  trackerId: 0
 --- !u!1001 &208041406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2708,6 +2718,15 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  trackerId: -1
+  isLeft: 0
+  controllerType: 0
+  joystick: {x: 0, y: 0, z: 0}
+  touchpad: {x: 0, y: 0, z: 0}
+  trigger: 0
+  grip: 0
+  aButton: 0
+  bButton: 0
 --- !u!1001 &227024679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4741,6 +4760,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: girl05
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: e70ffe2574f0aa841955f05bfc473123,
+        type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 0851b1b20e22dbd49aaa39f481d686b1, type: 3}
+    - target: {fileID: -6057140222963153312, guid: e70ffe2574f0aa841955f05bfc473123,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 9aaf3eb081c260745b4736940634cb99, type: 2}
     - target: {fileID: -4216859302048453862, guid: e70ffe2574f0aa841955f05bfc473123,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4811,16 +4840,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.75
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: e70ffe2574f0aa841955f05bfc473123,
-        type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: 0851b1b20e22dbd49aaa39f481d686b1, type: 3}
-    - target: {fileID: -6057140222963153312, guid: e70ffe2574f0aa841955f05bfc473123,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 9aaf3eb081c260745b4736940634cb99, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e70ffe2574f0aa841955f05bfc473123, type: 3}
 --- !u!4 &259071783 stripped
@@ -5323,6 +5342,63 @@ Transform:
   m_Father: {fileID: 386676237}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &305232802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 305232803}
+  - component: {fileID: 305232804}
+  m_Layer: 0
+  m_Name: Vive Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &305232803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305232802}
+  m_LocalRotation: {x: 0.18300958, y: 0.18300728, z: 0.68300945, w: 0.68301827}
+  m_LocalPosition: {x: 0.7920322, y: 1.3787174, z: -0.009429811}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1490067743}
+  m_Father: {fileID: 2083866052}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &305232804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305232802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6af37248f41b4e444b1734fbd01df8bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  status: 0
+  rotationConfidence: 0
+  positionConfidence: 0
+  autoUpdate: 1
+  trackerId: -1
+  isLeft: 0
+  controllerType: 0
+  joystick: {x: 0, y: 0, z: 0}
+  touchpad: {x: 0, y: 0, z: 0}
+  trigger: 0
+  grip: 0
+  aButton: 0
+  bButton: 0
 --- !u!1001 &308456409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5466,6 +5542,15 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  trackerId: -1
+  isLeft: 0
+  controllerType: 0
+  joystick: {x: 0, y: 0, z: 0}
+  touchpad: {x: 0, y: 0, z: 0}
+  trigger: 0
+  grip: 0
+  aButton: 0
+  bButton: 0
 --- !u!1001 &319056104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5722,6 +5807,15 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  trackerId: -1
+  isLeft: 0
+  controllerType: 0
+  joystick: {x: 0, y: 0, z: 0}
+  touchpad: {x: 0, y: 0, z: 0}
+  trigger: 0
+  grip: 0
+  aButton: 0
+  bButton: 0
 --- !u!1 &348084703
 GameObject:
   m_ObjectHideFlags: 0
@@ -7028,31 +7122,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.14194985
+      value: 0.19242947
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.071795136
+      value: 0.5839538
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.010323331
+      value: -0.14495333
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9872129
+      value: 0.7752145
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.086764954
+      value: -2.121805
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.29346013
+      value: 1.0866073
       objectReference: {fileID: 0}
     - target: {fileID: 4497492886351270, guid: 28f8c3be881dd2443bd61afee05dc24c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.4135985
+      value: -5.473727
       objectReference: {fileID: 0}
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
@@ -7072,17 +7166,17 @@ PrefabInstance:
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
       propertyPath: near clip plane
-      value: 0.17253843
+      value: 0.04426786
       objectReference: {fileID: 0}
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
       propertyPath: far clip plane
-      value: 34507.688
+      value: 8853.572
       objectReference: {fileID: 0}
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
       propertyPath: field of view
-      value: 52.37823
+      value: 71.31817
       objectReference: {fileID: 0}
     - target: {fileID: 20835689193238814, guid: 28f8c3be881dd2443bd61afee05dc24c,
         type: 3}
@@ -8227,7 +8321,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587672388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.303, y: 0.859, z: 15.412}
+  m_LocalPosition: {x: 7.8, y: 0.859, z: 15.412}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11135,6 +11229,15 @@ MonoBehaviour:
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     armSwing: 0
+  openVR:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    openVRController: {fileID: 0}
+    controllerType: 0
+    useSkeletalInput: 1
   oculus:
     enabled: 1
     target: {fileID: 768101154}
@@ -11252,6 +11355,55 @@ MonoBehaviour:
   handRigidbody: {fileID: 0}
   handPhysics: {fileID: 0}
   directFingerMovements: 1
+--- !u!1 &776230783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 776230784}
+  - component: {fileID: 776230785}
+  m_Layer: 0
+  m_Name: OpenVR HMD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &776230784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776230783}
+  m_LocalRotation: {x: -0.0000052736123, y: 0.0000006854531, z: -0.000000113015346,
+    w: 1}
+  m_LocalPosition: {x: -9.3132235e-10, y: 1.6389312, z: 0.010374067}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2083866052}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &776230785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776230783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c6ef46252b367c4dae5c647ea267858, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  status: 0
+  rotationConfidence: 0
+  positionConfidence: 0
+  autoUpdate: 1
+  trackerId: 0
 --- !u!1001 &782956661
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11532,7 +11684,7 @@ Transform:
   m_GameObject: {fileID: 839424441}
   m_LocalRotation: {x: -0.000002652407, y: -0.00000011920926, z: -0.00000013803978,
     w: 1}
-  m_LocalPosition: {x: -9.3132235e-10, y: 1.6440482, z: 0.0108509045}
+  m_LocalPosition: {x: -9.3132235e-10, y: 1.6440237, z: 0.0108509045}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 504093357}
@@ -14802,6 +14954,36 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6619843097358628751, guid: b351050d64d130c488078dd8bfe40339,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000018339752
+      objectReference: {fileID: 0}
+    - target: {fileID: -6619843097358628751, guid: b351050d64d130c488078dd8bfe40339,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0019437396
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: b351050d64d130c488078dd8bfe40339,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 43e71db6156be6e40ad6a56a171f1e98, type: 2}
+    - target: {fileID: -6057140222963153312, guid: b351050d64d130c488078dd8bfe40339,
+        type: 3}
+      propertyPath: m_WarningMessage
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: b351050d64d130c488078dd8bfe40339,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: b351050d64d130c488078dd8bfe40339,
+        type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: bd9c8d216b785504b88845b0dcf73728, type: 3}
     - target: {fileID: -4216859302048453862, guid: b351050d64d130c488078dd8bfe40339,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14856,36 +15038,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: b351050d64d130c488078dd8bfe40339,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 43e71db6156be6e40ad6a56a171f1e98, type: 2}
-    - target: {fileID: -6057140222963153312, guid: b351050d64d130c488078dd8bfe40339,
-        type: 3}
-      propertyPath: m_WarningMessage
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: b351050d64d130c488078dd8bfe40339,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: b351050d64d130c488078dd8bfe40339,
-        type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: bd9c8d216b785504b88845b0dcf73728, type: 3}
-    - target: {fileID: -6619843097358628751, guid: b351050d64d130c488078dd8bfe40339,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.00000018339752
-      objectReference: {fileID: 0}
-    - target: {fileID: -6619843097358628751, guid: b351050d64d130c488078dd8bfe40339,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.0019437396
       objectReference: {fileID: 0}
     - target: {fileID: -1116949043531025300, guid: b351050d64d130c488078dd8bfe40339,
         type: 3}
@@ -15179,6 +15331,7 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  trackerId: 0
 --- !u!1001 &1272580537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16419,6 +16572,15 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  trackerId: -1
+  isLeft: 0
+  controllerType: 0
+  joystick: {x: 0, y: 0, z: 0}
+  touchpad: {x: 0, y: 0, z: 0}
+  trigger: 0
+  grip: 0
+  aButton: 0
+  bButton: 0
 --- !u!1 &1384266043
 GameObject:
   m_ObjectHideFlags: 0
@@ -16467,6 +16629,7 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  trackerId: 0
 --- !u!1001 &1386934653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16636,6 +16799,15 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  trackerId: -1
+  isLeft: 0
+  controllerType: 0
+  joystick: {x: 0, y: 0, z: 0}
+  touchpad: {x: 0, y: 0, z: 0}
+  trigger: 0
+  grip: 0
+  aButton: 0
+  bButton: 0
 --- !u!1 &1396907788
 GameObject:
   m_ObjectHideFlags: 0
@@ -16956,6 +17128,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: boyTall01
       objectReference: {fileID: 0}
+    - target: {fileID: -6619843097358628751, guid: 5b7b0bcd9dfbedf43a43647f8db7f8b3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000018339753
+      objectReference: {fileID: 0}
+    - target: {fileID: -6619843097358628751, guid: 5b7b0bcd9dfbedf43a43647f8db7f8b3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0019437397
+      objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 5b7b0bcd9dfbedf43a43647f8db7f8b3,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 685fb8cf9f34e45458bac9d18e8dd94d, type: 2}
+    - target: {fileID: -6057140222963153312, guid: 5b7b0bcd9dfbedf43a43647f8db7f8b3,
+        type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed by
+        Humanoid clips.\n\tTransform 'mixamorig4:Hips'\n\tTransform 'mixamorig4:RightHandMiddle2'\n\tTransform
+        'mixamorig4:LeftToeBase'\n\tTransform 'mixamorig4:LeftHandThumb2'\n\tTransform
+        'mixamorig4:RightHandRing2'\n\tTransform 'mixamorig4:RightToeBase'\n\tTransform
+        'mixamorig4:RightHandThumb1'\n\tTransform 'mixamorig4:RightArm'\n\tTransform
+        'mixamorig4:LeftHandIndex1'\n\tTransform 'mixamorig4:RightHandIndex3'\n\tand
+        more ...\n\tFrom animation clip 'mixamo.com'\n\tFrom animation clip 'mixamo.com'"
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5b7b0bcd9dfbedf43a43647f8db7f8b3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17011,38 +17210,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 5b7b0bcd9dfbedf43a43647f8db7f8b3,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 685fb8cf9f34e45458bac9d18e8dd94d, type: 2}
-    - target: {fileID: -6057140222963153312, guid: 5b7b0bcd9dfbedf43a43647f8db7f8b3,
-        type: 3}
-      propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed by
-        Humanoid clips.\n\tTransform 'mixamorig4:Hips'\n\tTransform 'mixamorig4:RightHandMiddle2'\n\tTransform
-        'mixamorig4:LeftToeBase'\n\tTransform 'mixamorig4:LeftHandThumb2'\n\tTransform
-        'mixamorig4:RightHandRing2'\n\tTransform 'mixamorig4:RightToeBase'\n\tTransform
-        'mixamorig4:RightHandThumb1'\n\tTransform 'mixamorig4:RightArm'\n\tTransform
-        'mixamorig4:LeftHandIndex1'\n\tTransform 'mixamorig4:RightHandIndex3'\n\tand
-        more ...\n\tFrom animation clip 'mixamo.com'\n\tFrom animation clip 'mixamo.com'"
-      objectReference: {fileID: 0}
-    - target: {fileID: -802994131263626547, guid: 5b7b0bcd9dfbedf43a43647f8db7f8b3,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.793
-      objectReference: {fileID: 0}
-    - target: {fileID: -6619843097358628751, guid: 5b7b0bcd9dfbedf43a43647f8db7f8b3,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.00000018339753
-      objectReference: {fileID: 0}
-    - target: {fileID: -6619843097358628751, guid: 5b7b0bcd9dfbedf43a43647f8db7f8b3,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.0019437397
-      objectReference: {fileID: 0}
     - target: {fileID: -1116949043531025300, guid: 5b7b0bcd9dfbedf43a43647f8db7f8b3,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -17052,6 +17219,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0.04789479
+      objectReference: {fileID: 0}
+    - target: {fileID: -802994131263626547, guid: 5b7b0bcd9dfbedf43a43647f8db7f8b3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.793
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -6057140222963153312, guid: 5b7b0bcd9dfbedf43a43647f8db7f8b3, type: 3}
@@ -17591,6 +17763,15 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  trackerId: -1
+  isLeft: 0
+  controllerType: 0
+  joystick: {x: 0, y: 0, z: 0}
+  touchpad: {x: 0, y: 0, z: 0}
+  trigger: 0
+  grip: 0
+  aButton: 0
+  bButton: 0
 --- !u!1 &1470747373
 GameObject:
   m_ObjectHideFlags: 0
@@ -17779,6 +17960,83 @@ Transform:
   m_Father: {fileID: 1517668514}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1490067742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1490067743}
+  - component: {fileID: 1490067745}
+  - component: {fileID: 1490067744}
+  m_Layer: 0
+  m_Name: whole_model_group1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1490067743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490067742}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 305232803}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!23 &1490067744
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490067742}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a01074c59ceef5140b755e2a690fcec5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1490067745
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490067742}
+  m_Mesh: {fileID: 4300000, guid: 642e86673a14ec54db79c69658bcaddb, type: 3}
 --- !u!1001 &1492780590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18893,6 +19151,63 @@ Transform:
   m_Father: {fileID: 2078134806}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1608166297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1608166298}
+  - component: {fileID: 1608166299}
+  m_Layer: 0
+  m_Name: Vive Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1608166298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608166297}
+  m_LocalRotation: {x: 0.18302442, y: -0.18302025, z: -0.68303055, w: 0.6829898}
+  m_LocalPosition: {x: -0.7867755, y: 1.3658398, z: -0.00890076}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2104473539}
+  m_Father: {fileID: 2083866052}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1608166299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608166297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6af37248f41b4e444b1734fbd01df8bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  status: 0
+  rotationConfidence: 0
+  positionConfidence: 0
+  autoUpdate: 1
+  trackerId: -1
+  isLeft: 1
+  controllerType: 0
+  joystick: {x: 0, y: 0, z: 0}
+  touchpad: {x: 0, y: 0, z: 0}
+  trigger: 0
+  grip: 0
+  aButton: 0
+  bButton: 0
 --- !u!1001 &1610823783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20352,6 +20667,15 @@ MonoBehaviour:
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     armSwing: 0
+  openVR:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    openVRController: {fileID: 0}
+    controllerType: 0
+    useSkeletalInput: 1
   oculus:
     enabled: 1
     target: {fileID: 0}
@@ -20854,6 +21178,15 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  trackerId: -1
+  isLeft: 0
+  controllerType: 0
+  joystick: {x: 0, y: 0, z: 0}
+  touchpad: {x: 0, y: 0, z: 0}
+  trigger: 0
+  grip: 0
+  aButton: 0
+  bButton: 0
 --- !u!1001 &1704939013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21334,6 +21667,7 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  trackerId: 0
 --- !u!1 &1738979862
 GameObject:
   m_ObjectHideFlags: 0
@@ -21413,6 +21747,7 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  trackerId: 0
 --- !u!1 &1739465630
 GameObject:
   m_ObjectHideFlags: 0
@@ -21610,7 +21945,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747248694}
   m_LocalRotation: {x: 0.49999484, y: -0.5000159, z: -0.5000118, w: 0.49997744}
-  m_LocalPosition: {x: -0.74677074, y: 1.3559357, z: -0.048903514}
+  m_LocalPosition: {x: -0.74677074, y: 1.3559028, z: -0.048903514}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 504093357}
@@ -21712,7 +22047,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747578523}
   m_LocalRotation: {x: 0.5000013, y: 0.49998236, z: 0.49999437, w: 0.50002205}
-  m_LocalPosition: {x: 0.7520198, y: 1.3688189, z: -0.049443115}
+  m_LocalPosition: {x: 0.7520198, y: 1.368786, z: -0.049443115}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 504093357}
@@ -22147,6 +22482,7 @@ MonoBehaviour:
   rotationConfidence: 0
   positionConfidence: 0
   autoUpdate: 1
+  trackerId: 0
 --- !u!1001 &1799587456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22672,6 +23008,55 @@ Transform:
   m_Father: {fileID: 166266650}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1824502556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1824502557}
+  - component: {fileID: 1824502558}
+  m_Layer: 0
+  m_Name: OpenVR HMD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1824502557
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824502556}
+  m_LocalRotation: {x: -0.000005273612, y: 0.0000006556509, z: -0.00000011301515,
+    w: 1}
+  m_LocalPosition: {x: -9.3132235e-10, y: 1.6389022, z: 0.010374067}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2083866052}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1824502558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824502556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c6ef46252b367c4dae5c647ea267858, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  status: 0
+  rotationConfidence: 0
+  positionConfidence: 0
+  autoUpdate: 1
+  trackerId: 0
 --- !u!1 &1834987612
 GameObject:
   m_ObjectHideFlags: 0
@@ -23924,6 +24309,13 @@ MonoBehaviour:
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     headAnimation: 1
     faceAnimation: 1
+  openVR:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    hmd: {fileID: 0}
   oculus:
     enabled: 1
     target: {fileID: 1922665221}
@@ -25967,6 +26359,10 @@ Transform:
   - {fileID: 1797148125}
   - {fileID: 1700467797}
   - {fileID: 1469061927}
+  - {fileID: 776230784}
+  - {fileID: 1608166298}
+  - {fileID: 305232803}
+  - {fileID: 1824502557}
   m_Father: {fileID: 864393739}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26234,6 +26630,83 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2102726367}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2104473538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2104473539}
+  - component: {fileID: 2104473541}
+  - component: {fileID: 2104473540}
+  m_Layer: 0
+  m_Name: whole_model_group1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2104473539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104473538}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1608166298}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!23 &2104473540
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104473538}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a01074c59ceef5140b755e2a690fcec5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &2104473541
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104473538}
+  m_Mesh: {fileID: 4300000, guid: 642e86673a14ec54db79c69658bcaddb, type: 3}
 --- !u!1 &2108494701
 GameObject:
   m_ObjectHideFlags: 0
@@ -27566,7 +28039,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644388359183280161}
-  m_LocalRotation: {x: 0.03296842, y: 0.03493891, z: 0.0006094736, w: 0.99884534}
+  m_LocalRotation: {x: 0.032968476, y: 0.034939017, z: 0.0006094439, w: 0.9988454}
   m_LocalPosition: {x: -0.000000020861625, y: 0.031811982, z: 0.00000013411045}
   m_LocalScale: {x: 0.9999999, y: 0.99999976, z: 1}
   m_Children:
@@ -27899,7 +28372,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645299226343952845}
   m_LocalRotation: {x: 0.007477671, y: 0.000028580424, z: -0.0000031886152, w: 0.9999721}
-  m_LocalPosition: {x: -0.0000018998983, y: 0.95302004, z: -0.08025647}
+  m_LocalPosition: {x: -0.0000018998983, y: 0.95298713, z: -0.08025647}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1641302724796195811}
@@ -27926,7 +28399,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644452730749773357}
-  m_LocalRotation: {x: -0.008944976, y: 0.010948019, z: -0.010795106, w: 0.99984187}
+  m_LocalRotation: {x: -0.008944976, y: 0.010948079, z: -0.010795104, w: 0.99984187}
   m_LocalPosition: {x: 0.000000026822091, y: 0.027933901, z: -0.0000000014901161}
   m_LocalScale: {x: 0.9999998, y: 0.99999994, z: 0.99999994}
   m_Children: []
@@ -28433,7 +28906,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644745182713923515}
-  m_LocalRotation: {x: 0.003319752, y: 0.0026364971, z: 0.009442502, w: 0.9999465}
+  m_LocalRotation: {x: 0.0033197294, y: 0.002636374, z: 0.009442501, w: 0.9999464}
   m_LocalPosition: {x: 0.0000000059604646, y: 0.020972481, z: 0.000000032037498}
   m_LocalScale: {x: 1.0000002, y: 0.99999994, z: 1}
   m_Children: []
@@ -28535,7 +29008,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643965054488964003}
   m_LocalRotation: {x: -0.000015676951, y: 0.0000030994404, z: 0.0000017711193, w: -1}
-  m_LocalPosition: {x: -0.06642913, y: 0.07696115, z: -0.12843612}
+  m_LocalPosition: {x: -0.06642913, y: 0.07692825, z: -0.12843612}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1641302724796195811}
@@ -28879,7 +29352,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643872995074917305}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcfe545386f1e6c41b7c6a0f1b7ff073, type: 3}
   m_Name: 
@@ -32359,7 +32832,7 @@ Transform:
   m_GameObject: {fileID: 1643872995074917305}
   m_LocalRotation: {x: -0.0000052736123, y: 0.0000006854531, z: -0.000000113015346,
     w: 1}
-  m_LocalPosition: {x: 0.00029374662, y: 1.6029208, z: -0.09542371}
+  m_LocalPosition: {x: 0.00029374662, y: 1.6028879, z: -0.09542371}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1646423474761678635}
@@ -32418,7 +32891,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645289295638739383}
-  m_LocalRotation: {x: 0.000018268345, y: -0.00022946841, z: -0.000043623546, w: 1}
+  m_LocalRotation: {x: 0.000018242969, y: -0.00022942373, z: -0.000043608732, w: 1}
   m_LocalPosition: {x: -0.027933924, y: 0.00000009764335, z: -0.00000014740237}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -32496,7 +32969,7 @@ Transform:
   m_GameObject: {fileID: 1644745429461000591}
   m_LocalRotation: {x: -0.0000011883675, y: -0.00000011920926, z: 0.0000010254706,
     w: -1}
-  m_LocalPosition: {x: 0.06642725, y: 0.07691055, z: -0.12843704}
+  m_LocalPosition: {x: 0.06642725, y: 0.076877646, z: -0.12843704}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1641302724796195811}
@@ -32760,7 +33233,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644684790311847695}
   m_LocalRotation: {x: 0.000009983776, y: -0.000014007085, z: -0.000026810683, w: 1}
-  m_LocalPosition: {x: -0.64677054, y: 1.4058669, z: -0.08889586}
+  m_LocalPosition: {x: -0.64677054, y: 1.405834, z: -0.08889586}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1641302724796195811}
@@ -32869,7 +33342,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644696617201251113}
   m_LocalRotation: {x: 0.007477671, y: 0.000028580427, z: -0.0000031888485, w: 0.9999721}
-  m_LocalPosition: {x: -0.0000018998983, y: 0.95302004, z: -0.08025647}
+  m_LocalPosition: {x: -0.0000018998983, y: 0.95298713, z: -0.08025647}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1646220144516969727}
@@ -32974,7 +33447,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643873533605986909}
-  m_LocalRotation: {x: 0.00008637778, y: 0.0021289575, z: 0.03290344, w: 0.99945635}
+  m_LocalRotation: {x: 0.00008639316, y: 0.002128928, z: 0.0329035, w: 0.99945635}
   m_LocalPosition: {x: 0.03181182, y: 0.00000005972106, z: -0.0000003079349}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -33003,8 +33476,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644050008276728757}
-  m_LocalRotation: {x: 0.000082201805, y: 0.00011952977, z: 0.0001230641, w: 1}
-  m_LocalPosition: {x: 0.020972745, y: 0.000000056881845, z: 0.00000062702037}
+  m_LocalRotation: {x: 0.000082162514, y: 0.00011951952, z: 0.0001229784, w: 1}
+  m_LocalPosition: {x: 0.020972745, y: 0.000000054423936, z: 0.00000062576055}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1646483325188915703}
@@ -33049,7 +33522,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644087762904122663}
   m_LocalRotation: {x: 0.7123745, y: 0.000022589886, z: 0.000018081822, w: 0.7017996}
-  m_LocalPosition: {x: -0.0000018998983, y: 0.08025634, z: 0.9530201}
+  m_LocalPosition: {x: -0.0000018998983, y: 0.08025634, z: 0.9529872}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1646133234175749949}
@@ -33566,7 +34039,7 @@ Transform:
   m_GameObject: {fileID: 1643954188556348615}
   m_LocalRotation: {x: -0.000000028870986, y: -0.0000062584845, z: -0.000006379392,
     w: 1}
-  m_LocalPosition: {x: 0.6520329, y: 1.4187521, z: -0.0894317}
+  m_LocalPosition: {x: 0.6520329, y: 1.4187192, z: -0.0894317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1641302724796195811}
@@ -34511,7 +34984,7 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 1646356066362686749}
-          baseRotation: {x: 0.00008221303, y: 0.0001195154, z: 0.00012308368, w: 1.0000011}
+          baseRotation: {x: 0.00008217528, y: 0.00011950787, z: 0.00012301478, w: 1.0000012}
           basePosition: {x: 0.02097223, y: -0.000000028144541, z: -0.000000028343559}
           toBoneRotation: {x: 0.5046198, y: 0.4984179, z: 0.49218503, w: -0.50467116}
         bone:
@@ -34869,7 +35342,7 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 1646356066362686749}
-          baseRotation: {x: 0.00008221303, y: 0.0001195154, z: 0.00012308368, w: 1.0000011}
+          baseRotation: {x: 0.00008217528, y: 0.00011950787, z: 0.00012301478, w: 1.0000012}
           basePosition: {x: 0.02097223, y: -0.000000028144541, z: -0.000000028343559}
           toBoneRotation: {x: 0.5046198, y: 0.4984179, z: 0.49218503, w: -0.50467116}
         bone:
@@ -35107,6 +35580,15 @@ MonoBehaviour:
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     armSwing: 0
+  openVR:
+    enabled: 1
+    target: {fileID: 1675604918898829087}
+    sensorTransform: {fileID: 305232803}
+    sensor2TargetPosition: {x: -0.14000095, y: 0.03999997, z: -0.08000014}
+    sensor2TargetRotation: {x: -0.18301272, y: -0.18301272, z: -0.6830128, w: 0.68301284}
+    openVRController: {fileID: 0}
+    controllerType: 0
+    useSkeletalInput: 1
   oculus:
     enabled: 1
     target: {fileID: 1675604918898829087}
@@ -35335,7 +35817,7 @@ MonoBehaviour:
   ground: {fileID: 0}
   groundNormal: {x: 0, y: 1, z: 0}
   groundTranslation: {x: 0, y: 0, z: 0}
-  groundDistance: -0.14616877
+  groundDistance: -0.14613587
   soleThicknessFoot: 0
   soleThicknessToes: 0
 --- !u!114 &1675639104764430309
@@ -35457,7 +35939,7 @@ MonoBehaviour:
   ground: {fileID: 0}
   groundNormal: {x: 0, y: 1, z: 0}
   groundTranslation: {x: 0, y: 0, z: 0}
-  groundDistance: -0.1461181
+  groundDistance: -0.1460852
   soleThicknessFoot: 0
   soleThicknessToes: 0
 --- !u!114 &1675639608979299113
@@ -36206,6 +36688,15 @@ MonoBehaviour:
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     armSwing: 0
+  openVR:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    openVRController: {fileID: 0}
+    controllerType: 0
+    useSkeletalInput: 1
   oculus:
     enabled: 1
     target: {fileID: 0}
@@ -36588,6 +37079,13 @@ MonoBehaviour:
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     headAnimation: 1
     faceAnimation: 1
+  openVR:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    hmd: {fileID: 0}
   oculus:
     enabled: 1
     target: {fileID: 0}
@@ -37565,12 +38063,18 @@ MonoBehaviour:
     enabled: 0
     trackerTransform: {fileID: 0}
     subTrackers: []
+  openVR:
+    status: 0
+    enabled: 1
+    trackerTransform: {fileID: 2083866052}
+    subTrackers: []
+    hmd: {fileID: 0}
+    controllers: []
   oculus:
     status: 0
     enabled: 1
     trackerTransform: {fileID: 504093357}
     subTrackers: []
-    androidDeviceType: 2
   forwardSpeed: 1
   backwardSpeed: 0.6
   sidewardSpeed: 1
@@ -38411,11 +38915,19 @@ MonoBehaviour:
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     headAnimation: 1
     faceAnimation: 1
+  openVR:
+    enabled: 1
+    target: {fileID: 1676322799709377999}
+    sensorTransform: {fileID: 1824502557}
+    sensor2TargetPosition: {x: 0.00029318934, y: -0.036013275, z: -0.10579844}
+    sensor2TargetRotation: {x: -3.2155496e-13, y: -3.634063e-20, z: -2.1684043e-19,
+      w: 1.0000001}
+    hmd: {fileID: 0}
   oculus:
     enabled: 1
     target: {fileID: 1676322799709377999}
     sensorTransform: {fileID: 839424442}
-    sensor2TargetPosition: {x: 0.0002931912, y: -0.041126277, z: -0.10627533}
+    sensor2TargetPosition: {x: 0.0002931912, y: -0.04113474, z: -0.10627533}
     sensor2TargetRotation: {x: -0.0000026212056, y: 0.0000007586429, z: 0.000000025026765,
       w: 1.0000001}
     overrideOptitrackPosition: 1
@@ -40171,6 +40683,15 @@ MonoBehaviour:
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     armSwing: 0
+  openVR:
+    enabled: 1
+    target: {fileID: 0}
+    sensorTransform: {fileID: 0}
+    sensor2TargetPosition: {x: 0, y: 0, z: 0}
+    sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
+    openVRController: {fileID: 0}
+    controllerType: 0
+    useSkeletalInput: 1
   oculus:
     enabled: 1
     target: {fileID: 0}
@@ -40497,7 +41018,7 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 1646128758366972313}
-          baseRotation: {x: 0.000018265875, y: -0.00022947241, z: -0.000043631022,
+          baseRotation: {x: 0.000018247809, y: -0.00022938524, z: -0.000043606353,
             w: 1.0000008}
           basePosition: {x: -0.027933806, y: -0.00000002321758, z: 0.000000013185854}
           toBoneRotation: {x: 0.5419991, y: -0.5223525, z: -0.4652729, w: -0.46573183}
@@ -40855,7 +41376,7 @@ MonoBehaviour:
         target:
           length: 0
           transform: {fileID: 1646128758366972313}
-          baseRotation: {x: 0.000018265875, y: -0.00022947241, z: -0.000043631022,
+          baseRotation: {x: 0.000018247809, y: -0.00022938524, z: -0.000043606353,
             w: 1.0000008}
           basePosition: {x: -0.027933806, y: -0.00000002321758, z: 0.000000013185854}
           toBoneRotation: {x: 0.5419991, y: -0.5223525, z: -0.4652729, w: -0.46573183}
@@ -41025,6 +41546,15 @@ MonoBehaviour:
     sensor2TargetPosition: {x: 0, y: 0, z: 0}
     sensor2TargetRotation: {x: 0, y: 0, z: 0, w: 0}
     armSwing: 0
+  openVR:
+    enabled: 1
+    target: {fileID: 1679557135354268669}
+    sensorTransform: {fileID: 1608166298}
+    sensor2TargetPosition: {x: 0.14000079, y: 0.04000003, z: -0.07999981}
+    sensor2TargetRotation: {x: -0.18301296, y: 0.18301262, z: 0.68301296, w: 0.6830125}
+    openVRController: {fileID: 0}
+    controllerType: 0
+    useSkeletalInput: 1
   oculus:
     enabled: 1
     target: {fileID: 1679557135354268669}

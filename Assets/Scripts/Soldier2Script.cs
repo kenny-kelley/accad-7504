@@ -23,6 +23,8 @@ public class Soldier2Script : MonoBehaviour
     private bool bash;
     private bool push;
 
+    private int strikeCounter;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +46,8 @@ public class Soldier2Script : MonoBehaviour
         isAiming = true;
         bash = false;
         push = false;
+
+        strikeCounter = 0;
     }
 
     // Update is called once per frame
@@ -109,13 +113,28 @@ public class Soldier2Script : MonoBehaviour
             }
         }
 
+/*
+        if (strikeCounter >= 2) //stop bash animation after two times
+        {
+            bash = false;
+            threateningStudents = false;
+        }
+        */
+
         if (threateningStudents)
         {
             timePassed += Time.deltaTime;
-            if (timePassed < 10000000000000.0f)
+            if (timePassed < 10.0f)
             {
-                timePassed = 0;
+                //timePassed = 0;
                 bash = true;
+                //strikeCounter++;
+            }
+            else //if(timePassed > 10.0f)
+            {
+                bash = false;
+                threateningStudents = false;
+
             }
         }
 
