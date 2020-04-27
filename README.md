@@ -15,6 +15,7 @@ You will notice 13 scripts attached to these Box Triggers. Each one of these scr
 You will also find scripts for the characters Abdoul, Amina, Soldier 1, and Soldier 2, as well as another script to control the movement of the doors. An API of the characters and an outline of each Box Trigger is provided below.
 
 ## API
+Please open this in a text editor, as it has indentations that Github doesn't show on the browser.
 
 ### AminaScript
 Amina is the teacher of the class. She plays a role throughout the entire experience.
